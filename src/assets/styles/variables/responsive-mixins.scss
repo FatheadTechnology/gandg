@@ -1,0 +1,50 @@
+// start breakpoint vars
+$s: 500px;
+$m: 850px;
+$l: 1200px;
+$xl : 1400px;
+// end breakpoint vars
+
+// start @media mixins
+@mixin s {
+  @media (max-width: $s) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media (min-width: $s) and (max-width: $m) {
+    @content;
+  }
+}
+
+@mixin under-m {
+  @media (max-width: $m) {
+    @content;
+  }
+}
+
+@mixin over-m {
+  @media (min-width: $m) {
+    @content;
+  }
+}
+
+@mixin l {
+  @media (min-width: $m) and (max-width: $l) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $l) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    @content;
+  }
+}

@@ -1,0 +1,48 @@
+@import "../variables/variables";
+.btn{
+  padding: $btn-padding;
+  margin: $btn-margin;
+  text-align: center;
+  cursor: pointer;
+  width: $btn-width;
+  box-sizing: border-box;
+  align-self: center;
+  border-radius: $base-border-radius;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+@include retina{
+  .btn{
+    width: 85%;
+    margin: 1em 7.5%;
+    //TODO : Make a mobile class, ie: retina + mobile screen size
+  }
+}
+
+.primary-btn{
+  background-color: $btn-primary-bg-color;
+  color: $btn-primary-color;
+  &:hover{
+    background-color: darken($btn-primary-bg-color, 10%)
+  }
+}
+
+.secondary-btn{
+  background-color: $btn-secondary-bg-color;
+  color: $btn-secondary-color;
+  &:hover{
+    background-color: darken($btn-secondary-bg-color, 10%)
+  }
+}
+
+.social-btn{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  margin: 1em;
+}
+.social-btn:first-child{
+  margin-top: 0;
+}

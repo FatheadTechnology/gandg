@@ -1,0 +1,23 @@
+@import "../variables/variables";
+
+@include retina{
+  body{
+    font-size: $base-font-size-retina;
+  }
+}
+
+h1,h2,h3,h4,h5{
+  font-weight: $header-font-weight;
+}
+
+a{
+  color: $link-color;
+  &:hover{
+    color: darken($link-color, 15%);
+  }
+}
+
+
+
+
+

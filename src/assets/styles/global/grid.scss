@@ -1,0 +1,15 @@
+@import "../variables/variables";
+
+#app{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: $left-nav-size 1fr $right-nav-size;
+  grid-column-gap: $main-grid-gap;
+
+}
+
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: $main-grid-gap;
+}

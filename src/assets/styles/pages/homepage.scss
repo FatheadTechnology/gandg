@@ -1,0 +1,30 @@
+@import "../variables/variables";
+
+#home{
+
+#hero{
+  margin: $base-top-margin 0 0;
+  background-image: url("https://assets.fathead.com/swipe-patterns/shining_sparrows_flat.jpg");
+  height: $hero-height;
+  position: relative;
+  #hero-content{
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    max-width: 300px;
+    color: $hero-content-color;
+    h2{
+      text-transform: uppercase;
+    }
+  }
+}
+#cta-hero-bar{
+  width: 100%;
+  background-color: $hero-cta-bg-color;
+  color: $hero-cta-color;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+}
