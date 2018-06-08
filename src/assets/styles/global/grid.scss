@@ -7,9 +7,79 @@
   grid-column-gap: $main-grid-gap;
 
 }
+@include s{
+  #app{
+    margin-top: $mobile-nav-bar-height;
+    grid-template-columns: 1fr;
+  }
+}
 
+@include m{
+  #app{
+    grid-template-columns: $left-nav-size-small 1fr $right-nav-size-small;
+  }
+
+}
+
+//TODO: product grid variants? other class or ...
 .product-grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column: $main-grid-gap;
+  grid-column-gap: 1.5em;
+  margin: 1.5em 0;
+
+  .product-grid-item{
+    height: 200px;
+    background-color: red;
+  }
+}
+
+@include xs{
+  .product-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    //TODO: PUNCH YOURSELF IN THE FUCKING FACE FOR USING AN IMPORTANT YOU PIECE OF SHIT
+    // TODO : MAKE A REAL XS AND SMALL DIFFERENTION IN THE SHEETS BITCH
+    grid-column-gap: .25em !important;
+    grid-row-gap: .25em !important;
+    margin: .25em !important;
+
+    .product-grid-item{
+      height: 200px;
+      background-color: red;
+    }
+  }
+
+}
+
+@include s{
+  .product-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin: 1em;
+
+    .product-grid-item{
+      height: 150px;
+      background-color: red;
+    }
+  }
+
+}
+
+@include m{
+  .product-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: .5em;
+    grid-row-gap: .5em;
+    margin: .5em 0;
+
+    .product-grid-item{
+      height: 200px;
+      background-color: red;
+    }
+  }
+
 }

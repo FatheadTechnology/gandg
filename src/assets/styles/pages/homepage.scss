@@ -1,30 +1,60 @@
 @import "../variables/variables";
 
-#home{
+#home {
+  align-items: center;
 
-#hero{
-  margin: $base-top-margin 0 0;
-  background-image: url("https://assets.fathead.com/swipe-patterns/shining_sparrows_flat.jpg");
-  height: $hero-height;
-  position: relative;
-  #hero-content{
-    position: absolute;
-    left: 50px;
-    top: 100px;
-    max-width: 300px;
-    color: $hero-content-color;
-    h2{
-      text-transform: uppercase;
+  #hero {
+    margin: $base-top-margin 0 0;
+    //background-image: url("https://assets.fathead.com/swipe-patterns/shining_sparrows_flat.jpg");
+    background-color: red;
+    background-image: url("http://i63.tinypic.com/64fqmp.png");
+    background-size: cover;
+    background-position: center;
+    height: $hero-height;
+    position: relative;
+    #hero-content {
+      text-align: center;
+      display: flex;
+      flex-directioN: column;
+      justify-content: center;
+      background-color: rgba(255,255,255,.75);
+      backdrop-filter: blur(5px);
+      border: 1px solid $a-hover-color;
+      padding: 1em;
+      position: absolute;
+      left: 50px;
+      top: 100px;
+      max-width: 300px;
+      // color: $hero-content-color;
+      p{
+        text-align: justify;
+        font-size: 1.25em;
+      }
+      h2 {
+        color: $a-hover-color;
+        text-transform: uppercase;
+      }
     }
   }
-}
-#cta-hero-bar{
-  width: 100%;
-  background-color: $hero-cta-bg-color;
-  color: $hero-cta-color;
-  padding: 1em;
-  box-sizing: border-box;
-  text-align: center;
-}
+  @include s {
+    #hero {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #hero-content {
+        left: auto;
+        top: auto;
+      }
+    }
+  }
+  #cta-hero-bar {
+    width: 100%;
+    background-color: $hero-cta-bg-color;
+    color: $hero-cta-color;
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+  }
 
 }

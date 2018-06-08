@@ -1,11 +1,19 @@
+//TODO : move this to breakpoints or delete that file
 // start breakpoint vars
-$s: 500px;
-$m: 850px;
-$l: 1200px;
-$xl : 1400px;
+$xs: 350px;
+$s: 700px;
+$m: 1050px;
+$l: 1300px;
+$xl : 1500px;
 // end breakpoint vars
 
 // start @media mixins
+@mixin xs {
+  @media (max-width: $xs) {
+    @content;
+  }
+}
+
 @mixin s {
   @media (max-width: $s) {
     @content;
@@ -17,6 +25,7 @@ $xl : 1400px;
     @content;
   }
 }
+//TODO no right nav on medium
 
 @mixin under-m {
   @media (max-width: $m) {

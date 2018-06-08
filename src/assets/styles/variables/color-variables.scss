@@ -1,7 +1,9 @@
 //BASE COLORS
-$bg-color: #F4F2F0;
+$bg-color: #fcfaf8;
+//$bg-color: #F4F2F0;
 $base-text-color: #121212;
 $link-color: #68B2CF;
+$a-hover-color: #B9862C;
 
 //HERO COLORS
 $hero-content-color: #fff;
@@ -12,7 +14,8 @@ $hero-cta-color : #fff;
 $btn-primary-bg-color: #68B2CF;
 $btn-primary-color: #fff;
 
-$btn-secondary-bg-color: #BC9B7D;
+//$btn-secondary-bg-color: #BC9B7D;
+$btn-secondary-bg-color: #B9862C;
 $btn-secondary-color: #fff;
 
 //FOOTER COLORS
@@ -20,3 +23,6 @@ $footer-top-bg-color: #BC9B7D;
 $footer-top-color: #fff;
 $footer-btm-bg-color: #121212;
 $footer-btm-color: #fff;
+
+$btn-shadow : 0px 3px 17px 1px rgba(128,128,128,0.5);
+$btn-shadow-hover : 0px 3px 17px 1px rgba(92, 92, 92, 0.9);

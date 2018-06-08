@@ -2,31 +2,33 @@
 @import "global/global.scss";
 
 //DEBUG MODE :
+//
+
+/*
 div{
   border: 1px solid pink;
 }
 @include s{
   html{
-    border: 1px dashed red;
+    border: 5px dashed red;
   }
 }
 
 @include m{
   html{
-    border: 1px dashed green;
+    border: 5px dashed green;
   }
 }
 
 @include l{
   html{
-    border: 1px dashed yellow;
+    border: 5px dashed yellow;
   }
 }
 
 @include xl{
   html{
-    border: 1px dashed pink;
+    border: 5px dashed pink;
   }
 }
-
-
+*/
