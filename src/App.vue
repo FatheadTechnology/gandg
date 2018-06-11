@@ -3,7 +3,10 @@
     <mobile-nav></mobile-nav>
     <left-nav></left-nav>
     <div class="space-fill"></div>
+    <div id="page-content">
     <router-view/>
+      <global-footer></global-footer>
+    </div>
     <div class="space-fill"></div>
     <right-nav></right-nav>
     <!--
@@ -17,11 +20,12 @@
   import LeftNav from './components/LeftNav'
   import RightNav from './components/RightNav'
   import MobileNav from './components/MobileNav'
+  import GlobalFooter from './components/GlobalFooter'
 
   export default {
     name: 'App',
     components: {
-      LeftNav, RightNav, MobileNav
+      LeftNav, RightNav, MobileNav, GlobalFooter
     }
   }
 </script>

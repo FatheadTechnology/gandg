@@ -24,6 +24,7 @@
 }
 #right-nav{
   margin-top: $base-top-margin;
+  margin-right: 5px;
   width: $right-nav-size;
   position: fixed;
   right: 0;
@@ -59,7 +60,7 @@
     text-transform: uppercase;
     font-weight: $header-font-weight;
     &:hover{
-      color: $a-hover-color;
+      color: lighten($a-hover-color, 10%);
     }
   }
 h1{

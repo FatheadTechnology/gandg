@@ -2,27 +2,32 @@
 $bg-color: #fcfaf8;
 //$bg-color: #F4F2F0;
 $base-text-color: #121212;
-$link-color: #68B2CF;
-$a-hover-color: #B9862C;
+$link-color: #1C4E52;
+$a-hover-color: #6C4F1A;
 
 //HERO COLORS
 $hero-content-color: #fff;
-$hero-cta-bg-color : #212121;
+$hero-cta-bg-color : #42403E;
 $hero-cta-color : #fff;
 
 //BUTTON COLORS
-$btn-primary-bg-color: #68B2CF;
+$btn-primary-bg-color: $link-color;
 $btn-primary-color: #fff;
 
 //$btn-secondary-bg-color: #BC9B7D;
-$btn-secondary-bg-color: #B9862C;
+$btn-secondary-bg-color: #6C4F1A;
 $btn-secondary-color: #fff;
 
-//FOOTER COLORS
+// FOOTER COLORS
+$footer-bg-color: #3C3A38;
+$footer-color: #E5E2DF;
+
+
+/*//FOOTER COLORS
 $footer-top-bg-color: #BC9B7D;
 $footer-top-color: #fff;
 $footer-btm-bg-color: #121212;
-$footer-btm-color: #fff;
+$footer-btm-color: #fff;*/
 
 $btn-shadow : 0px 3px 17px 1px rgba(128,128,128,0.5);
 $btn-shadow-hover : 0px 3px 17px 1px rgba(92, 92, 92, 0.9);

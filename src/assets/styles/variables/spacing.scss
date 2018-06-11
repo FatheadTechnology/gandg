@@ -2,22 +2,35 @@ html,body{
   margin: 0;
   padding: 0;
 }
+//MAIN GRID
 $main-grid-gap: 10px;
 $base-top-margin: 2em;
 
-$btn-padding : 1.25em;
-$btn-margin: 1em;
+//GLOBAL BUTTONS
+$btn-padding : 1.5em;
+$btn-margin: 1.25em 0;
 $btn-width: 220px;
 $btn-width-retina: 250px;
 
+//MOBILE NAV
 $mobile-nav-bar-height: 3em;
 
+//BORDER RADIUS
 $base-border-radius: 1px;
 
+//LEFT NAV
 $left-nav-size: 250px;
 $left-nav-size-small: 200px;
 
+// RIGHT NAV
 $right-nav-size: 75px;
 $right-nav-size-small: 50px;
 
+//HERO
 $hero-height: 400px;
+
+//FOOTER
+$footer-link-margin: .75em;
+
+//HOMEPAGE
+$artist-grid-spacing:  2.5em;

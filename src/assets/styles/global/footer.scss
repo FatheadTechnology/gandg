@@ -1,1 +1,46 @@
 @import "../variables/variables";
+
+#global-footer {
+  width: 100%;
+  background-color: $footer-bg-color;
+  color: $footer-color;
+  margin-top: 2em;
+  padding: 0 2em;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 1em;
+  box-sizing: border-box;
+  a {
+    color: $footer-color;
+    text-decoration: none;
+    margin: $footer-link-margin 0;
+    &:hover {
+      color: darken($footer-color, 10%);
+    }
+  }
+  .small-nav-col {
+    grid-column: span 2 / auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 2em;
+  }
+
+  #email-col {
+    grid-column: span 4 / auto;
+  }
+}
+
+@include under-m {
+  #global-footer {
+    grid-template-columns: repeat(2, 1fr);
+    #email-col {
+      grid-column: span 2 / auto;
+    }
+    .small-nav-col {
+      grid-column: span 1 / auto;
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 2em;
+    }
+  }
+}

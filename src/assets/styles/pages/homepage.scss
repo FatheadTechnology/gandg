@@ -7,7 +7,7 @@
     margin: $base-top-margin 0 0;
     //background-image: url("https://assets.fathead.com/swipe-patterns/shining_sparrows_flat.jpg");
     background-color: red;
-    background-image: url("http://i63.tinypic.com/64fqmp.png");
+   /* background-image: url("http://i63.tinypic.com/64fqmp.png");*/
     background-size: cover;
     background-position: center;
     height: $hero-height;
@@ -48,6 +48,21 @@
       }
     }
   }
+//TODO : MAKE UNDER M CLASS
+  //TODO : MAKE UNDER S CLASS
+  @include m {
+    #hero {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #hero-content {
+        left: auto;
+        top: auto;
+      }
+    }
+  }
+
   #cta-hero-bar {
     width: 100%;
     background-color: $hero-cta-bg-color;
@@ -55,6 +70,47 @@
     padding: 1em;
     box-sizing: border-box;
     text-align: center;
+  }
+
+}
+
+#featured-artist-grid-container{
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 0 0 3em;
+  h1{
+    padding: 1.5em 1.25em .25em;
+  }
+  p{
+    padding: .25em $artist-grid-spacing;
+    max-width: 65em;
+  }
+  .product-grid{
+    margin: $artist-grid-spacing;
+  }
+
+}
+
+#subheader-grid-container{
+  box-sizing: border-box;
+  h1{
+    text-align: center;
+    padding: 1.5em 1.25em .25em;
+  }
+  p{
+    padding: .25em $artist-grid-spacing;
+    max-width: 65em;
+  }
+  .product-grid{
+    text-align: center;
+    text-transform: uppercase;
+    .product-grid-item-header{
+      letter-spacing: .25em;
+    }
+    .product-grid-item-subheader{
+      letter-spacing: .15em;
+    }
+
   }
 
 }

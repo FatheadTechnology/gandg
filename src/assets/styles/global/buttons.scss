@@ -17,6 +17,11 @@
   }
 }
 
+@include m{
+  .btn{
+    width: auto;
+  }
+}
 @include retina{
   .btn{
     //TODO: SHOULD BUTTONS CHANGE ON HIGH RES??!??
@@ -44,6 +49,7 @@
   }
 }
 
+// TODO : make social btns centered with margin to there left
 .social-btn{
   border-radius: 100%;
   width: 50px;
@@ -72,6 +78,8 @@
 .btn-center-container{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 #help-btn{
