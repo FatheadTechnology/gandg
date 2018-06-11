@@ -1,9 +1,11 @@
 <template>
   <div id="mobile-nav">
     <img src="../assets/hamburger.png" alt="Hamburger">
-    <img src="../assets/gandg.png" alt="Guild & Grace">
-    <img src="../assets/cart.png" alt="Guild & Grace">
-
+    <img src="../assets/logo.png" alt="Guild & Grace">
+    <img src="../assets/cart.png" alt="Cart">
+<!--
+TODO: make this all svg goodness
+-->
   </div>
 </template>
 

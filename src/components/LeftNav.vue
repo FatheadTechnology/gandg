@@ -1,6 +1,6 @@
 <template>
   <div id="left-nav">
-    <img src="../assets/guildandgrace.png" alt="Guild & Grace">
+    <img src="../assets/logo.png" alt="Guild & Grace">
 
     <!--TODO : make ids that make sense for hover -->
     <div class="left-menu-item" id="wallpaper"><span>Wallpaper</span> <span> > </span></div>

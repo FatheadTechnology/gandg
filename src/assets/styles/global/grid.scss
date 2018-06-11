@@ -34,9 +34,9 @@
     flex-direction: column;
     cursor: pointer;
     border-bottom: 2px solid rgba(255,255,255,0);
-    transition: all 1.25s ease-in-out;
+    transition: all .35s ease-in-out;
     &:hover{
-      transition: all 1.25s ease-in-out;
+      transition: all .35s ease-in-out;
       border-bottom: 2px solid $btn-primary-bg-color;
   }
 
