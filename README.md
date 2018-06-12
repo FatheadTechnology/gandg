@@ -1,4 +1,4 @@
-# scss-testing
+# G&G
 
 > A Vue.js project
 
