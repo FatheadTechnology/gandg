@@ -18,28 +18,32 @@
     <div id="subheader-grid-container">
       <div class="product-grid">
         <div class="product-grid-item-container">
-          <div class="product-grid-item-image">
+          <div class="product-grid-item-image-container">
+            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonLamaisondespapillonsNavy12x12.jpg');"></div>
           </div>
           <span class="product-grid-item-header"> vintage</span>
           <span class="product-grid-item-subheader">gritty & grungy</span>
         </div>
 
         <div class="product-grid-item-container">
-          <div class="product-grid-item-image">
+          <div class="product-grid-item-image-container">
+            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonDunesGray24x24.jpg');"></div>
           </div>
           <span class="product-grid-item-header"> Geometric</span>
           <span class="product-grid-item-subheader">patterns & lines</span>
         </div>
 
         <div class="product-grid-item-container">
-          <div class="product-grid-item-image">
+          <div class="product-grid-item-image-container">
+            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/resting_sparrows_white.jpg');"></div>
           </div>
           <span class="product-grid-item-header"> Damask</span>
           <span class="product-grid-item-subheader">traditional style</span>
         </div>
 
         <div class="product-grid-item-container">
-          <div class="product-grid-item-image">
+          <div class="product-grid-item-image-container">
+            <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/deco_diamond_blue-01.jpg');"></div>
           </div>
           <span class="product-grid-item-header">Kids</span>
           <span class="product-grid-item-subheader">fun & funky</span>
@@ -70,34 +74,40 @@
       <p>Multi-disciplinary designers, Wayne & Gerardine Hemingway, bring an iconic style to their wallpaper designs
 with a graphic style & vintage cool.</p>
       <div class="product-grid">
+
         <div class="product-grid-item-container">
-          <div class="product-grid-item-image">
+          <div class="product-grid-item-image-container">
+            <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/deco_diamond_blue-01.jpg');"></div>
           </div>
           <span class="product-grid-item-header"> Some Product Name</span>
           <span class="product-grid-item-subheader">6 colors available</span>
         </div>
 
         <div class="product-grid-item-container">
-          <div class="product-grid-item-image">
+          <div class="product-grid-item-image-container">
+            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/resting_sparrows_white.jpg');"></div>
           </div>
           <span class="product-grid-item-header"> Some Product Name</span>
           <span class="product-grid-item-subheader">6 colors available</span>
         </div>
 
         <div class="product-grid-item-container">
-          <div class="product-grid-item-image">
+          <div class="product-grid-item-image-container">
+            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonDunesGray24x24.jpg');"></div>
           </div>
           <span class="product-grid-item-header"> Some Product Name</span>
           <span class="product-grid-item-subheader">6 colors available</span>
         </div>
 
         <div class="product-grid-item-container">
-          <div class="product-grid-item-image">
+          <div class="product-grid-item-image-container">
+            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonLamaisondespapillonsNavy12x12.jpg');"></div>
           </div>
           <span class="product-grid-item-header"> Some Product Name</span>
           <span class="product-grid-item-subheader">6 colors available</span>
         </div>
       </div>
+
       <div class="btn-center-container">
         <div class="btn primary-btn">SEE THE COLLECTION</div>
         <a href="#">See All Artists</a>
@@ -110,7 +120,7 @@ with a graphic style & vintage cool.</p>
 </template>
 
 <script>
-  import ProductGridLineMock from './ProductGridLineMock'
+  import ProductGridLineMock from '../ProductGridLineMock'
 
   export default {
     name: 'HelloWorld',

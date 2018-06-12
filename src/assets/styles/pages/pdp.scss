@@ -1,1 +1,66 @@
 @import "../variables/variables";
+
+#pdp {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5em;
+  margin: 1.5em 0;
+
+  .pdp-top-content {
+  }
+
+  #pdp-image-container {
+    grid-column: span 2 / auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $grid-gap-pdp;
+
+    #active-image {
+      grid-column: span 2 / auto;
+    }
+
+    .pdp-image-choice {
+      margin-top: $grid-gap-pdp;
+      grid-column: span 1 / auto;
+    }
+  }
+
+  #pdp-purchase-container {
+    grid-column: span 2 / auto;
+
+    #color-ways-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-gap: .5em;
+      .color-way-grid-item {
+        grid-column: span 1 / auto;
+        background-color: red;
+      }
+    }
+  }
+
+  //TODO :
+  .pdp-full-width-content {
+    grid-column: span 4 / auto;
+  }
+
+}
+
+@include under-m {
+  #pdp {
+    margin: $grid-gap-pdp;
+
+    #pdp-image-container {
+      grid-column: span 4 / auto;
+    }
+    #pdp-purchase-container {
+      grid-column: span 4 / auto;
+    }
+    .mobile-center-pdp-btn{
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+}

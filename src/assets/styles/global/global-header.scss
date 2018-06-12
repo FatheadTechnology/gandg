@@ -1,2 +1,64 @@
 @import "../variables/variables";
 
+.header {
+  margin: $base-top-margin 0 0;
+  //background-image: url("https://assets.fathead.com/swipe-patterns/shining_sparrows_flat.jpg");
+  /*
+  background-color: red;
+  */
+  background-color: red;
+  background-size: cover;
+  background-position: bottom;
+  height: $header-height;
+  position: relative;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  //TODO : CENTER AND BLUR BG ON XXXL
+  .header-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255,255,255,.75);
+    backdrop-filter: blur(5px);
+    border: 1px solid $a-hover-color;
+    padding: 1em;
+    max-width: 300px;
+    margin-left: $header-cta-left-margin;
+    height: $header-cta-height;
+    // color: $hero-content-color;
+    p{
+      text-align: justify;
+      font-size: 1.25em;
+    }
+    h2 {
+      color: $a-hover-color;
+      text-transform: uppercase;
+    }
+  }
+}
+@include s {
+  .header {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .header-content {
+      margin: 0 !important;
+    }
+  }
+}
+
+@include m {
+  .header {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .header-content {
+      margin: 0 !important;
+    }
+  }
+}

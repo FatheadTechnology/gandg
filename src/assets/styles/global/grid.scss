@@ -22,6 +22,49 @@
 
 }
 
+
+.main-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5em;
+  margin: 1.5em 0;
+}
+
+
+
+@include xs {
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-column-gap: .25em !important;
+    grid-row-gap: .25em !important;
+    margin: .25em !important;
+  }
+
+}
+
+@include s {
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin: 1em;
+  }
+}
+
+@include m {
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: .5em;
+    grid-row-gap: .5em;
+    margin: .5em 0;
+  }
+
+}
+
+
 //TODO: product grid variants? other class or ...
 .product-grid {
   display: grid;
@@ -33,10 +76,12 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    border-top: 2px solid rgba(255,255,255,0);
     border-bottom: 2px solid rgba(255,255,255,0);
     transition: all .35s ease-in-out;
     &:hover{
       transition: all .35s ease-in-out;
+      border-top: 2px solid $btn-primary-bg-color;
       border-bottom: 2px solid $btn-primary-bg-color;
   }
 
@@ -49,11 +94,28 @@
       font-size: 1em;
       margin-bottom: 1em;
     }
-    .product-grid-item-image {
+    .product-grid-item-image-container {
+      position: relative;
+      &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: (1 / 1) * 100%;
+      }
+      > .product-grid-item-image  {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: red;
+      }
+    }
+ /*   .product-grid-item-image {
       height: 200px;
       background-color: red;
       width: 100%;
-    }
+    }*/
   }
 }
 
@@ -73,7 +135,6 @@
       flex-direction: column;
 
       .product-grid-item-image {
-        height: 200px;
         background-color: red;
         width: 100%;
       }
