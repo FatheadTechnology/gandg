@@ -19,7 +19,7 @@
 
         </div>
       </div>
-      <h1>TODO : MAKE SLIDER ON MOBILE</h1>
+      <h4>TODO : MAKE SLIDER ON MOBILE</h4>
 
     </div>
 

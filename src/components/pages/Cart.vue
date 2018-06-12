@@ -1,118 +1,41 @@
 <template>
-  <div id="home">
-    <div id="hero">
-      <div id="hero-content">
-        <h2>Transform Your Room</h2>
-        <p>
-          Our wallpaper is easy to hang and comes off clean so you can make your room match your style without the fuss. </p>
-        <div id="hero-btn" class="btn primary-btn">CALL TO ACTION</div>
-      </div>
+  <div id="cart">
+    <div id="cart-header">
+     <h1> Shopping Cart</h1>
     </div>
-    <div id="cta-hero-bar">
-      Memorial Day Sale: 30% Off Select Styles
-
-
-
+    <div id="label-bar">
+      <div class="cart-label cart-item"> Pattern</div>
+      <div class="cart-label quantity"> Quantity</div>
+      <div class="cart-label"> Price</div>
+      <div class="cart-label"> Total</div>
+      <div class="cart-label"> Remove</div>
     </div>
 
-    <div id="subheader-grid-container">
-      <div class="product-grid">
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonLamaisondespapillonsNavy12x12.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> vintage</span>
-          <span class="product-grid-item-subheader">gritty & grungy</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonDunesGray24x24.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Geometric</span>
-          <span class="product-grid-item-subheader">patterns & lines</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/resting_sparrows_white.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Damask</span>
-          <span class="product-grid-item-subheader">traditional style</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/deco_diamond_blue-01.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header">Kids</span>
-          <span class="product-grid-item-subheader">fun & funky</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="btn-center-container">
-      <div class="btn primary-btn">See all design styles</div>
-    </div>
-
-    <h2>Featured Patterns</h2>
-    <product-grid-line-mock></product-grid-line-mock>
-    <div class="btn-center-container">
-      <div class="btn primary-btn">See all patterns</div>
-    </div>
-
-    <h2>Recently Viewed</h2>
-    <product-grid-line-mock></product-grid-line-mock>
-
-    <div class="btn-center-container">
-      <div class="btn primary-btn">See all viewed patterns</div>
-    </div>
-
-
-    <div id="featured-artist-grid-container">
-      <h1>Featured Artist</h1>
-      <p>Multi-disciplinary designers, Wayne & Gerardine Hemingway, bring an iconic style to their wallpaper designs
-with a graphic style & vintage cool.</p>
-      <div class="product-grid">
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/deco_diamond_blue-01.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Some Product Name</span>
-          <span class="product-grid-item-subheader">6 colors available</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/resting_sparrows_white.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Some Product Name</span>
-          <span class="product-grid-item-subheader">6 colors available</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonDunesGray24x24.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Some Product Name</span>
-          <span class="product-grid-item-subheader">6 colors available</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonLamaisondespapillonsNavy12x12.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Some Product Name</span>
-          <span class="product-grid-item-subheader">6 colors available</span>
-        </div>
+    <div class="cart-line">
+      <div class=" cart-label cart-item">
+        some stuff here FLEX ME OUT
       </div>
 
-      <div class="btn-center-container">
-        <div class="btn primary-btn">SEE THE COLLECTION</div>
-        <a href="#">See All Artists</a>
+      <div class="cart-label quantity">
+        from old site quantity here
       </div>
 
+      <div class="cart-label">$95</div>
+      <div class="cart-label">$190</div>
+      <div class="cart-label remove">x</div>
+
+    </div>
+
+    <div id="cart-last-line">
+      <div id="promo" class="cart-label">
+        PROMO STUFF HERE
+      </div>
+      <div id="total" class="cart-label">
+        Total :
+      </div>
+      <div id="total-ammount" class="cart-label">
+        $190
+      </div>
     </div>
   </div>
 

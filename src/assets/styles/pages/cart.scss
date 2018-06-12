@@ -1,1 +1,79 @@
 @import "../variables/variables";
+
+#cart{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: $cart-item-padding;
+
+  .cart-label{
+    padding: $cart-item-padding;
+    box-sizing: border-box;
+    text-align: right;
+  }
+  #cart-header{
+    grid-column: span 8 / auto;
+    h1{
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .cart-item{
+    grid-column: span 3 / auto;
+  }
+  .quantity{
+    grid-column: span 2 / auto;
+  }
+
+
+  #label-bar{
+    grid-column: span 8 / auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: $cart-item-padding;
+    background-color: $footer-bg-color;
+    color: $footer-color;
+    .cart-item{
+      grid-column: span 3 / auto;
+    }
+    .quantity{
+      grid-column: span 2 / auto;
+    }
+
+  }
+
+  .cart-line{
+    grid-column: span 8 / auto;
+    border-bottom: 1px solid $footer-bg-color;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: $cart-item-padding;
+    .cart-item{
+      grid-column: span 3 / auto;
+    }
+    .quantity{
+      grid-column: span 2 / auto;
+    }
+
+    .remove{
+      color: $btn-primary-bg-color;
+    }
+  }
+
+  #cart-last-line{
+    grid-column: span 8 / auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: $cart-item-padding;
+
+    #promo{
+      grid-column: span 5 / auto;
+    }
+    #total{
+
+    }
+    #total-ammount{
+
+    }
+
+  }
+}
