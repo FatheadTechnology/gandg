@@ -3,7 +3,7 @@ html,body{
   padding: 0;
 }
 //MAIN GRID
-$main-grid-gap: 10px;
+$main-grid-gap: 3em;
 $base-top-margin: 2em;
 
 //GLOBAL BUTTONS
@@ -29,8 +29,16 @@ $right-nav-size-small: 50px;
 //HERO
 $hero-height: 400px;
 
+//HEADERS
+$header-height: 300px;
+$header-cta-height: 250px;
+$header-cta-left-margin: 2em;
+
 //FOOTER
 $footer-link-margin: .75em;
 
 //HOMEPAGE
 $artist-grid-spacing:  2.5em;
+
+//PDP
+$grid-gap-pdp : 1em;

@@ -6,12 +6,15 @@
   #hero {
     margin: $base-top-margin 0 0;
     //background-image: url("https://assets.fathead.com/swipe-patterns/shining_sparrows_flat.jpg");
+    /*
     background-color: red;
-   /* background-image: url("http://i63.tinypic.com/64fqmp.png");*/
+    */
+    background-image: url("http://i63.tinypic.com/64fqmp.png");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     height: $hero-height;
     position: relative;
+    //TODO : CENTER AND BLUR BG ON XXXL
     #hero-content {
       text-align: center;
       display: flex;

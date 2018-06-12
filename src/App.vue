@@ -17,10 +17,10 @@
 </template>
 
 <script>
-  import LeftNav from './components/LeftNav'
-  import RightNav from './components/RightNav'
-  import MobileNav from './components/MobileNav'
-  import GlobalFooter from './components/GlobalFooter'
+  import LeftNav from './components/global/LeftNav'
+  import RightNav from './components/global/RightNav'
+  import MobileNav from './components/global/MobileNav'
+  import GlobalFooter from './components/global/GlobalFooter'
 
   export default {
     name: 'App',
