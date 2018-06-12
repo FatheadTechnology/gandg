@@ -45,7 +45,7 @@ TODO : ADD IN FILTERS
   import ProductGridLineMock from '../ProductGridLineMock'
 
   export default {
-    name: 'ProductList',
+    name: 'HelloWorld',
     components: {
       ProductGridLineMock
     },

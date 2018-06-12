@@ -51,17 +51,14 @@
 
 // TODO : make social btns centered with margin to there left
 .social-btn{
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  background-color: $a-hover-color;
+  //border-radius: 100%;
+  width: 2.5em;
+  height: 2.5em;
+  //background-color: $a-hover-color;
   margin: 1em;
-  box-shadow: $btn-shadow;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
   &:hover{
-    background-color: lighten($a-hover-color, 5%);
-    box-shadow: $btn-shadow-hover;
   }
 }
 
@@ -86,8 +83,8 @@
   position: fixed;
   right: -12px;
   bottom: -22px;
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   border-radius: 100%;
   background-color: $btn-primary-bg-color;
   color: $btn-primary-color;
@@ -100,6 +97,11 @@
   &:hover{
     background-color: darken($btn-primary-bg-color, 5%);
     box-shadow: $btn-shadow-hover;
+  }
+
+  img{
+    margin-top: -14px;
+    width: 45px;
   }
 }
 

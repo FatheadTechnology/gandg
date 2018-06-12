@@ -10,7 +10,7 @@
     <router-link tag="div" to="/find-your-style" class="btn secondary-btn" id="find-your-style">
       FIND YOUR STYLE
     </router-link>
-    <router-link tag="div" to="/how-to-home" class="left-menu-item" id="how-to-link"><span>How To</span> </router-link>
+    <router-link tag="div" to="/how-to" class="left-menu-item" id="how-to-link"><span>How To</span> </router-link>
     <router-link tag="div" to="/blog" class="left-menu-item" id="blog-link"><span>Blog</span>  </router-link>
     <router-link tag="div" to="/about-us" class="left-menu-item" id="about-us-link"><span>About</span>  </router-link>
 
