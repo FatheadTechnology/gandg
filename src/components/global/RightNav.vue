@@ -1,9 +1,10 @@
 <template>
   <div id="right-nav">
-    <div class="social-btn"></div>
-    <div class="social-btn"></div>
-    <div class="social-btn"></div>
-    <div class="social-btn"></div>
+    <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/cart.svg" alt="Cart">
+    <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/search3.svg" alt="Search">
+    <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/heart3.svg" alt="Favorites">
+    <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/user2.svg" alt="Profile">
+    TODO : custom btns from design
   </div>
 </template>
 

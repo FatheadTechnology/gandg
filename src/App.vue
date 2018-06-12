@@ -12,7 +12,10 @@
     <!--
     TODO: absolute position the icon in the help btn?
     -->
-    <div id="help-btn">?</div>
+    <div id="help-btn">
+      <img src="./assets/icomoon_6_icons/SVG/bubbles2.svg" alt="Chat Bubble">
+
+    </div>
   </div>
 </template>
 
