@@ -18,6 +18,8 @@
 @include m {
   #app {
     grid-template-columns: $left-nav-size-small 1fr $right-nav-size-small;
+    grid-column-gap: $main-grid-gap-m;
+
   }
 
 }

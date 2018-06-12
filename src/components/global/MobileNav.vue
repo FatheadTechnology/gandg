@@ -1,8 +1,9 @@
 <template>
   <div id="mobile-nav">
-    <span>BURGER</span>
-    <span>LOGO</span>
-    <span>CART</span>
+    <img  src="../../assets/icomoon_6_icons/SVG/menu.svg" alt="menu">
+    <img  src="../../assets/fakegg.svg" alt="home">
+    <img  src="../../assets/icomoon_6_icons/SVG/cart.svg" alt="cart">
+
 <!--
     <img src="../assets/hamburger.png" alt="Hamburger">
 

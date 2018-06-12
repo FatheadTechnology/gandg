@@ -58,7 +58,10 @@
   margin: 1em;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
+  border-bottom: 2px solid rgba(255,255,255,0);
   &:hover{
+    transition: all 0.25s ease-in-out;
+    border-bottom: 2px solid $btn-secondary-bg-color;
   }
 }
 
