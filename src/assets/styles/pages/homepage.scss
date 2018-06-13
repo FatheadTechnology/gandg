@@ -45,6 +45,8 @@
 
   @include s {
     #hero {
+      background-position: left;
+      //TODO : FIGURE OUT RESPONSIVE BACKGROUND IMAGE GUIDLINES WITH ELLEN
       margin: 0;
       display: flex;
       justify-content: center;
@@ -72,7 +74,7 @@
 
   @include xl {
     #hero {
-      height: 600px;
+      height: $xl-hero-height;
       background-position: center 65%;
       #hero-content {
 
@@ -91,6 +93,12 @@
   padding: 1em;
   box-sizing: border-box;
   text-align: center;
+  position: relative;
+  #close-hero{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
 }
 #hero-bar {
   width: 100%;

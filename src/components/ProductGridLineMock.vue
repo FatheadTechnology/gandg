@@ -38,7 +38,7 @@
 
 <script>
   export default {
-    name: 'Mock Line',
+    name: 'MockLine',
     data () {
       return {
         msg: 'Welcome to Your Vue.js App'

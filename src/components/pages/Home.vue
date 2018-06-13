@@ -1,9 +1,12 @@
 <template>
   <div id="home">
-    <div id="cta-hero-bar">
+    <div id="cta-hero-bar" v-show="!showCTA">
       Memorial Day Sale: 30% Off Select Styles
+      <div id="close-hero" :click="showCTA = !showCTA">
+      <span > X</span>
+      </div>
     </div>
-    <div id="hero">
+    <div id="hero" >
 <!--      <div id="hero-content">
         <h2>Transform Your Room</h2>
         <p>
@@ -12,7 +15,7 @@
       </div>-->
     </div>
     <div id="hero-bar">
-      <h2>Transform Your Room</h2>
+      <h2>{{showCTA}}Transform Your Room</h2>
       <p>
        Our wallpaper is easy to hang and comes off clean so you can make your room match your style without the fuss. </p>
     </div>
@@ -137,7 +140,9 @@ with a graphic style & vintage cool.</p>
     },
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        msg: 'Welcome to Your Vue.js App',
+        showCTA: true
+        //TODO : WTF IS GOING ON HERE?!??!?!?!?!?!?
       }
     }
   }
