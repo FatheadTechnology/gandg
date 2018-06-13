@@ -4,7 +4,8 @@
   align-items: center;
 
   #hero {
-    margin: $base-top-margin 0 0;
+    //margin:  0 0 $base-top-margin;
+    margin: 0;
     //background-image: url("https://assets.fathead.com/swipe-patterns/shining_sparrows_flat.jpg");
     /*
     background-color: red;
@@ -13,6 +14,7 @@
     background-size: cover;
     background-position: center;
     height: $hero-height;
+    //TODO : xl height
     position: relative;
     //TODO : CENTER AND BLUR BG ON XXXL
     #hero-content {
@@ -40,6 +42,7 @@
       }
     }
   }
+
   @include s {
     #hero {
       margin: 0;
@@ -67,16 +70,55 @@
     }
   }
 
-  #cta-hero-bar {
-    width: 100%;
-    background-color: $hero-cta-bg-color;
-    color: $hero-cta-color;
-    padding: 1em;
-    box-sizing: border-box;
-    text-align: center;
+  @include xl {
+    #hero {
+      height: 600px;
+      background-position: center 65%;
+      #hero-content {
+
+      }
+    }
   }
 
 }
+
+
+//TODO: CTA HERO AT TOP
+#cta-hero-bar {
+  width: 100%;
+  background-color: $hero-cta-bg-color;
+  color: $hero-cta-color;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+}
+#hero-bar {
+  width: 100%;
+  background-color: $btn-primary-bg-color;
+  color: $hero-cta-color;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    margin: .25em;
+    padding: .25em;
+    border-bottom: 1px dotted $hero-cta-color;
+    border-top: 1px dotted $hero-cta-color;
+  }
+  p{
+    text-transform: uppercase;
+    margin: .25em;
+    padding: .25em;
+  }
+}
+
+
 
 #featured-artist-grid-container{
   box-sizing: border-box;
