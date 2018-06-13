@@ -1,8 +1,8 @@
 <template>
   <div id="home">
-    <div id="cta-hero-bar" v-show="!showCTA">
+    <div id="cta-hero-bar" v-show="showCTA">
       Memorial Day Sale: 30% Off Select Styles
-      <div id="close-hero" :click="showCTA = !showCTA">
+      <div id="close-hero" v-on:click="showCTA = !showCTA">
       <span > X</span>
       </div>
     </div>
@@ -15,7 +15,7 @@
       </div>-->
     </div>
     <div id="hero-bar">
-      <h2>{{showCTA}}Transform Your Room</h2>
+      <h2>Transform Your Room</h2>
       <p>
        Our wallpaper is easy to hang and comes off clean so you can make your room match your style without the fuss. </p>
     </div>

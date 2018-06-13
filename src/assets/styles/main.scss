@@ -32,3 +32,56 @@ div{
   }
 }
 */
+
+#breakpoint-teller{
+  position: fixed;
+  left: 5px;
+  bottom: 5px;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  text-transform: uppercase;
+}
+@include s{
+  #breakpoint-teller{
+    background-color: red;
+
+  }
+  #breakpoint-teller::after {
+    content: 's';
+  }
+}
+
+@include m{
+  #breakpoint-teller{
+    background-color: orange;
+
+  }
+  #breakpoint-teller::after {
+    content: 'm';
+  }
+}
+
+@include l{
+
+  #breakpoint-teller::after {
+    content: 'l';
+
+  }
+}
+
+@include xl{
+  #breakpoint-teller{
+    background-color: green;
+
+  }
+  #breakpoint-teller::after {
+    content: 'xl';
+
+  }
+}

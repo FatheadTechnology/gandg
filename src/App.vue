@@ -16,6 +16,7 @@
       <img src="./assets/icomoon_6_icons/SVG/bubbles2.svg" alt="Chat Bubble">
 
     </div>
+    <div id="breakpoint-teller"></div>
   </div>
 </template>
 
