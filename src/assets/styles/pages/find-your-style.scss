@@ -1,6 +1,10 @@
 @import "../variables/variables";
 
 $choice-margin: 10px;
+#find-your-style-header {
+  background-image: url('https://assets.fathead.com/find-your-style-images/mcm.jpg');
+  background-size: cover;
+}
 .find-your-style-grid {
     margin: $choice-margin 0;
     display: grid;
@@ -104,3 +108,26 @@ $choice-margin: 10px;
   }
 }
 
+@include xl {
+  #find-your-style-header{
+    background-position: center 55%;
+  }
+}
+
+@include l {
+  #find-your-style-header{
+    background-position: center 45%;
+  }
+}
+
+@include m {
+  #find-your-style-header{
+    background-position: center 25%;
+  }
+}
+
+@include s {
+  #find-your-style-header{
+    background-position: center 45%;
+  }
+}

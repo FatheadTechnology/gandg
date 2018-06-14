@@ -1,7 +1,6 @@
 <template>
   <div id="find-your-style">
-    <div class="header" id="product-list-header"
-         style="background-image: url('https://assets.fathead.com/find-your-style-images/mcm.jpg'); background-position: center; background-size: cover;">
+    <div class="header" id="find-your-style-header">
 
 
   </div>
