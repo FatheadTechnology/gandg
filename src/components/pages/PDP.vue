@@ -1,25 +1,20 @@
 <template>
   <div id="pdp">
     <div class="pdp-top-content" id="pdp-image-container">
+
       <div class="maintain-square-image-container" id="active-image">
         <div class="maintain-square-image">
         </div>
       </div>
-      <!-- TODO : on mobile there will be no active image, just a scroll through of the image choices?
-            TODO: on mobile maybe use a totally different container???
-      -->
 
-      <div class="maintain-square-image-container pdp-image-choice">
-        <div class="maintain-square-image">
+      <div id="pdp-image-selection">
+        <div class="maintain-square-image-container pdp-image-choice" v-for="i in 5">
+          <div class="maintain-square-image">
 
+          </div>
         </div>
-      </div>
-      <div class="maintain-square-image-container pdp-image-choice">
-        <div class="maintain-square-image">
 
-        </div>
       </div>
-      <h4>TODO : MAKE SLIDER ON MOBILE</h4>
 
     </div>
 
@@ -82,20 +77,29 @@
       <a href="#" id="order-sample">Order a sample swatch</a>
     </div>
 
-    <!--TODO : Build Accordion -->
-    <div class="pdp-full-width-content">
-      <span>TODO : Build Accordion</span>
+
+<div id="accordion-container">
+    <div class="accordion-header" id="accordion-header-1" v-on:click="showAccordion1 = !showAccordion1">
+    <h2>Description</h2><h2 v-if="!showAccordion1">+</h2><h2 v-if="showAccordion1">-</h2>
+    </div>
+    <div class="pdp-full-width-content" id="accordion-content-1"  v-if="showAccordion1" >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
 
-    <div class="pdp-full-width-content">
-      <h2>Description</h2>
+    <div class="accordion-header" id="accordion-header-2"  v-on:click="showAccordion2 = !showAccordion2">
+      <h2>Weight & Dimensions</h2><h2 v-if="!showAccordion2">+</h2><h2 v-if="showAccordion2">-</h2>
     </div>
-    <div class="pdp-full-width-content">
-      <h2>Weight & Dimensions</h2>
+    <div class="pdp-full-width-content" id="accordion-content-2"  v-if="showAccordion2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
-    <div class="pdp-full-width-content">
-      <h2>Delivery Options</h2>
+
+    <div class="accordion-header" id="accordion-header-3"  v-on:click="showAccordion3 = !showAccordion3">
+      <h2>Delivery Options</h2><h2 v-if="!showAccordion3">+</h2><h2 v-if="showAccordion3">-</h2>
     </div>
+    <div class="pdp-full-width-content" id="accordion-content-3" v-if="showAccordion3" >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+</div>
 
     <div class="pdp-full-width-content">
       <h2>Related Patterns</h2>
@@ -130,7 +134,11 @@
     },
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        msg: 'Welcome to Your Vue.js App',
+        showAccordion1: false,
+        showAccordion2: false,
+        showAccordion3: false
+
       }
     }
   }

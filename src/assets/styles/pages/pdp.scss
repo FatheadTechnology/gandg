@@ -16,7 +16,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: $grid-gap-pdp;
     box-sizing: border-box;
-    padding: 0 1.5em 3em 1.5em;
+    padding:0;
 
     #active-image {
       grid-column: span 2 / auto;
@@ -25,6 +25,14 @@
     .pdp-image-choice {
       margin-top: $grid-gap-pdp;
       grid-column: span 1 / auto;
+    }
+
+    #pdp-image-selection{
+      grid-column: span 2 / auto;
+
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: $grid-gap-pdp;
     }
   }
 
@@ -51,6 +59,25 @@
   //TODO :
   .pdp-full-width-content {
     grid-column: span 4 / auto;
+  }
+
+  #accordion-container{
+    margin: 2em 0;
+    grid-column: span 4 / auto;
+
+    .accordion-header{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $footer-bg-color;
+      cursor: pointer;
+      margin: 1em 0;
+      user-select: none;
+      transition: all .15s ease-in-out;
+
+    }
+    .accordion-content{
+      transition: all .15s ease-in-out;
+    }
   }
 
 }
