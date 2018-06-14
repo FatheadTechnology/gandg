@@ -1,0 +1,44 @@
+#how-to-video {
+  .steps {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    @include s {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+    .left-side {
+      width: 60%;
+      margin-right: 20px;
+      @include xl {
+        width: 75%;
+      }
+      @include s {
+        width: 100%;
+        margin-right: 0;
+        padding: 0 20px;
+      }
+    }
+    .right-side {
+      margin-left: 20px;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      @include xl {
+        width: 25%;
+      }
+      @include s {
+        width: 100%;
+        margin-left: 0;
+      }
+      .vertical-videos {
+        .product-grid-item-header {
+          margin-bottom: 30px;
+          display: inline-block;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
