@@ -7,13 +7,22 @@
       <div class="cart-label cart-item"> Pattern</div>
       <div class="cart-label quantity"> Quantity</div>
       <div class="cart-label"> Price</div>
-      <div class="cart-label"> Total</div>
+      <div class="cart-label"> Total Price</div>
       <div class="cart-label"> Remove</div>
     </div>
 
-    <div class="cart-line">
+    <div class="cart-line" v-for="i in 4">
       <div class=" cart-label cart-item">
-        some stuff here FLEX ME OUT
+        <div class="cart-item-image-container">
+        <div class="cart-item-image"></div></div>
+        <div class="cart-item-details">
+          <h4>Product Name</h4>
+          <span>some thing here</span>
+          <span>Donec id elit non mi  metus.</span>
+          <span>some thing here</span>
+          <span>TODO : ADD FREE SQUEEGEE & KNIFE</span>
+        </div>
+
       </div>
 
       <div class="cart-label quantity">
@@ -31,12 +40,19 @@
         PROMO STUFF HERE
       </div>
       <div id="total" class="cart-label">
-        Total :
+        Total Price :
       </div>
       <div id="total-ammount" class="cart-label">
-        $190
+        ${{190 * 4}}
       </div>
     </div>
+
+    <div id="checkout-btn-container">
+      <div class="spacer"></div>
+      <div class="btn primary-btn">CHECK OUT</div>
+      <div class="spacer"></div>
+    </div>
+
   </div>
 
 
