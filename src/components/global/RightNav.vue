@@ -15,7 +15,9 @@
     <router-link tag="div" to="/profile"  id="profile-link">
     <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/user2.svg" alt="Profile">
     </router-link>
+<!--
       TODO : custom btns from design
+-->
   </div>
 </template>
 
