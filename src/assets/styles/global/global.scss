@@ -7,15 +7,15 @@
 @import "./type";
 @import "./global-header";
 @import "./image-helpers";
-
-html,body{
+@import "./videos";
+html,
+body {
   min-height: 100vh;
 }
-body{
+body {
   font-size: $base-font-size;
   font-family: $base-font;
   font-weight: $base-font-weight;
   background-color: $bg-color;
   color: $base-text-color;
 }
-

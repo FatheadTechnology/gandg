@@ -5,7 +5,6 @@
   display: grid;
   grid-template-columns: $left-nav-size 1fr $right-nav-size;
   grid-column-gap: $main-grid-gap;
-
 }
 
 @include s {
@@ -19,30 +18,24 @@
   #app {
     grid-template-columns: $left-nav-size-small 1fr $right-nav-size-small;
     grid-column-gap: $main-grid-gap-m;
-
   }
-
 }
 
-
-.main-grid{
+.main-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1.5em;
   margin: 1.5em 0;
 }
 
-
-
 @include xs {
   .main-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr) !important;
-    grid-column-gap: .25em !important;
-    grid-row-gap: .25em !important;
-    margin: .25em !important;
+    grid-column-gap: 0.25em !important;
+    grid-row-gap: 0.25em !important;
+    margin: 0.25em !important;
   }
-
 }
 
 @include s {
@@ -59,13 +52,11 @@
   .main-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: .5em;
-    grid-row-gap: .5em;
-    margin: .5em 0;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+    margin: 0.5em 0;
   }
-
 }
-
 
 //TODO: product grid variants? other class or ...
 .product-grid {
@@ -78,21 +69,21 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    border-top: 2px solid rgba(255,255,255,0);
-    border-bottom: 2px solid rgba(255,255,255,0);
-    transition: all .35s ease-in-out;
-    &:hover{
-      transition: all .35s ease-in-out;
+    border-top: 2px solid rgba(255, 255, 255, 0);
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: all 0.35s ease-in-out;
+    &:hover {
+      transition: all 0.35s ease-in-out;
       border-top: 2px solid $btn-primary-bg-color;
       border-bottom: 2px solid $btn-primary-bg-color;
-  }
+    }
 
-    .product-grid-item-header{
-      margin-top: .5em;
+    .product-grid-item-header {
+      margin-top: 0.5em;
       font-size: 1.25em;
       font-weight: $header-font-weight;
     }
-    .product-grid-item-subheader{
+    .product-grid-item-subheader {
       font-size: 1em;
       margin-bottom: 1em;
     }
@@ -104,7 +95,7 @@
         width: 100%;
         padding-top: (1 / 1) * 100%;
       }
-      > .product-grid-item-image  {
+      > .product-grid-item-image {
         position: absolute;
         top: 0;
         right: 0;
@@ -113,14 +104,20 @@
         background-color: red;
       }
     }
- /*   .product-grid-item-image {
+    /*   .product-grid-item-image {
       height: 200px;
       background-color: red;
       width: 100%;
     }*/
   }
 }
-
+.product-grid.video-grid {
+  .product-grid-item-image-container {
+    &:before {
+      padding-top: 0;
+    }
+  }
+}
 
 @include xs {
   .product-grid {
@@ -128,9 +125,9 @@
     grid-template-columns: repeat(1, 1fr) !important;
     //TODO: PUNCH YOURSELF IN THE FUCKING FACE FOR USING AN IMPORTANT YOU PIECE OF SHIT
     // TODO : MAKE A REAL XS AND SMALL DIFFERENTION IN THE SHEETS BITCH
-    grid-column-gap: .25em !important;
-    grid-row-gap: .25em !important;
-    margin: .25em !important;
+    grid-column-gap: 0.25em !important;
+    grid-row-gap: 0.25em !important;
+    margin: 0.25em !important;
 
     .product-grid-item-container {
       display: flex;
@@ -142,7 +139,6 @@
       }
     }
   }
-
 }
 
 @include s {
@@ -158,21 +154,19 @@
       background-color: red;
     }
   }
-
 }
 
 @include m {
   .product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: .5em;
-    grid-row-gap: .5em;
-    margin: .5em 0;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+    margin: 0.5em 0;
 
     .product-grid-item {
       height: 200px;
       background-color: red;
     }
   }
-
 }
