@@ -1,132 +1,602 @@
 <template>
-  <div id="home">
-    <div id="hero">
-      <div id="hero-content">
-        <h2>Transform Your Room</h2>
-        <p>
-          Our wallpaper is easy to hang and comes off clean so you can make your room match your style without the fuss. </p>
-        <div id="hero-btn" class="btn primary-btn">CALL TO ACTION</div>
+  <div id="find-your-style">
+    <div class="header" id="product-list-header"
+         style="background-image: url('https://assets.fathead.com/find-your-style-images/mcm.jpg'); background-position: center; background-size: cover;">
+
+
+  </div>
+    <div class="header-bar">
+      <h2>FIND YOUR STYLE</h2>
+    </div>
+
+<!--START ROOM STYLE SECTION -->
+    <h1>1. Marketing copy for room style </h1>
+    <div class="find-your-style-grid">
+
+      <div class="choice-container room-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/find-your-style-images/contemporary.jpg'); background-size: cover;"></div>
+        </div>
+        <span class="choice-header"> Room Style Name</span>
+        <span class="choice-subheader">An explanation of this style in a short space</span>
+      </div>
+
+      <div class="choice-container room-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/find-your-style-images/mcm.jpg'); background-size: cover;"></div>
+        </div>
+        <span class="choice-header"> Room Style Name</span>
+        <span class="choice-subheader">An explanation of this style in a short space</span>
+      </div>
+
+      <div class="choice-container room-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/find-your-style-images/victorian.jpg'); background-size: cover;"></div>
+        </div>
+        <span class="choice-header"> Room Style Name</span>
+        <span class="choice-subheader">An explanation of this style in a short space</span>
+      </div>
+
+
+      <div class="choice-container room-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/find-your-style-images/contemporary.jpg'); background-size: cover;"></div>
+        </div>
+        <span class="choice-header"> Room Style Name</span>
+        <span class="choice-subheader">An explanation of this style in a short space</span>
+      </div>
+
+      <div class="choice-container room-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/find-your-style-images/mcm.jpg'); background-size: cover;"></div>
+        </div>
+        <span class="choice-header"> Room Style Name</span>
+        <span class="choice-subheader">An explanation of this style in a short space</span>
+      </div>
+
+      <div class="choice-container room-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/find-your-style-images/victorian.jpg'); background-size: cover;"></div>
+        </div>
+        <span class="choice-header"> Room Style Name</span>
+        <span class="choice-subheader">An explanation of this style in a short space</span>
+      </div>
+
+
+      <div class="choice-container room-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/find-your-style-images/contemporary.jpg'); background-size: cover;"></div>
+        </div>
+        <span class="choice-header"> Room Style Name</span>
+        <span class="choice-subheader">An explanation of this style in a short space</span>
+      </div>
+
+      <div class="choice-container room-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/find-your-style-images/mcm.jpg'); background-size: cover;"></div>
+        </div>
+        <span class="choice-header"> Room Style Name</span>
+        <span class="choice-subheader">An explanation of this style in a short space</span>
+      </div>
+
+
+    </div>
+<!--END ROOM STYLE SECTION -->
+
+<!--START PALETTE SECTION -->
+    <h1>2. Color Palettes </h1>
+    <div class="find-your-style-grid">
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+      <div class="choice-container palette-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square">
+            <div style="background-color: #ffcabf"></div>
+            <div style="background-color: orange"></div>
+            <div style="background-color: #ffdc4c"></div>
+            <div style="background-color: #ff6f6b"></div>
+            <div style="background-color: #ff9b52"></div>
+          </div>
+        </div>
+        <span class="choice-header"> Color Palette Name</span>
+        <span class="choice-subheader">An explanation of this palette</span>
+      </div>
+
+
+    </div>
+<!--END PALETTE SECTION -->
+
+<!--START COLOR SECTION -->
+    <h1>3. Marketing copy for colors </h1>
+    <div class="find-your-style-grid">
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #ff4932"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #ff9d22"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #fff959"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #c1ff72"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #3fff8a"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #74beff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #8f7fff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #c358ff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #ff4932"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #ff9d22"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #fff959"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #c1ff72"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #3fff8a"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #74beff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #8f7fff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #c358ff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #ff4932"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #ff9d22"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #fff959"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #c1ff72"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #3fff8a"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #74beff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #8f7fff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+      <div class="choice-container color-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-color: #c358ff"></div>
+        </div>
+        <span class="color-choice-header"> Color</span>
+      </div>
+
+    </div>
+<!--END COLOR SECTION -->
+
+<!--START PATTERN SECTION -->
+    <h1>4. Marketing copy for patterns </h1>
+    <div class="find-your-style-grid">
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/ArtDecoIsh_Wallpaper_KyleScott-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/Banana_Leaf-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/ArtDecoIsh_Wallpaper_KyleScott-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/Banana_Leaf-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/ArtDecoIsh_Wallpaper_KyleScott-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/Banana_Leaf-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/ArtDecoIsh_Wallpaper_KyleScott-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/Banana_Leaf-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/ArtDecoIsh_Wallpaper_KyleScott-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/Banana_Leaf-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/ArtDecoIsh_Wallpaper_KyleScott-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
+      </div>
+
+      <div class="choice-container pattern-choice">
+        <div class="choice-square-container ">
+          <div class="choice-square"
+               style="background-image: url('https://assets.fathead.com/swipe-patterns/Banana_Leaf-01.jpg');"></div>
+        </div>
+        <span class="choice-header"> Pattern Archetype</span>
+        <span class="choice-subheader">An explanation of this pattern style</span>
       </div>
     </div>
-    <div id="cta-hero-bar">
-      Memorial Day Sale: 30% Off Select Styles
-
-
-
-    </div>
-
-    <div id="subheader-grid-container">
-      <div class="product-grid">
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonLamaisondespapillonsNavy12x12.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> vintage</span>
-          <span class="product-grid-item-subheader">gritty & grungy</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonDunesGray24x24.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Geometric</span>
-          <span class="product-grid-item-subheader">patterns & lines</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/resting_sparrows_white.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Damask</span>
-          <span class="product-grid-item-subheader">traditional style</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/deco_diamond_blue-01.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header">Kids</span>
-          <span class="product-grid-item-subheader">fun & funky</span>
-        </div>
-      </div>
-    </div>
+<!--END PATTERN SECTION -->
 
     <div class="btn-center-container">
-      <div class="btn primary-btn">See all design styles</div>
+      <div class="btn secondary-btn">FIND YOUR STYLE</div>
     </div>
 
-    <h2>Featured Patterns</h2>
-    <product-grid-line-mock></product-grid-line-mock>
-    <div class="btn-center-container">
-      <div class="btn primary-btn">See all patterns</div>
-    </div>
-
-    <h2>Recently Viewed</h2>
-    <product-grid-line-mock></product-grid-line-mock>
-
-    <div class="btn-center-container">
-      <div class="btn primary-btn">See all viewed patterns</div>
-    </div>
-
-
-    <div id="featured-artist-grid-container">
-      <h1>Featured Artist</h1>
-      <p>Multi-disciplinary designers, Wayne & Gerardine Hemingway, bring an iconic style to their wallpaper designs
-with a graphic style & vintage cool.</p>
-      <div class="product-grid">
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/deco_diamond_blue-01.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Some Product Name</span>
-          <span class="product-grid-item-subheader">6 colors available</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/resting_sparrows_white.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Some Product Name</span>
-          <span class="product-grid-item-subheader">6 colors available</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonDunesGray24x24.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Some Product Name</span>
-          <span class="product-grid-item-subheader">6 colors available</span>
-        </div>
-
-        <div class="product-grid-item-container">
-          <div class="product-grid-item-image-container">
-            <div class="product-grid-item-image"  style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonLamaisondespapillonsNavy12x12.jpg');"></div>
-          </div>
-          <span class="product-grid-item-header"> Some Product Name</span>
-          <span class="product-grid-item-subheader">6 colors available</span>
-        </div>
-      </div>
-
-      <div class="btn-center-container">
-        <div class="btn primary-btn">SEE THE COLLECTION</div>
-        <a href="#">See All Artists</a>
-      </div>
-
-    </div>
   </div>
 
 
 </template>
 
 <script>
-  import ProductGridLineMock from '../ProductGridLineMock'
 
   export default {
-    name: 'HelloWorld',
-    components: {
-      ProductGridLineMock
-    },
+    name: 'FindYourStyle',
+    components: {},
     data () {
       return {
         msg: 'Welcome to Your Vue.js App'

@@ -38,6 +38,34 @@
     }
   }
 }
+
+.header-bar {
+  width: 100%;
+  background-color: $btn-secondary-bg-color;
+  color: $hero-cta-color;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    margin: .25em;
+    padding: .25em;
+    border-bottom: 1px dotted $hero-cta-color;
+    border-top: 1px dotted $hero-cta-color;
+  }
+  p{
+    text-transform: uppercase;
+    margin: .25em;
+    padding: .25em;
+  }
+}
+
+
 @include s {
   .header {
     margin: 0;
@@ -60,5 +88,11 @@
     .header-content {
       margin: 0 !important;
     }
+  }
+}
+
+@include xl{
+  .header {
+    height: $header-height-xl;
   }
 }

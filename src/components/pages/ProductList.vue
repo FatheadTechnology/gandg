@@ -1,12 +1,10 @@
 <template>
   <div id="product-list">
     <div class="header" id="product-list-header">
-      <div class="header-content">
-        <h2>Product List Copy</h2>
-        <p>
-          Our wallpaper is easy to hang and comes off clean so you can make your room match your style without the fuss. </p>
-        <div id="product-list-header-btn" class="header-btn btn primary-btn">CALL TO ACTION</div>
-      </div>
+
+    </div>
+    <div class="header-bar">
+      <h2>CATEGORY NAME OR GENERAL TEXT (TODO : 6/18 PORT)</h2>
     </div>
 
 <!--
