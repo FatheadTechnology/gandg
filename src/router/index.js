@@ -5,6 +5,7 @@ import AboutUs from '@/components/pages/AboutUs'
 import BlogHome from '@/components/pages/BlogHome'
 import BlogPost from '@/components/pages/BlogPost'
 import Cart from '@/components/pages/Cart'
+import Favorites from '@/components/pages/Favorites'
 import FAQ from '@/components/pages/FAQ'
 import FindYourStyle from '@/components/pages/FindYourStyle'
 import Home from '@/components/pages/Home'
@@ -47,6 +48,11 @@ export default new Router({
       path: '/cart',
       name: 'Cart',
       component: Cart
+    },
+    {
+      path: '/favorites',
+      name: 'Favorites',
+      component: Favorites
     },
     {
       path: '/faq',

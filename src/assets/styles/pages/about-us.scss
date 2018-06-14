@@ -1,31 +1,30 @@
 @import "../variables/variables";
 
-
-#favorites-header {
-  background-image: url('https://assets.fathead.com/find-your-style-images/contemporary.jpg');
+#about-us-header {
+  background-image: url('https://assets.fathead.com/find-your-style-images/mcm.jpg');
   background-size: cover;
 }
 
 @include xl {
-  #favorites-header{
+  #about-us-header{
     background-position: center 55%;
   }
 }
 
 @include l {
-  #favorites-header{
+  #about-us-header{
     background-position: center 45%;
   }
 }
 
 @include m {
-  #favorites-header{
+  #about-us-header{
     background-position: center 25%;
   }
 }
 
 @include s {
-  #favorites-header{
+  #about-us-header{
     background-position: center 45%;
   }
 }

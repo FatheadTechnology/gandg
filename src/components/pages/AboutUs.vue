@@ -1,13 +1,12 @@
 <template>
   <div id="about-us">
     <div class="header" id="about-us-header">
-      <div class="header-content">
-        <h2>About Us</h2>
-        <p>
-          Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-</p>
-      </div>
+
     </div>
+    <div class="header-bar">
+      <h2>ABOUT</h2>
+    </div>
+
 
     <h2>Dapibus Elit Sit</h2>
     <p>
