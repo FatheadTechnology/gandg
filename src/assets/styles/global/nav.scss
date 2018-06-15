@@ -1,10 +1,11 @@
 @import "../variables/variables";
 
-#mobile-nav{
+#mobile-nav {
   display: none;
 }
+
 @include s {
-  #mobile-nav{
+  #mobile-nav {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -14,8 +15,8 @@
     width: 100%;
     background-color: $bg-color;
     z-index: 1000;
-    box-shadow: 0px 10px 31px -2px rgba(128,128,128,1);
-    img{
+    box-shadow: 0px 10px 31px -2px rgba(128, 128, 128, 1);
+    img {
       padding: .5em;
       width: 50px;
       height: 50px;
@@ -24,7 +25,8 @@
     }
   }
 }
-#right-nav{
+
+#right-nav {
   margin-top: $base-top-margin;
   margin-right: 5px;
   width: $right-nav-size;
@@ -36,7 +38,7 @@
   align-items: center;
 }
 
-#left-nav{
+#left-nav {
   width: $left-nav-size;
   position: fixed;
   left: 0;
@@ -44,14 +46,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  img{
-    margin:  $base-top-margin 0 1em;
+  img {
+    margin: $base-top-margin 0 1em;
   }
-  svg{
+  svg {
     box-sizing: border-box;
     padding: 2em;
   }
-  .left-menu-item{
+  .left-menu-item {
     width: 100%;
     box-sizing: border-box;
     padding: 1em;
@@ -61,42 +63,44 @@
     cursor: pointer;
     text-transform: uppercase;
     font-weight: $header-font-weight;
-    &:hover{
+    &:hover {
       color: lighten($a-hover-color, 10%);
     }
   }
-h1{
-  font-size: 3em;
-  text-align: center;
-  width: 100%;
-}
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+  }
 }
 
-@include s{
-  #right-nav{
+@include s {
+  #right-nav {
     display: none;
   }
-  #left-nav{
+  #left-nav {
     display: none;
   }
 }
 
 @include m {
-  #left-nav{
+  #left-nav {
     width: $left-nav-size-small;
   }
-  #right-nav{
+  #right-nav {
     width: $right-nav-size-small;
   }
 }
 
-#home-link{
+#home-link {
   cursor: pointer;
 }
 
 $hover-menu-background-color: #fff;
-$hover-menu-border: 1px solid black;
-$hover-menu-top: 20px;
+$hover-menu-border: 1px solid #828282;
+
+$hover-menu-cart-top: 10px;
+$hover-menu-connector-top: 20px;
 $hover-menu-right: 90px;
 //todo: make top for all menu items
 $hover-menu-circle-size: 50px;
@@ -111,61 +115,87 @@ $hover-menu-connector-width: $hover-menu-right - $hover-menu-connector-right + 1
 //TODO : FOR THE LOVE OF GOD YOU BETTER MAKE THESE ALL VARS WITH THE REST OF THE MENU STUFF OR I WILL KILL YOU
 #cart-hover-menu {
   position: fixed;
-  width: 300px;
+  width: 400px;
   border: $hover-menu-border;
-  right: $hover-menu-right ;
+  right: $hover-menu-right;
 
   //TODO: VARIABLES, THIS NEEDS TO BE PROGRAMATIC DUMB ASS
   background-color: $hover-menu-background-color;
-  top: $hover-menu-top;
+  top: $hover-menu-cart-top;
   min-height: 500px;
   box-shadow: $btn-shadow-hover;
   z-index: 2;
-  #circle{
+  #circle {
     border-radius: 100%;
-    height:$hover-menu-circle-size;
+    height: $hover-menu-circle-size;
     width: $hover-menu-circle-size;
     border: $hover-menu-border;
     position: fixed;
     right: $hover-menu-circle-right;
-    top: $hover-menu-top;
+    top: $hover-menu-connector-top;
     background-color: $hover-menu-background-color;
     box-shadow: $btn-shadow-hover;
     z-index: 2;
   }
-  #cart-icon-hover{
+  #cart-icon-hover {
     position: fixed;
     width: 2.5em;
     height: 2.5em;
     top: 28px;
-    right: 2em;
+    right: 1.8em;
     //TODO: where does the 1em come from that isn't the icon 1em?/???
-    z-index:3;
+    z-index: 3;
   }
-  #connector{
+  #connector {
     position: fixed;
-    top: $hover-menu-top;
+    top: $hover-menu-connector-top;
     right: $hover-menu-connector-right;
     height: $hover-menu-circle-size;
-    width:$hover-menu-connector-width;
+    width: $hover-menu-connector-width;
     border-top: $hover-menu-border;
     border-bottom: $hover-menu-border;
     background-color: $hover-menu-background-color;
-    z-index:2;
+    z-index: 2;
   }
-#cart-hover-menu-content {
-  margin: 1em;
-  background-color: red;
+  #cart-hover-menu-content {
+    margin: 1em;
+    background-color: $bg-color;
+    box-sizing: border-box;
+    #cart-hover-menu-header {
+      width: 100%;
+      color: $cart-hover-menu-header-footer-color;
+      background-color: $cart-hover-menu-header-footer-bg-color;
+      padding: .75em;
+      font-size: 1.5em;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    #cart-hover-menu-footer {
+      margin-top: 1em;
+      width: 100%;
+      color: $cart-hover-menu-header-footer-color;
+      background-color: $cart-hover-menu-header-footer-bg-color;
+      padding: .75em;
+      font-size: 1.5em;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    h1, h2, h3, h4 {
+      text-align: center;
+      padding: .25em;
+      box-sizing: border-box;
+    }
+  }
 
 }
 
-}
-#cart-hover-connector-shadow{
+#cart-hover-connector-shadow {
   position: fixed;
-  top: $hover-menu-top;
+  top: $hover-menu-connector-top;
   right: $hover-menu-connector-right;
   height: $hover-menu-circle-size;
-  width:$hover-menu-connector-width;
+  width: $hover-menu-connector-width;
   border-top: $hover-menu-border;
   border-bottom: $hover-menu-border;
   background-color: $hover-menu-background-color;
@@ -173,12 +203,50 @@ $hover-menu-connector-width: $hover-menu-right - $hover-menu-connector-right + 1
   z-index: 1;
 }
 
-#pseudo-space{
+#pseudo-space {
   position: fixed;
   width: 100%;
   height: 100%;
-
+  left: 0;
+  top: 0;
 }
 
+.cart-preview-line {
 
+  .cart-preview-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: $cart-item-padding;
+  }
 
+  .cart-preview-item-image-container {
+    width: 100px;
+    position: relative;
+    margin: .5em 0;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (1 / 1) * 100%;
+    }
+
+    > .cart-preview-item-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: red;
+    }
+  }
+  .cart-preview-item-details{
+    margin: .5em 0;
+    h4{
+      margin: 0;
+    }
+  }
+}
+
+.cart-preview-btn{
+  margin-bottom: 1em;
+}
