@@ -2,35 +2,35 @@
 
 $choice-margin: 10px;
 #find-your-style-header {
-  background-image: url('https://assets.fathead.com/find-your-style-images/mcm.jpg');
+  background-image: url("https://assets.fathead.com/find-your-style-images/mcm.jpg");
   background-size: cover;
 }
 .find-your-style-grid {
-    margin: $choice-margin 0;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: $choice-margin;
+  margin: $choice-margin 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: $choice-margin;
 
   .choice-container {
     display: flex;
     flex-direction: column;
     cursor: pointer;
     border: 2px solid $btn-primary-bg-color;
-    transition: all .15s ease-in-out;
-    &:hover{
-      transition: all .15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    &:hover {
+      transition: all 0.15s ease-in-out;
       background-color: $btn-primary-bg-color;
       color: $btn-primary-color;
       box-shadow: $btn-shadow-hover;
     }
 
-    .choice-header{
-      margin: .25em;
+    .choice-header {
+      margin: 0.25em;
       font-size: 1.25em;
       font-weight: $header-font-weight;
-      margin-left: .5em;
+      margin-left: 0.5em;
     }
-    .choice-subheader{
+    .choice-subheader {
       margin: 0 $choice-margin $choice-margin;
     }
     .choice-square-container {
@@ -41,7 +41,7 @@ $choice-margin: 10px;
         width: 100%;
         padding-top: (1 / 1) * 100%;
       }
-      > .choice-square  {
+      > .choice-square {
         position: absolute;
         top: 0;
         right: 0;
@@ -57,14 +57,13 @@ $choice-margin: 10px;
   }
 }
 
-
-.room-choice{
+.room-choice {
   grid-column: span 2 / auto;
 }
 
-.palette-choice{
+.palette-choice {
   grid-column: span 2 / auto;
-  .choice-square{
+  .choice-square {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -72,16 +71,16 @@ $choice-margin: 10px;
   }
 }
 
-.color-choice{
+.color-choice {
   grid-column: span 1 / auto;
-  .color-choice-header{
-    margin: .5em;
+  .color-choice-header {
+    margin: 0.5em;
     font-size: 1.25em;
     font-weight: $header-font-weight;
   }
 }
 
-.pattern-choice{
+.pattern-choice {
   grid-column: span 2 / auto;
   margin: $choice-margin 0;
   display: grid;
@@ -91,42 +90,30 @@ $choice-margin: 10px;
 
 @include under-m {
   .find-your-style-grid {
-
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@include s {
-  #find-your-style{
-    h1{
-      margin-left: .5em;
-    }
-  }
-  .find-your-style-grid {
-    margin: 0 1em;
-  }
-}
-
 @include xl {
-  #find-your-style-header{
+  #find-your-style-header {
     background-position: center 55%;
   }
 }
 
 @include l {
-  #find-your-style-header{
+  #find-your-style-header {
     background-position: center 45%;
   }
 }
 
 @include m {
-  #find-your-style-header{
+  #find-your-style-header {
     background-position: center 25%;
   }
 }
 
 @include s {
-  #find-your-style-header{
+  #find-your-style-header {
     background-position: center 45%;
   }
 }

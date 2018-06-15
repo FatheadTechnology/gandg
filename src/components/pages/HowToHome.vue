@@ -1,5 +1,5 @@
 <template>
-  <div id="how-to-home">
+  <div id="how-to-home" class="content-wrap">
     <h1>How To</h1>
     <p>Watch the video or follow our step-by-step instructions of how to apply and remove your removable wallpaper.</p>
     <div class="video-wrap">
