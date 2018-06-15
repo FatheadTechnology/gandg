@@ -16,7 +16,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: $grid-gap-pdp;
     box-sizing: border-box;
-    padding:0;
+    padding: 0;
 
     #active-image {
       grid-column: span 2 / auto;
@@ -27,7 +27,7 @@
       grid-column: span 1 / auto;
     }
 
-    #pdp-image-selection{
+    #pdp-image-selection {
       grid-column: span 2 / auto;
 
       display: grid;
@@ -38,17 +38,17 @@
 
   #pdp-purchase-container {
     grid-column: span 2 / auto;
-    h1{
-      margin: .5em 0;
+    h1 {
+      margin: 0.5em 0;
     }
-    p:first-child{
-      margin: .5em 0;
+    p:first-child {
+      margin: 0.5em 0;
     }
 
     #color-ways-grid {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      grid-column-gap: .5em;
+      grid-column-gap: 0.5em;
       .color-way-grid-item {
         grid-column: span 1 / auto;
         background-color: red;
@@ -61,31 +61,27 @@
     grid-column: span 4 / auto;
   }
 
-  #accordion-container{
+  #accordion-container {
     margin: 2em 0;
     grid-column: span 4 / auto;
 
-    .accordion-header{
+    .accordion-header {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $footer-bg-color;
       cursor: pointer;
       margin: 1em 0;
       user-select: none;
-      transition: all .15s ease-in-out;
-
+      transition: all 0.15s ease-in-out;
     }
-    .accordion-content{
-      transition: all .15s ease-in-out;
+    .accordion-content {
+      transition: all 0.15s ease-in-out;
     }
   }
-
 }
 
 @include under-m {
   #pdp {
-    margin: $grid-gap-pdp;
-
     #pdp-image-container {
       grid-column: span 4 / auto;
       padding: 0;
@@ -93,10 +89,9 @@
     #pdp-purchase-container {
       grid-column: span 4 / auto;
     }
-    .mobile-center-pdp-btn{
+    .mobile-center-pdp-btn {
       display: flex;
       justify-content: center;
     }
   }
-
 }
