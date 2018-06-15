@@ -93,3 +93,92 @@ h1{
 #home-link{
   cursor: pointer;
 }
+
+$hover-menu-background-color: #fff;
+$hover-menu-border: 1px solid black;
+$hover-menu-top: 20px;
+$hover-menu-right: 90px;
+//todo: make top for all menu items
+$hover-menu-circle-size: 50px;
+$hover-menu-circle-right: 12px;
+$hover-menu-icon-right: 25px;
+
+$cart-icon-right: $hover-menu-circle-right + 10px;
+
+$hover-menu-connector-right: ($hover-menu-circle-size/2)+$hover-menu-circle-right;
+$hover-menu-connector-width: $hover-menu-right - $hover-menu-connector-right + 1px;
+
+//TODO : FOR THE LOVE OF GOD YOU BETTER MAKE THESE ALL VARS WITH THE REST OF THE MENU STUFF OR I WILL KILL YOU
+#cart-hover-menu {
+  position: fixed;
+  width: 300px;
+  border: $hover-menu-border;
+  right: $hover-menu-right ;
+
+  //TODO: VARIABLES, THIS NEEDS TO BE PROGRAMATIC DUMB ASS
+  background-color: $hover-menu-background-color;
+  top: $hover-menu-top;
+  min-height: 500px;
+  box-shadow: $btn-shadow-hover;
+  z-index: 2;
+  #circle{
+    border-radius: 100%;
+    height:$hover-menu-circle-size;
+    width: $hover-menu-circle-size;
+    border: $hover-menu-border;
+    position: fixed;
+    right: $hover-menu-circle-right;
+    top: $hover-menu-top;
+    background-color: $hover-menu-background-color;
+    box-shadow: $btn-shadow-hover;
+    z-index: 2;
+  }
+  #cart-icon-hover{
+    position: fixed;
+    width: 2.5em;
+    height: 2.5em;
+    top: 28px;
+    right: 2em;
+    //TODO: where does the 1em come from that isn't the icon 1em?/???
+    z-index:3;
+  }
+  #connector{
+    position: fixed;
+    top: $hover-menu-top;
+    right: $hover-menu-connector-right;
+    height: $hover-menu-circle-size;
+    width:$hover-menu-connector-width;
+    border-top: $hover-menu-border;
+    border-bottom: $hover-menu-border;
+    background-color: $hover-menu-background-color;
+    z-index:2;
+  }
+#cart-hover-menu-content {
+  margin: 1em;
+  background-color: red;
+
+}
+
+}
+#cart-hover-connector-shadow{
+  position: fixed;
+  top: $hover-menu-top;
+  right: $hover-menu-connector-right;
+  height: $hover-menu-circle-size;
+  width:$hover-menu-connector-width;
+  border-top: $hover-menu-border;
+  border-bottom: $hover-menu-border;
+  background-color: $hover-menu-background-color;
+  box-shadow: $btn-shadow-hover;
+  z-index: 1;
+}
+
+#pseudo-space{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+

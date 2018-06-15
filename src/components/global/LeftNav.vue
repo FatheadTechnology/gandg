@@ -12,7 +12,7 @@
     </router-link>
     <router-link tag="div" to="/how-to" class="left-menu-item" id="how-to-link"><span>How To</span> </router-link>
     <router-link tag="div" to="/blog" class="left-menu-item" id="blog-link"><span>Blog</span>  </router-link>
-    <router-link tag="div" to="/about-us" class="left-menu-item" id="about-us-link"><span>About</span>  </router-link>
+    <router-link tag="div" to="/about-us" class="left-menu-item" id="about-us-link"><span>About Us</span>  </router-link>
 
 
   </div>
