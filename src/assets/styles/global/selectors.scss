@@ -1,0 +1,170 @@
+@import "./../variables/variables";
+
+.selectors {
+  width: 50%;
+  margin: 30px 0;
+  @include s {
+    width: 100%;
+  }
+}
+.material-picker {
+  .button-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 20px 0;
+    @include s {
+      max-width: 1000px;
+    }
+    .material-option {
+      width: 100px;
+      padding: 10px 20px;
+      text-align: center;
+      cursor: pointer;
+      line-height: 1.25em;
+      &.selected {
+        border-color: $a-hover-color;
+        background-color: $a-hover-color;
+        color: #fff;
+      }
+      @include s {
+        width: 48%;
+        padding: 10px 0;
+      }
+    }
+    .material-select {
+      width: 400px;
+      padding: 10px;
+      margin: 20px 0;
+      font-size: 1em;
+      text-transform: capitalize;
+    }
+  }
+}
+.size-picker {
+  .button-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 0 20px 0;
+    @include s {
+      max-width: 1000px;
+    }
+    .size-option {
+      padding: 10px 20px;
+      margin: 5px 0;
+      text-align: center;
+      width: 100%;
+      cursor: pointer;
+      line-height: 1.25em;
+      &.selected {
+        border-color: $a-hover-color;
+        background-color: $a-hover-color;
+        color: #fff;
+      }
+      @include s {
+        width: 48%;
+        padding: 10px 0;
+      }
+    }
+    .size-select {
+      width: 100%;
+      padding: 10px;
+      margin: 20px 0;
+      font-size: 1em;
+    }
+  }
+}
+.color-picker {
+  margin: 20px 0;
+  max-width: 300px;
+  @include s {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .color-option {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    transition: border 0s;
+    -webkit-transition: border 0s;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.selected {
+      // TODO: Do we want this outline or the corner option?
+      // outline: 2px solid $selected-pdp-color;
+      &:before {
+        content: "";
+        display: inline-block;
+        color: #333;
+        text-align: center;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        position: relative;
+        padding: 7px 0;
+        top: -40px;
+        left: -40px;
+        width: 50px;
+        height: 50px;
+        background-color: $a-hover-color;
+      }
+    }
+    @include s {
+      padding: 0 10px;
+      height: 50px;
+      width: 48%;
+      margin-top: 10px;
+      margin-right: 0;
+    }
+  }
+}
+.quantity-selector {
+  display: flex;
+  margin: 20px 0;
+  .btn {
+    margin: 0;
+    box-shadow: none;
+    background-color: #fff;
+  }
+  .minus-one {
+    border-left: 1px solid $base-text-color;
+  }
+  .plus-one {
+    border-right: 1px solid $base-text-color;
+  }
+  .minus-one,
+  .plus-one {
+    border-top: 1px solid $base-text-color;
+    border-bottom: 1px solid $base-text-color;
+    font-size: 1.25em;
+    width: 40px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    padding: 0 !important;
+    border-radius: 0;
+  }
+  .quantity-selected {
+    background-color: #fff;
+    border: 1px solid $base-text-color;
+    font-size: 1.25em;
+    width: 40px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

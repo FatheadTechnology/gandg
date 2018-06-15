@@ -5,13 +5,28 @@
       <div class="pdp-top-content" id="pdp-image-container">
 
         <div class="maintain-square-image-container" id="active-image">
-          <div class="maintain-square-image">
+          <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamillePink24x24.jpg')">
           </div>
         </div>
 
         <div id="pdp-image-selection">
-          <div class="maintain-square-image-container pdp-image-choice" v-for="i in 5">
-            <div class="maintain-square-image">
+          <div class="maintain-square-image-container pdp-image-choice">
+            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamillePink24x24.jpg')">
+
+            </div>
+          </div>
+          <div class="maintain-square-image-container pdp-image-choice">
+            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleTeal24x24.jpg')">
+
+            </div>
+          </div>
+          <div class="maintain-square-image-container pdp-image-choice">
+            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleMidnightPink24x24.jpg')">
+
+            </div>
+          </div>
+          <div class="maintain-square-image-container pdp-image-choice">
+            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleMidnightTeal24x24.jpg')">
 
             </div>
           </div>
@@ -28,55 +43,44 @@
         <div id="color-ways-grid">
 
           <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image">
+            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamillePink24x24.jpg')">
 
             </div>
           </div>
 
           <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image">
+            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleTeal24x24.jpg')">
+
+            </div>
+          </div>
+          <div class="maintain-square-image-container color-way-grid-item">
+            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleMidnightPink24x24.jpg')">
 
             </div>
           </div>
 
           <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image">
-
-            </div>
-          </div>
-
-          <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image">
-
-            </div>
-          </div>
-
-          <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image">
-
-            </div>
-          </div>
-
-          <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image">
+            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleMidnightTeal24x24.jpg')">
 
             </div>
           </div>
 
         </div>
+        <div class="selectors">
+          <material-selector></material-selector>
+          <size-selector></size-selector>
+          <quantity-selector></quantity-selector>
+          <div class="calculator-wrap">
+            <span>How much do I need?</span>
+            <!-- TODO: Remove fontawesome icon -->
+            <img class="show-calculator" @click="showModal" id="calculator-btn" src="./../../assets/icomoon_6_icons/SVG/calculator.svg">
+          </div>
+          <calculator-modal id="calculator-modal"></calculator-modal>
+          <h1 id="pdp-price">$150</h1>
 
-        <p class="selection-header">Select Finish</p>
-        <p>PORT FROM OLD PAGE SELECTOR</p>
-        <p class="selection-header">Select Size</p>
-        <p>PORT FROM OLD PAGE SELECTOR</p>
-
-        <p class="selection-header">Select Quantity</p>
-        <p>PORT FROM OLD PAGE SELECTOR</p>
-
-        <h1 id="pdp-price">$150</h1>
-
-        <div id="add-to-cart-btn" class="btn primary-btn">Add To Cart</div>
-        <a href="#" id="order-sample">Order a sample swatch</a>
+          <div id="add-to-cart-btn" class="btn primary-btn">Add To Cart</div>
+          <a href="#" id="order-sample">Order a sample swatch</a>
+        </div>
       </div>
 
       <div id="accordion-container">
@@ -133,11 +137,19 @@
 
 <script>
 import ProductGridLineMock from "../ProductGridLineMock";
+import MaterialSelector from "../pdp/MaterialSelector";
+import SizeSelector from "../pdp/SizeSelector";
+import QuantitySelector from "../pdp/QuantitySelector";
+import CalculatorModal from "../global/CalculatorModal";
 
 export default {
   name: "PDP",
   components: {
-    ProductGridLineMock
+    ProductGridLineMock,
+    MaterialSelector,
+    SizeSelector,
+    QuantitySelector,
+    CalculatorModal
   },
   data() {
     return {
@@ -146,6 +158,14 @@ export default {
       showAccordion2: false,
       showAccordion3: false
     };
+  },
+  methods: {
+    showModal() {
+      this.$modal.show("calculator");
+    },
+    hideModal() {
+      this.$modal.hide("calculator");
+    }
   }
 };
 </script>
