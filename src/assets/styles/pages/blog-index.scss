@@ -45,6 +45,7 @@
   .blog-inner-right {
     display: inline-block;
     width: 40%;
+    background-size: cover;
     .blog-image {
       width: 100%;
     }
@@ -74,7 +75,7 @@
   }
 }
 
-@include s {
+@include m {
   .blog {
     .blog-inner-right {
       background-position: center 45%;
@@ -82,6 +83,27 @@
     }
     .blog-inner-left {
       width: 50%;
+    }
+  }
+}
+
+@include s {
+  .blog-posts {
+    background-color: $btn-secondary-bg-color;
+  }
+  .blog {
+    background-color: $bg-color;
+    flex-direction: column;
+    height: auto;
+    margin: 5px 0;
+    padding: 40px 0;
+    .blog-inner-right {
+      background-position: center;
+      width: 100%;
+      height: 200px;
+    }
+    .blog-inner-left {
+      width: 100%;
     }
   }
 }

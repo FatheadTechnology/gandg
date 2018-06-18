@@ -3,7 +3,7 @@
     <div id="cta-hero-bar" v-show="showCTA">
       Memorial Day Sale: 30% Off Select Styles
       <div id="close-hero" v-on:click="showCTA = !showCTA">
-        <span> X</span>
+        <span> &times;</span>
       </div>
     </div>
     <div id="hero">
