@@ -1,0 +1,5 @@
+.content-wrap {
+  @include s {
+    padding: $mobile-padding;
+  }
+}

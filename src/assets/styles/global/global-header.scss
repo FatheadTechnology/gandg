@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255,255,255,.75);
+    background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(5px);
     border: 1px solid $a-hover-color;
     padding: 1em;
@@ -28,7 +28,7 @@
     margin-left: $header-cta-left-margin;
     height: $header-cta-height;
     // color: $hero-content-color;
-    p{
+    p {
       text-align: justify;
       font-size: 1.25em;
     }
@@ -50,21 +50,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h2{
+  h2 {
     text-transform: uppercase;
-    letter-spacing: .25em;
-    margin: .25em;
-    padding: .25em;
+    letter-spacing: 0.25em;
+    margin: 0.25em;
+    padding: 0.25em;
     border-bottom: 1px dotted $hero-cta-color;
     border-top: 1px dotted $hero-cta-color;
   }
-  p{
+  p {
     text-transform: uppercase;
-    margin: .25em;
-    padding: .25em;
+    margin: 0.25em;
+    padding: 0.25em;
   }
 }
-
 
 @include s {
   .header {
@@ -91,7 +90,7 @@
   }
 }
 
-@include xl{
+@include xl {
   .header {
     height: $header-height-xl;
   }

@@ -20,10 +20,10 @@
     #hero-content {
       text-align: center;
       display: flex;
-      flex-directioN: column;
+      flex-direction: column;
       justify-content: center;
-      box-shadow: 0px 10px 31px -2px rgba(128,128,128,1);
-      background-color: rgba(255,255,255,.75);
+      box-shadow: 0px 10px 31px -2px rgba(128, 128, 128, 1);
+      background-color: rgba(255, 255, 255, 0.75);
       backdrop-filter: blur(5px);
       border: 1px solid $a-hover-color;
       padding: 1em;
@@ -32,7 +32,7 @@
       top: 100px;
       max-width: 300px;
       // color: $hero-content-color;
-      p{
+      p {
         text-align: justify;
         font-size: 1.25em;
       }
@@ -57,7 +57,7 @@
       }
     }
   }
-//TODO : MAKE UNDER M CLASS
+  //TODO : MAKE UNDER M CLASS
   //TODO : MAKE UNDER S CLASS
   @include m {
     #hero {
@@ -77,19 +77,15 @@
       height: $xl-hero-height;
       background-position: center 65%;
       #hero-content {
-
       }
     }
   }
-
-
 }
-@include s{
-  h2{
-    margin-left: .6em;
+@include s {
+  h2 {
+    margin-left: 0.6em;
   }
 }
-
 
 //TODO: CTA HERO AT TOP
 #cta-hero-bar {
@@ -100,12 +96,19 @@
   box-sizing: border-box;
   text-align: center;
   position: relative;
+
   #close-hero{
     cursor: pointer;
     font-weight: $header-font-weight;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 0.5em;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    font-size: 2em;
   }
 }
 #hero-bar {
@@ -119,60 +122,55 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h2{
+  h2 {
     text-transform: uppercase;
-    letter-spacing: .25em;
-    margin: .25em;
-    padding: .25em;
+    letter-spacing: 0.25em;
+    margin: 0.25em;
+    padding: 0.25em;
     border-bottom: 1px dotted $hero-cta-color;
     border-top: 1px dotted $hero-cta-color;
   }
-  p{
+  p {
     text-transform: uppercase;
-    margin: .25em;
-    padding: .25em;
+    margin: 0.25em;
+    padding: 0.25em;
   }
 }
 
-
-
-#featured-artist-grid-container{
+#featured-artist-grid-container {
   box-sizing: border-box;
   background-color: #fff;
-  padding: 0 0 3em;
-  h1{
-    padding: 1.5em 1.25em .25em;
+  padding: 0 1em 3em 1em;
+  h1 {
+    padding: 1.5em 1.25em 0.25em;
   }
-  p{
-    padding: .25em $artist-grid-spacing;
+  p {
+    padding: 0.25em $artist-grid-spacing;
     max-width: 65em;
   }
-  .product-grid{
+  .product-grid {
     margin: $artist-grid-spacing;
   }
-
 }
 
-#subheader-grid-container{
+#subheader-grid-container {
   box-sizing: border-box;
-  h1{
+  h1 {
     text-align: center;
-    padding: 1.5em 1.25em .25em;
+    padding: 1.5em 1.25em 0.25em;
   }
-  p{
-    padding: .25em $artist-grid-spacing;
+  p {
+    padding: 0.25em $artist-grid-spacing;
     max-width: 65em;
   }
-  .product-grid{
+  .product-grid {
     text-align: center;
     text-transform: uppercase;
-    .product-grid-item-header{
-      letter-spacing: .25em;
+    .product-grid-item-header {
+      letter-spacing: 0.25em;
     }
-    .product-grid-item-subheader{
-      letter-spacing: .15em;
+    .product-grid-item-subheader {
+      letter-spacing: 0.15em;
     }
-
   }
-
 }
