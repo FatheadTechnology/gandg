@@ -101,6 +101,8 @@
   text-align: center;
   position: relative;
   #close-hero{
+    cursor: pointer;
+    font-weight: $header-font-weight;
     position: absolute;
     right: 1em;
     top: 1em;

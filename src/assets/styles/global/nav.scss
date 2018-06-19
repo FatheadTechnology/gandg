@@ -36,6 +36,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 #left-nav {
@@ -46,6 +47,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
   img {
     margin: $base-top-margin 0 1em;
   }
@@ -102,6 +104,8 @@ $hover-menu-border: 1px solid #828282;
 $hover-menu-cart-top: 10px;
 $hover-menu-connector-top: 20px;
 $hover-menu-right: 90px;
+$hover-menu-right-medium: 70px;
+
 //todo: make top for all menu items
 $hover-menu-circle-size: 50px;
 $hover-menu-circle-right: 12px;
@@ -118,7 +122,6 @@ $hover-menu-connector-width: $hover-menu-right - $hover-menu-connector-right + 1
   width: 400px;
   border: $hover-menu-border;
   right: $hover-menu-right;
-
   //TODO: VARIABLES, THIS NEEDS TO BE PROGRAMATIC DUMB ASS
   background-color: $hover-menu-background-color;
   top: $hover-menu-cart-top;
@@ -138,6 +141,7 @@ $hover-menu-connector-width: $hover-menu-right - $hover-menu-connector-right + 1
     z-index: 2;
   }
   #cart-icon-hover {
+    cursor: pointer;
     position: fixed;
     width: 2.5em;
     height: 2.5em;
@@ -249,4 +253,269 @@ $hover-menu-connector-width: $hover-menu-right - $hover-menu-connector-right + 1
 
 .cart-preview-btn{
   margin-bottom: 1em;
+}
+
+
+// Leftside Menu
+$highlight-color: #fff;
+$left-menu-wallpaper-top: 181px;
+$left-menu-collections-top: 225px;
+$left-menu-artists-top: 269px;
+
+$highlight-circle-size: 42px;
+$left-menu-circle-left: 4px;
+$highlight-padding-top: 12px;
+$left-menu-wallpaper-content-top: $left-menu-wallpaper-top + $highlight-circle-size;
+$left-menu-collections-content-top: $left-menu-collections-top + $highlight-circle-size;
+$left-menu-artists-content-top: $left-menu-artists-top + $highlight-circle-size;
+$highlight-left: ($highlight-circle-size/2)+ $left-menu-circle-left;
+
+$left-menu-content-height: 200px;
+$left-menu-highlight-width: 750px;
+$left-menu-content-left: 200px;
+$left-menu-content-width: ($left-menu-highlight-width + $highlight-left -1px) - $left-menu-content-left;
+
+#wallpaper-menu-left-highlight{
+  position: fixed;
+  top: $left-menu-wallpaper-top;
+  padding-top: $highlight-padding-top;
+  left:$highlight-left;
+  width: $left-menu-highlight-width;
+  height: $highlight-circle-size;
+  font-weight: $header-font-weight;
+  //background-color: $hover-menu-background-color;
+  background-color:$highlight-color;
+  box-shadow: $btn-shadow-hover;
+  box-sizing: border-box;
+  z-index: 4;
+  cursor: pointer;
+  #wallpaper-forward-circle{
+    width: $highlight-circle-size;
+    height: $highlight-circle-size;
+    border-radius: 100%;
+    background-color:$highlight-color;
+    position: fixed;
+    z-index: 3;
+    left: $left-menu-circle-left;
+    top: $left-menu-wallpaper-top;
+
+  }
+  #wallpaper-highlight-copy{
+    position: absolute;
+    z-index: 4;
+    .selected-right-menu-item{
+      color: $btn-primary-bg-color;
+    }
+  }
+}
+#wallpaper-circle{
+  width: $highlight-circle-size;
+  height: $highlight-circle-size;
+  border-radius: 100%;
+  background-color:$highlight-color;
+  position: fixed;
+  z-index: 3;
+  left: $left-menu-circle-left;
+  top: $left-menu-wallpaper-top;
+  box-shadow: $btn-shadow-hover;
+
+}
+$left-wallpaper-menu-padding: 10px;
+#left-wallpaper-menu-content{
+  top: $left-menu-wallpaper-content-top;
+  position: fixed;
+  left: $left-menu-content-left;
+ // height: $left-menu-content-height;
+  width: $left-menu-content-width;
+  background-color: $bg-color;
+  border: $hover-menu-border;
+  z-index: 4;
+  //start grid here :
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  .left-wallpaper-grid-inner-group:first-child{
+    //border-right: $hover-menu-border;
+    //TODO : MAKE THIS NOT FUCKING SUCK
+  }
+  .left-wallpaper-grid-inner-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    .title{
+      grid-column: span 2 / auto;
+      font-weight: $header-font-weight;
+      text-transform: uppercase;
+      font-size: 1.25em;
+      padding: $left-wallpaper-menu-padding $left-wallpaper-menu-padding 0 $left-wallpaper-menu-padding;
+      margin-bottom: 0;
+    }
+    .group{
+      grid-column: span 1 / auto;
+      width: 50%;
+      padding: $left-wallpaper-menu-padding;
+        .group-item{
+          margin-bottom: 5px;
+          border-bottom: 1px solid rgba(255,255,255,0);
+          cursor: pointer;
+          transition: $transition-all;
+          &:hover{
+            border-bottom: $hover-menu-border;
+            transition: $transition-all;
+          }
+        }
+    }
+    .left-wallpaper-grid-inner-group-item{
+
+    }
+
+  }
+  //TODO: make var left - menu width or something
+  .full-width{
+    grid-column: span 2 / auto;
+    margin-bottom: 10px;
+  }
+}
+
+#wallpaper-dummy-area{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+
+
+#collections-menu-left-highlight{
+  position: fixed;
+  top: $left-menu-collections-top;
+  padding-top: $highlight-padding-top;
+  left:$highlight-left;
+  width: $left-menu-highlight-width;
+  height: $highlight-circle-size;
+  font-weight: $header-font-weight;
+  //background-color: $hover-menu-background-color;
+  background-color:$highlight-color;
+  box-shadow: $btn-shadow-hover;
+  box-sizing: border-box;
+  z-index: 4;
+  cursor: pointer;
+  #collections-forward-circle{
+    width: $highlight-circle-size;
+    height: $highlight-circle-size;
+    border-radius: 100%;
+    background-color:$highlight-color;
+    position: fixed;
+    z-index: 3;
+    left: $left-menu-circle-left;
+    top: $left-menu-collections-top;
+
+  }
+  #collections-highlight-copy{
+    position: absolute;
+    z-index: 4;
+    .selected-right-menu-item{
+      color: $btn-primary-bg-color;
+    }
+  }
+}
+#collections-circle{
+  width: $highlight-circle-size;
+  height: $highlight-circle-size;
+  border-radius: 100%;
+  background-color:$highlight-color;
+  position: fixed;
+  z-index: 3;
+  left: $left-menu-circle-left;
+  top: $left-menu-collections-top;
+  box-shadow: $btn-shadow-hover;
+
+}
+#left-collections-menu-content{
+  top: $left-menu-collections-content-top;
+  position: fixed;
+  left: $left-menu-content-left;
+  height: 400px;
+  width: $left-menu-content-width;
+  background-color: $bg-color;
+  border: $hover-menu-border;
+  z-index: 4;
+  //TODO: make var left - menu width or something
+}
+
+#collections-dummy-area{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+
+
+#artists-menu-left-highlight{
+  position: fixed;
+  top: $left-menu-artists-top;
+  padding-top: $highlight-padding-top;
+  left:$highlight-left;
+  width: $left-menu-highlight-width;
+  height: $highlight-circle-size;
+  font-weight: $header-font-weight;
+  //background-color: $hover-menu-background-color;
+  background-color:$highlight-color;
+  box-shadow: $btn-shadow-hover;
+  box-sizing: border-box;
+  z-index: 4;
+  cursor: pointer;
+  #artists-forward-circle{
+    width: $highlight-circle-size;
+    height: $highlight-circle-size;
+    border-radius: 100%;
+    background-color:$highlight-color;
+    position: fixed;
+    z-index: 3;
+    left: $left-menu-circle-left;
+    top: $left-menu-artists-top;
+
+  }
+  #artists-highlight-copy{
+    position: absolute;
+    z-index: 4;
+    .selected-right-menu-item{
+      color: $btn-primary-bg-color;
+    }
+  }
+}
+#artists-circle{
+  width: $highlight-circle-size;
+  height: $highlight-circle-size;
+  border-radius: 100%;
+  background-color:$highlight-color;
+  position: fixed;
+  z-index: 3;
+  left: $left-menu-circle-left;
+  top: $left-menu-artists-top;
+  box-shadow: $btn-shadow-hover;
+
+}
+#left-artists-menu-content{
+  top: $left-menu-artists-content-top;
+  position: fixed;
+  left: $left-menu-content-left;
+  height: 400px;
+  width: $left-menu-content-width;
+  background-color: $bg-color;
+  border: $hover-menu-border;
+  z-index: 4;
+  //TODO: make var left - menu width or something
+}
+
+#artists-dummy-area{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
 }

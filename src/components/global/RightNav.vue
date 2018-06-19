@@ -53,7 +53,6 @@
     <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/user2.svg" alt="Profile">
     </router-link>
 
-    <h1 @click="showCartMenu = !showCartMenu">{{showCartMenu}}</h1>
 
     <!--
           TODO : custom btns from design
@@ -67,7 +66,7 @@
     data () {
       return {
         msg: 'Welcome to Your Vue.js App',
-        showCartMenu : true
+        showCartMenu : false
       }
     }
   }
