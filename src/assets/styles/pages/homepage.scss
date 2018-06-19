@@ -96,7 +96,10 @@
   box-sizing: border-box;
   text-align: center;
   position: relative;
-  #close-hero {
+
+  #close-hero{
+    cursor: pointer;
+    font-weight: $header-font-weight;
     position: absolute;
     right: 0.5em;
     top: 0;

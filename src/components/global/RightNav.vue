@@ -6,7 +6,31 @@
     <!--v-if="showCartMenu"-->
     <div id="cart-hover-menu" v-if="showCartMenu">
       <div id="cart-hover-menu-content">
-        <h1>header here</h1>
+        <div id="cart-hover-menu-header">Order Summary</div>
+
+        <div class="cart-preview-line" v-for="i in 4">
+          <div class=" cart-preview-item">
+
+            <div class="cart-preview-item-image-container">
+              <div class="cart-preview-item-image"></div>
+            </div>
+            <div class="cart-preview-item-details">
+              <h4>Product Name</h4>
+              <span>some thing here</span>
+              <span>Donec id elit non mi  metus.</span>
+              <span>some thing here</span>
+              <span>TODO : ADD FREE SQUEEGEE & KNIFE</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="cart-hover-menu-footer">Total : $999</div>
+
+      </div>
+      <div class="btn-center-container cart-preview-btn">
+        <div class="btn primary-btn">Check Out</div>
+        <a href="#">My Shopping Cart</a>
       </div>
 
 
@@ -29,7 +53,6 @@
     <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/user2.svg" alt="Profile">
     </router-link>
 
-    <h1 @click="showCartMenu = !showCartMenu">{{showCartMenu}}</h1>
 
     <!--
           TODO : custom btns from design
@@ -43,7 +66,7 @@
     data () {
       return {
         msg: 'Welcome to Your Vue.js App',
-        showCartMenu : true
+        showCartMenu : false
       }
     }
   }
