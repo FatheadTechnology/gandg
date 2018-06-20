@@ -1,5 +1,5 @@
 <template>
-  <modal name="calculator" :adaptive="true" width="650px" height="auto" :scrollable="true" class="calculator modal" id="calculator-modal">
+  <modal name="calculator" width="650px" height="auto" :scrollable="true" class="calculator modal" id="calculator-modal">
     <div class="modal-inner top-bar">
       <div class="title">Wallpaper Calculator</div>
       <div @click="hideModal" class="modal-close" id="calculator-close">&times;</div>
@@ -33,6 +33,7 @@
               <div class="modal-title">4th Wall Width:</div>
               <input type="number" name="wall-size-height" class="modal-number-input" placeholder="Width" v-model="widths[3]"> Ft
             </div>
+            <div class="remove-wall" @click="removeWall" v-show="wallsShown > 1">&minus; Remove a wall</div>
             <div class="add-wall" @click="addWall" v-show="wallsShown < 4">&plus; Add a wall</div>
           </div>
           <div class="btn primary-btn" @click="calculate">Calculate</div>
@@ -91,6 +92,9 @@ export default {
     },
     addWall() {
       this.wallsShown += 1;
+    },
+    removeWall() {
+      this.wallsShown -= 1;
     }
   }
 };

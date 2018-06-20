@@ -9,7 +9,6 @@
     width: 20px;
   }
 }
-
 .add-to-cart.modal {
   .modal-wrap {
     text-align: center;
@@ -29,12 +28,34 @@
     width: auto;
   }
 }
-
+.v--modal {
+  top: 0;
+}
+@include s {
+  .v--modal {
+    width: 100% !important;
+    top: 0 !important;
+  }
+  .modal-wrap {
+    max-height: 20000000px;
+  }
+}
 .calculator.modal {
+  @include s {
+    z-index: 9999;
+    width: 100%;
+    top: $mobile-nav-bar-height;
+    ul {
+      margin-bottom: 3em;
+    }
+  }
   .modal-half {
     img {
       max-width: 100%;
     }
+  }
+  .modal-wrap {
+    max-height: 99999px;
   }
 }
 
@@ -101,11 +122,19 @@
       padding: 5px;
       margin: 5px 0 10px 0;
     }
-    .add-wall {
+    .add-wall,
+    .remove-wall {
       text-decoration: underline;
       color: $a-hover-color;
       cursor: pointer;
+      margin: 10px 0;
     }
+    .add-wall {
+      @include s {
+        margin: 40px 0;
+      }
+    }
+
     .total,
     .error {
       font-size: 1.25em;

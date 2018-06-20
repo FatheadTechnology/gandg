@@ -1,1 +1,93 @@
 @import "../variables/variables";
+
+$filter-bg: $a-hover-color;
+$filter-hover: rgb(155, 122, 61);
+$filter-border: 1px solid $base-text-color;
+
+.dropdown-wrap {
+  display: flex;
+  .dropdown {
+    width: 200px;
+    margin: 0 10px;
+    background-color: $filter-bg;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.25em;
+    font-family: $base-font;
+    z-index: 2;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $filter-hover;
+    }
+    &:focus {
+      background-color: $filter-hover;
+    }
+    &:after {
+      content: "v";
+      float: right;
+    }
+    &.open {
+      background-color: $filter-hover;
+      &:after {
+        content: "^";
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.filters {
+  background-color: $filter-hover;
+  padding: 20px;
+  color: #fff;
+  .filter {
+    h3 {
+      margin-top: 0;
+    }
+  }
+}
+
+.pagination-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px;
+  padding: 0;
+  .results-per-page-text {
+    align-self: center;
+  }
+  .ais-results-per-page-selector {
+    display: inline-block;
+    margin: 0 5px 0 20px;
+  }
+  ul.pagination {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    .ais-pagination__item {
+      margin: 0 5px;
+      background-color: #fff;
+      padding: 5px 10px;
+      border: 1px solid $footer-bg-color;
+      .ais-pagination__link {
+        text-decoration: none;
+        color: $base-text-color;
+        font-family: $base-font;
+        font-size: 1.25em;
+      }
+    }
+    li {
+      display: inline-block;
+      padding: 0 5px;
+    }
+  }
+}

@@ -4,8 +4,10 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import VModal from "vue-js-modal";
+import InstantSearch from "vue-instantsearch";
 
 Vue.use(VModal);
+Vue.use(InstantSearch);
 Vue.config.productionTip = false;
 
 router.beforeEach(function(to, from, next) {
