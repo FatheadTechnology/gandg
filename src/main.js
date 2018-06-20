@@ -9,6 +9,9 @@ Vue.use(VModal);
 Vue.config.productionTip = false;
 
 router.beforeEach(function(to, from, next) {
+  console.log(dataLayer);
+  dataLayer.push({event: 'pageview'});
+  //dataLayer.push({event: 'going to' + to + 'from '+ from});
   window.scrollTo(0, 0);
 
   next();
