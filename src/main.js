@@ -4,15 +4,24 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import VModal from "vue-js-modal";
+import VueGtm from 'vue-gtm'
+
+router.beforeEach(function(to, from, next) {
+  window.scrollTo(0, 0);
+  next();
+});
 
 Vue.use(VModal);
 Vue.config.productionTip = false;
 
-router.beforeEach(function(to, from, next) {
-  window.scrollTo(0, 0);
+Vue.use(VueGtm, {
+  debug: true, // Whether or not display console logs debugs (optional)
+  vueRouter: router, // Pass the router instance to automatically sync with router (optional)
+  ignoredViews: [], // If router, you can exclude some routes name (case insensitive) (optional)
+})
 
-  next();
-});
+
+
 
 /* eslint-disable no-new */
 new Vue({

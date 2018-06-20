@@ -27,82 +27,92 @@ export default new Router({
     {
       path: '/about-us',
       name: 'About Us',
-      component: AboutUs
+      component: AboutUs,
+      meta: {gtm: 'About Us'}
     },
     {
       path: '/blog',
       name: 'Blog',
-      component: BlogHome
+      component: BlogHome,
+      meta: {gtm: 'Blog Home'}
     },
     {
       path: '/blog-post',
       name: 'Blog Post',
-      component: BlogPost
-    },
-    {
-      path: '/about-us',
-      name: 'About Us',
-      component: AboutUs
+      component: BlogPost,
+      meta: {gtm: 'Blog Post'}
     },
     {
       path: '/cart',
       name: 'Cart',
-      component: Cart
+      component: Cart,
+      meta: {gtm: 'Cart'}
     },
     {
       path: '/favorites',
       name: 'Favorites',
-      component: Favorites
+      component: Favorites,
+      meta: {gtm: 'Favorites'}
     },
     {
       path: '/faq',
       name: 'FAQ',
-      component: FAQ
+      component: FAQ,
+      meta: {gtm: 'FAQ'}
     },
     {
       path: '/find-your-style',
       name: 'Find Your Style',
-      component: FindYourStyle
+      component: FindYourStyle,
+      meta: {gtm: 'Find Your Style'}
     },
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+      meta: {gtm: 'Homepage'}
     },
     {
       path: '/how-to',
       name: 'How To',
-      component: HowToHome
+      component: HowToHome,
+      meta: {gtm: 'How To'}
     },
     {
       path: '/how-to-video',
       name: 'How To Video',
-      component: HowToVideo
+      component: HowToVideo,
+      meta: {gtm: 'How To Video'}
     },
     {
       path: '/order-history',
       name: 'Order History',
-      component: OrderHistory
+      component: OrderHistory,
+      meta: {gtm: 'Order History'}
     },
     {
       path: '/pdp',
       name: 'Product Description Page',
-      component: PDP
+      component: PDP,
+      meta: {gtm: 'PDP'}
     },
     {
       path: '/product-list',
       name: 'product-list',
-      component: ProductList
+      component: ProductList,
+      meta: {gtm: 'Product List'}
     },
     {
       path: '/profile',
       name: 'Profile',
-      component: Profile
+      component: Profile,
+      meta: {gtm: 'Profile'}
     },
     {
       path: '/search-results',
       name: 'Search Results',
-      component: SearchResults
+      component: SearchResults,
+      meta: {gtm: 'Homepage'}
     }
   ]
 })

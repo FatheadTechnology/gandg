@@ -1,7 +1,7 @@
 <template>
   <div id="left-nav">
-    <router-link tag="div" to="/" id="home-link">
-      <img src="../../assets/guildandgrace.png" alt="Guild & Grace">
+    <router-link tag="div" to="/" id="home-link" >
+      <img @click="onClick('homepageClick')" src="../../assets/guildandgrace.png" alt="Guild & Grace">
     </router-link>
 
     <div class="left-menu-item" id="wallpaper" @mouseover="showWallpaperMenu = !showWallpaperMenu">
@@ -11,6 +11,7 @@
     <div id="wallpaper-menu-left-highlight" v-if="showWallpaperMenu">
       <div id="wallpaper-highlight-copy">
         <span class="selected-right-menu-item">> &nbsp;</span> WALLPAPER
+
       </div>
       <div id="wallpaper-forward-circle"></div>
     </div>
@@ -73,6 +74,7 @@
     <div id="collections-menu-left-highlight" v-if="showCollectionsMenu">
       <div id="collections-highlight-copy">
         <span class="selected-right-menu-item">> &nbsp;</span> COLLECTIONS
+
       </div>
       <div id="collections-forward-circle"></div>
     </div>
@@ -89,6 +91,7 @@
     <div id="artists-menu-left-highlight" v-if="showArtistsMenu">
       <div id="artists-highlight-copy">
         <span class="selected-right-menu-item">> &nbsp;</span> ARTISTS
+
       </div>
       <div id="artists-forward-circle"></div>
     </div>
@@ -99,6 +102,7 @@
 
     <router-link tag="div" to="/find-your-style" class="btn secondary-btn" id="find-your-style">
       FIND YOUR STYLE
+
     </router-link>
     <router-link tag="div" to="/how-to" class="left-menu-item" id="how-to-link"><span>How To</span></router-link>
     <router-link tag="div" to="/blog" class="left-menu-item" id="blog-link"><span>Blog</span></router-link>
@@ -119,7 +123,23 @@
         showArtistsMenu: false
 
       }
-    }
+    },
+    methods: {
+      onClick: function(eventValue) {
+        console.log(this.$gtm.enabled);
+        console.log('clicked!');
+        this.$gtm.trackEvent({
+          category: 'Homepage',
+          action: 'click',
+          label: 'Home page link',
+          value: 5000,
+          event : eventValue
+        });
+      }
+    },
+  mounted() {
+    this.$gtm.trackView('MyScreenName', 'currentpath');
+  }
   }
 </script>
 
