@@ -25,84 +25,85 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/about-us',
-      name: 'About Us',
+      path: "/about-us",
+      name: "About Us",
       component: AboutUs
     },
     {
-      path: '/blog',
-      name: 'Blog',
+      path: "/blog",
+      name: "Blog",
       component: BlogHome
     },
     {
-      path: '/blog-post',
-      name: 'Blog Post',
+      path: "/blog-post",
+      name: "Blog Post",
       component: BlogPost
     },
     {
-      path: '/about-us',
-      name: 'About Us',
+      path: "/about-us",
+      name: "About Us",
       component: AboutUs
     },
     {
-      path: '/cart',
-      name: 'Cart',
+      path: "/cart",
+      name: "Cart",
       component: Cart
     },
     {
-      path: '/favorites',
-      name: 'Favorites',
+      path: "/favorites",
+      name: "Favorites",
       component: Favorites
     },
     {
-      path: '/faq',
-      name: 'FAQ',
+      path: "/faq",
+      name: "FAQ",
       component: FAQ
     },
     {
-      path: '/find-your-style',
-      name: 'Find Your Style',
+      path: "/find-your-style",
+      name: "Find Your Style",
       component: FindYourStyle
     },
     {
-      path: '/',
-      name: 'Home',
+      path: "/",
+      name: "Home",
       component: Home
     },
     {
-      path: '/how-to',
-      name: 'How To',
+      path: "/how-to",
+      name: "How To",
       component: HowToHome
     },
     {
-      path: '/how-to-video',
-      name: 'How To Video',
+      path: "/how-to-video",
+      name: "How To Video",
       component: HowToVideo
     },
     {
-      path: '/order-history',
-      name: 'Order History',
+      path: "/order-history",
+      name: "Order History",
       component: OrderHistory
     },
     {
-      path: '/pdp',
-      name: 'Product Description Page',
+      path: "/product/:pattern/:colorway?/:material?/:size?",
+      //https://github.com/vuejs/vue-router/blob/dev/examples/named-routes/app.js
+      name: "PDP",
       component: PDP
     },
     {
-      path: '/product-list',
-      name: 'product-list',
+      path: "/product-list",
+      name: "product-list",
       component: ProductList
     },
     {
-      path: '/profile',
-      name: 'Profile',
+      path: "/profile",
+      name: "Profile",
       component: Profile
     },
     {
-      path: '/search-results',
-      name: 'Search Results',
+      path: "/search-results",
+      name: "Search Results",
       component: SearchResults
     }
   ]
-})
+});

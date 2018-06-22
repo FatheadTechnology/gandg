@@ -1,9 +1,7 @@
 <template>
   <div class="content-wrap">
     <div id="pdp">
-
       <div class="pdp-top-content" id="pdp-image-container">
-
         <div class="maintain-square-image-container" id="active-image">
           <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamillePink24x24.jpg')">
           </div>
@@ -36,6 +34,8 @@
 
       <div classs="pdp-top-content" id="pdp-purchase-container">
         <h1>Majestic Teal</h1>
+        {{pattern}}
+
         <!--TODO : by artist component -->
         <p> A removable wallpaper design by
           <a href="#">Ellen Chang</a>
@@ -141,7 +141,13 @@ import MaterialSelector from "../pdp/MaterialSelector";
 import SizeSelector from "../pdp/SizeSelector";
 import QuantitySelector from "../pdp/QuantitySelector";
 import CalculatorModal from "../global/CalculatorModal";
+import Algolia from "./../api/Algolia";
+import algoliasearch from "algoliasearch";
 
+const client = algoliasearch("S7MN0CIBBE", "ecf8c6a506e3515c1400eb7086879aa2", {
+  protocol: "https:"
+});
+const index = client.initIndex("dev_NewEvolutionProducts");
 export default {
   name: "PDP",
   components: {
@@ -156,7 +162,8 @@ export default {
       msg: "Welcome to Your Vue.js App",
       showAccordion1: false,
       showAccordion2: false,
-      showAccordion3: false
+      showAccordion3: false,
+      pattern: null
     };
   },
   methods: {
@@ -166,6 +173,25 @@ export default {
     hideModal() {
       this.$modal.hide("calculator");
     }
+  },
+  mounted() {
+    index.search(
+      {
+        filters: `ProductUrl:${this.$route.params.pattern}`
+      },
+      (err, content) => {
+        if (err) {
+          console.log(err);
+          return;
+        } else {
+          console.log("content.hits[0]", content.hits[0]);
+          this.pattern = content.hits[0];
+          // router.push({ name: "wallpaper", query: { query: query } });2
+        }
+      }
+    );
+    // this.pattern = Algolia.findPattern(this.$route.params);
+    // console.log("pattern", this.pattern);
   }
 };
 </script>
