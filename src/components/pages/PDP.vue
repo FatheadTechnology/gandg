@@ -142,13 +142,7 @@ import MaterialSelector from "../pdp/MaterialSelector";
 import SizeSelector from "../pdp/SizeSelector";
 import QuantitySelector from "../pdp/QuantitySelector";
 import CalculatorModal from "../global/CalculatorModal";
-import Algolia from "./../api/Algolia";
-import algoliasearch from "algoliasearch";
 
-const client = algoliasearch("S7MN0CIBBE", "ecf8c6a506e3515c1400eb7086879aa2", {
-  protocol: "https:"
-});
-const index = client.initIndex("dev_NewEvolutionProducts");
 export default {
   name: "PDP",
   components: {
@@ -190,6 +184,10 @@ export default {
       materials: "getPdpMaterialsFromStore",
       sizes: "getPdpSizesFromStore"
     })
+  },
+  created() {
+    this.getPatternInfo(this.$route.params);
+    window.scrollTo(0, 0);
   }
 };
 </script>

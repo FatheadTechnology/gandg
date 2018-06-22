@@ -1,28 +1,29 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
-import AboutUs from '@/components/pages/AboutUs'
-import BlogHome from '@/components/pages/BlogHome'
-import BlogPost from '@/components/pages/BlogPost'
-import Cart from '@/components/pages/Cart'
-import Favorites from '@/components/pages/Favorites'
-import FAQ from '@/components/pages/FAQ'
-import FindYourStyle from '@/components/pages/FindYourStyle'
-import Home from '@/components/pages/Home'
-import HowToHome from '@/components/pages/HowToHome'
-import HowToVideo from '@/components/pages/HowToVideo'
-import OrderHistory from '@/components/pages/OrderHistory'
+import AboutUs from "@/components/pages/AboutUs";
+import BlogHome from "@/components/pages/BlogHome";
+import BlogPost from "@/components/pages/BlogPost";
+import Cart from "@/components/pages/Cart";
+import Favorites from "@/components/pages/Favorites";
+import FAQ from "@/components/pages/FAQ";
+import FindYourStyle from "@/components/pages/FindYourStyle";
+import Home from "@/components/pages/Home";
+import HowToHome from "@/components/pages/HowToHome";
+import HowToVideo from "@/components/pages/HowToVideo";
+import OrderHistory from "@/components/pages/OrderHistory";
 //TODO : do we need this just for anon orders?
-import PDP from '@/components/pages/PDP'
-import ProductList from '@/components/pages/ProductList'
-import Profile from '@/components/pages/Profile'
-import SearchResults from '@/components/pages/SearchResults'
+import PDP from "@/components/pages/PDP";
+import ProductList from "@/components/pages/ProductList";
+import Profile from "@/components/pages/Profile";
+import SearchResults from "@/components/pages/SearchResults";
 //TODO : this is just the product list with variables?
 
-Vue.use(Router)
+Vue.use(Router);
 
 //TODO : add in dynamic links
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: "/about-us",
