@@ -136,6 +136,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import ProductGridLineMock from "../ProductGridLineMock";
 import MaterialSelector from "../pdp/MaterialSelector";
 import SizeSelector from "../pdp/SizeSelector";
@@ -167,6 +168,10 @@ export default {
     };
   },
   methods: {
+    ...mapActions({
+      getPatternInfo: "getPatternInfo",
+      findProduct: "findPdpProduct"
+    }),
     showModal() {
       this.$modal.show("calculator");
     },
@@ -174,24 +179,17 @@ export default {
       this.$modal.hide("calculator");
     }
   },
-  mounted() {
-    index.search(
-      {
-        filters: `ProductUrl:${this.$route.params.pattern}`
-      },
-      (err, content) => {
-        if (err) {
-          console.log(err);
-          return;
-        } else {
-          console.log("content.hits[0]", content.hits[0]);
-          this.pattern = content.hits[0];
-          // router.push({ name: "wallpaper", query: { query: query } });2
-        }
-      }
-    );
-    // this.pattern = Algolia.findPattern(this.$route.params);
-    // console.log("pattern", this.pattern);
+  computed: {
+    ...mapGetters({
+      //TODO : make Pattern Info Grabber
+      patternInfo: "getPatternInfoFromStore",
+      selectedProduct: "getSelectedProductFromStore",
+      materialSelected: "getMaterialSelectedFromStore",
+      quantity: "getQuantitySelectorFromStore",
+      pdpColors: "getPdpColorsFromStore",
+      materials: "getPdpMaterialsFromStore",
+      sizes: "getPdpSizesFromStore"
+    })
   }
 };
 </script>

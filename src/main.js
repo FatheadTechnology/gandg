@@ -4,8 +4,13 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import VModal from "vue-js-modal";
+<<<<<<< Updated upstream
 import InstantSearch from "vue-instantsearch";
+=======
+import Vuex from "vuex";
+>>>>>>> Stashed changes
 
+Vue.use(Vuex);
 Vue.use(VModal);
 Vue.use(InstantSearch);
 Vue.config.productionTip = false;
