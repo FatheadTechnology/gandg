@@ -2,10 +2,11 @@
   <div class="content-wrap">
     <div id="pdp">
       <div class="pdp-top-content" id="pdp-image-container">
-        <div class="maintain-square-image-container" id="active-image">
+        <pdp-image :product='patternInfo' :productSelected='selectedPdpImage'></pdp-image>
+        <!-- <div class="maintain-square-image-container" id="active-image">
           <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamillePink24x24.jpg')">
           </div>
-        </div>
+        </div> -->
 
         <div id="pdp-image-selection">
           <div class="maintain-square-image-container pdp-image-choice">
@@ -142,6 +143,7 @@ import MaterialSelector from "../pdp/MaterialSelector";
 import SizeSelector from "../pdp/SizeSelector";
 import QuantitySelector from "../pdp/QuantitySelector";
 import CalculatorModal from "../global/CalculatorModal";
+import PdpImage from "../pdp/PdpImage";
 
 export default {
   name: "PDP",
@@ -150,7 +152,8 @@ export default {
     MaterialSelector,
     SizeSelector,
     QuantitySelector,
-    CalculatorModal
+    CalculatorModal,
+    PdpImage
   },
   data() {
     return {
@@ -182,7 +185,9 @@ export default {
       quantity: "getQuantitySelectorFromStore",
       pdpColors: "getPdpColorsFromStore",
       materials: "getPdpMaterialsFromStore",
-      sizes: "getPdpSizesFromStore"
+      sizes: "getPdpSizesFromStore",
+      selectedPdpImage: "getSelectedPdpImageFromStore",
+      roomShots: "getRoomShotsFromStore"
     })
   },
   created() {

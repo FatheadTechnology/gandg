@@ -2514,6 +2514,20 @@
       },
       "ProductUrl": "baby_dinosaurs",
       "DisplayName": "Baby Dinosaurs",
+      "RoomTypes": [
+        {
+          "name": "kids",
+          "patternSize": 148
+        },
+        {
+          "name": "nursery",
+          "patternSize": 168
+        },
+        {
+          "name": "industrial",
+          "patternSize": 214
+        }
+      ],
       "Description": "Lipsum porum descriptum whatesvum Dinosaurs",
       "DimensionFormatMask": "{W}' x {H}'",
       "Width": 50,

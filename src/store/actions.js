@@ -74,15 +74,15 @@ export const hideModal = ({ state }, modalName) => {
 
 //START PDP CODE
 
-export const getPatternInfo = ({ commit, state }, patternParams) => {
+export const getPatternInfo = ({ commit, state, dispatch }, patternParams) => {
   state.pdpColors = [];
   state.quantitySelected = 1;
   console.log("patternParams", patternParams);
   api.getPatternInfo(patternParams.pattern).then(response => {
     //get master product matching the product param in URL
 
-    console.log("response from heroku = ", response);
-    var products = response.data[0].Product.Children; //get list of child products under the master product
+    console.log("response from product api = ", response);
+    var products = response.data[0].Children; //get list of child products under the master product
     console.log("products", products);
 
     // state.pdpMaterials.active = 'vinyl'
@@ -115,7 +115,7 @@ export const getPatternInfo = ({ commit, state }, patternParams) => {
     } else {
       //otherwise, direct to URL with the default selections
       router.replace({
-        name: "PDP Full Params",
+        name: "PDP",
         params: {
           colorway: state.colorSelected,
           material: state.materialSelected,
@@ -123,9 +123,62 @@ export const getPatternInfo = ({ commit, state }, patternParams) => {
         }
       });
     }
-
     commit("setPatternInfo", response.data);
+    dispatch("createRoomShotData", response.data);
   });
+};
+
+export const createRoomShotData = ({ commit, dispatch }, product) => {
+  console.log("product:", product);
+  let rooms = product.RoomTypes;
+  console.log("rooms", rooms);
+  let colors = [];
+  for (var i = 0; i < product.Children.length; i++) {
+    let item = product.Children[i];
+    if (colors.indexOf(item.Images.CloudinaryPath) == -1) {
+      colors.push(item.Images.CloudinaryPath);
+    }
+  }
+  let images = [];
+  for (var i = 0; i < rooms.length; i++) {
+    for (var z = 0; z < colors.length; z++) {
+      // let temp = cloudinary.image(`test_rooms/wall_${room}_small`, {
+      //   width: "auto",
+      //   responsive: "true",
+      //   crop: "scale",
+      //   responsive_placeholder: "blank",
+      //   client_hints: "true",
+      //   sizes: "100vw",
+      //   transformation: [
+      //     {
+      //       overlay: background,
+      //       flags: "tiled",
+      //       opacity: 85,
+      //       effect: "multiply",
+      //       width: Math.round(size)
+      //     },
+      //     {
+      //       effect: "blur:10"
+      //     },
+      //     {
+      //       overlay: `test_rooms:furniture_${room}_small`
+      //     },
+      //     {
+      //       overlay: "test_rooms:noise_small",
+      //       effect: "multiply"
+      //     }
+      //   ]
+      // });
+      // images.push({ room: rooms[i], pattern: colors[z] });
+    }
+  }
+  commit("setRoomShotData", images);
+  dispatch("createRoomShots", images);
+};
+
+export const createRoomShots = ({ commit }, images) => {
+  console.log("images", images);
+  commit("setRoomShots", images);
 };
 
 export const selectMaterial = ({ state }, material) => {
