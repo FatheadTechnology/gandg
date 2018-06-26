@@ -4,14 +4,14 @@
     <div class="button-wrap">
       <!-- TODO: Decide between these options -->
       <!-- OPTION A -->
-      <!-- <div class="material-option plain button" :id="material" v-for="material in materials" :class="{ selected : materialSelected == material }" @click="selectMaterial(material)">{{material}}</div> -->
+      <div class="material-option plain button" :id="material" v-for="material in materials" :class="{ selected : materialSelected == material }" @click="selectMaterial(material)">{{material}}</div>
       <!-- END OPTION A -->
 
       <!-- OPTION B -->
-      <select name="material-select" class="material-select">
+      <!-- <select name="material-select" class="material-select">
         <option>Vinyl</option>
         <option>Textured</option>
-      </select>
+      </select> -->
       <!-- <select name="material-select" class="material-select" v-model="selectedMaterial" @change="selectMaterial(materialSelected)">
         <option v-for="material in materials" :value="`${material}`">{{material}}</option>
       </select> -->
@@ -21,12 +21,9 @@
 </template>
 
 <script>
-// import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
-  /*    components : {
-      WallpaperPattern
-    },*/
   props: ["materials"],
   data: function() {
     return {
@@ -35,21 +32,21 @@ export default {
     };
   },
   computed: {
-    // ...mapGetters({
-    //   // materialSelected: "getMaterialSelectedFromStore"
-    // })
+    ...mapGetters({
+      materialSelected: "getMaterialSelectedFromStore"
+    })
   },
   methods: {
-    // ...mapActions({
-    //   // selectMaterial: "selectMaterial",
-    //   // findPdpProduct: "findPdpProduct"
-    // })
+    ...mapActions({
+      selectMaterial: "selectMaterial",
+      findPdpProduct: "findPdpProduct"
+    })
   },
   updated() {
-    // this.findPdpProduct();
+    this.findPdpProduct();
   },
   created() {
-    // this.selectMaterial('vinyl')
+    this.selectMaterial("vinyl");
   }
 };
 </script>

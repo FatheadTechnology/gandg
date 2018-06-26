@@ -219,6 +219,10 @@ export const setSelectedProduct = (state, product) => {
   state.selectedProduct = product;
 };
 
+export const setSelectedPdpImage = (state, image) => {
+  state.selectedPdpImage = image;
+};
+
 export const setPdpRoom = (state, room) => {
   state.pdpRoom = room[0];
 };

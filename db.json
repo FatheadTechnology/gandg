@@ -1,15 +1,15 @@
 {
   "cart": [
     {
-      "ProductId": 127,
-      "SkuNumber": "98-1239",
-      "ProductUrl": "rosa/skyblue/polywoven/20x3",
+      "ProductId": 142,
+      "SkuNumber": "98-1255",
+      "ProductUrl": "rosa/tulip/polywoven/20x3",
       "DisplayName": "Rosa",
       "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
       "ColorWay": {
-        "ColorWayName": "skyblue",
-        "ColorWayDisplayName": "Sky Blue",
-        "ColorWayHex": "#87CEEB"
+        "ColorWayName": "tulip",
+        "ColorWayDisplayName": "Tulip",
+        "ColorWayHex": "#cc33cc"
       },
       "Material": "polywoven",
       "MaterialDisplayName": "Polywoven",
@@ -26,14 +26,14 @@
       "Price": 99.99,
       "ListPrice": 99.99,
       "Images": {
-        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_SkyBlue.png",
-        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_SkyBlue.png",
-        "CloudinaryPath": "test_patterns:rosa_skyblue"
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Tulip.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Tulip.png",
+        "CloudinaryPath": "test_patterns:rosa_tulip"
       },
       "Attributes": [
         {
-          "Url": "blue",
-          "DisplayName": "Blue",
+          "Url": "purple",
+          "DisplayName": "Purple",
           "SubDescription": null,
           "VocabularyUrl": "primary-color",
           "VocabularyDisplayName": "Primary Color"
@@ -74,70 +74,8 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 1,
-      "id": 2
-    },
-    {
-      "ProductId": 206,
-      "SkuNumber": "98-2006",
-      "ProductUrl": "baby_dinosaurs/oceanblue/vinyl/16x3",
-      "DisplayName": "Baby Dinosaurs",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
-      "ColorWay": {
-        "ColorWayName": "oceanblue",
-        "ColorWayDisplayName": "Ocean Blue",
-        "ColorWayHex": "#679fd3"
-      },
-      "Material": "vinyl",
-      "MaterialDisplayName": "Vinyl",
-      "DimensionFormatMask": "{W}' x {H}'",
-      "Width": 3,
-      "Height": 16,
-      "SizeDisplayName": "16x3",
-      "Depth": 0,
-      "AllowReview": true,
-      "DecalCount": 3,
-      "PopularityRanking": 944,
-      "AmountSold": 944,
-      "QtyForSale": -144,
-      "Price": 59.99,
-      "ListPrice": 59.99,
-      "Images": {
-        "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
-        "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png"
-      },
-      "Attributes": [
-        {
-          "Url": "blue",
-          "DisplayName": "Blue",
-          "SubDescription": null,
-          "VocabularyUrl": "primary-color",
-          "VocabularyDisplayName": "Primary Color"
-        },
-        {
-          "Url": "vinyl",
-          "DisplayName": "Vinyl",
-          "SubDescription": null,
-          "VocabularyUrl": "material",
-          "VocabularyDisplayName": "Material"
-        },
-        {
-          "Url": "16x3",
-          "DisplayName": "16Ft x 3Ft",
-          "SubDescription": null,
-          "VocabularyUrl": "size",
-          "VocabularyDisplayName": "Size"
-        },
-        {
-          "Url": "no",
-          "DisplayName": "No Ancillaries",
-          "SubDescription": null,
-          "VocabularyUrl": "ancillaries",
-          "VocabularyDisplayName": "Ancillaries"
-        }
-      ],
       "quantity": 2,
-      "id": 3
+      "id": 1
     }
   ],
   "favorites": [],

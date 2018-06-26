@@ -4,6 +4,8 @@ import Prismic from "prismic-javascript";
 import algoliasearch from "algoliasearch";
 import router from "./../router";
 
+import cloudinary from "cloudinary";
+
 const client = algoliasearch("S7MN0CIBBE", "ecf8c6a506e3515c1400eb7086879aa2", {
   protocol: "https:"
 });
@@ -79,59 +81,80 @@ export const getPatternInfo = ({ commit, state, dispatch }, patternParams) => {
   state.quantitySelected = 1;
   console.log("patternParams", patternParams);
   api.getPatternInfo(patternParams.pattern).then(response => {
-    //get master product matching the product param in URL
+    //Get master product matching the product param in URL
 
     console.log("response from product api = ", response);
-    var products = response.data[0].Children; //get list of child products under the master product
-    console.log("products", products);
+    let products = response.data[0].Children; //get list of child products under the master product
 
     // state.pdpMaterials.active = 'vinyl'
-    var colorList = [];
+    let colorList = [];
+    let sizeList = [];
+    let materialList = [];
     for (var i = 0; i < products.length; i++) {
-      //loop through all the children products to find all unique colors available for the product
-      if (!colorList.includes(products[i].ColorWay.ColorWayName)) {
-        colorList.push(products[i].ColorWay.ColorWayName);
-        console.log(
-          "products[i].ColorWay being put into pdpColors:",
-          products[i].ColorWay
-        );
-        state.pdpColors.push(products[i].ColorWay);
+      //Loop through all the children products to find all unique colors, sizes, and materials available for the product
+      if (
+        !colorList.find(
+          o =>
+            o.url == products[i].Images.CloudinaryPath &&
+            o.name == products[i].ColorWay.ColorWayName
+        )
+      ) {
+        colorList.push({
+          url: products[i].Images.CloudinaryPath,
+          name: products[i].ColorWay.ColorWayName
+        });
+        state.pdpColors.push({
+          url: products[i].Images.CloudinaryPath,
+          name: products[i].ColorWay.ColorWayName
+        });
+      }
+      //TODO: Change this to use SizeValue?
+      if (!sizeList.includes(products[i].SizeDisplayName)) {
+        sizeList.push(products[i].SizeDisplayName);
+        state.pdpSizes.push({
+          Value: products[i].SizeDisplayName,
+          DisplayName: products[i].SizeDisplayName
+        });
+      }
+      if (!materialList.includes(products[i].Material)) {
+        materialList.push(products[i].Material);
+        state.pdpMaterials.push(products[i].Material);
       }
     }
+    //TODO: Make this customizable. Do we want the defaults to be the best seller?
 
-    state.colorSelected = products[0].ColorWay.ColorWayName; //default color to first product's material
+    state.colorSelected = products[0].ColorWay.ColorWayName; //default color to first product's color
     state.materialSelected = products[0].Material; //default material to first product's material
-    state.sizeSelected = products[0].SizeDisplayName; //default material to first product's material
+    state.sizeSelected = products[0].SizeDisplayName; //default size to first product's size
 
-    if (
-      patternParams.colorway &&
-      patternParams.material &&
-      patternParams.size
-    ) {
-      //if all three params are available, use them for pickers
+    // If color, material, or size is given in url, use it
+    if (patternParams.colorway) {
       state.colorSelected = patternParams.colorway;
-      state.materialSelected = patternParams.material;
-      state.sizeSelected = patternParams.size;
-    } else {
-      //otherwise, direct to URL with the default selections
-      router.replace({
-        name: "PDP",
-        params: {
-          colorway: state.colorSelected,
-          material: state.materialSelected,
-          size: state.sizeSelected
-        }
-      });
     }
+    if (patternParams.material) {
+      state.materialSelected = patternParams.material;
+    }
+    if (patternParams.size) {
+      state.sizeSelected = patternParams.size;
+    }
+    router.replace({
+      name: "PDP",
+      params: {
+        colorway: state.colorSelected,
+        material: state.materialSelected,
+        size: state.sizeSelected
+      }
+    });
+
     commit("setPatternInfo", response.data);
-    dispatch("createRoomShotData", response.data);
+    setTimeout(() => {
+      dispatch("createRoomShotData", state.patternInfo);
+    }, 1);
   });
 };
 
 export const createRoomShotData = ({ commit, dispatch }, product) => {
-  console.log("product:", product);
   let rooms = product.RoomTypes;
-  console.log("rooms", rooms);
   let colors = [];
   for (var i = 0; i < product.Children.length; i++) {
     let item = product.Children[i];
@@ -140,44 +163,53 @@ export const createRoomShotData = ({ commit, dispatch }, product) => {
     }
   }
   let images = [];
-  for (var i = 0; i < rooms.length; i++) {
-    for (var z = 0; z < colors.length; z++) {
-      // let temp = cloudinary.image(`test_rooms/wall_${room}_small`, {
-      //   width: "auto",
-      //   responsive: "true",
-      //   crop: "scale",
-      //   responsive_placeholder: "blank",
-      //   client_hints: "true",
-      //   sizes: "100vw",
-      //   transformation: [
-      //     {
-      //       overlay: background,
-      //       flags: "tiled",
-      //       opacity: 85,
-      //       effect: "multiply",
-      //       width: Math.round(size)
-      //     },
-      //     {
-      //       effect: "blur:10"
-      //     },
-      //     {
-      //       overlay: `test_rooms:furniture_${room}_small`
-      //     },
-      //     {
-      //       overlay: "test_rooms:noise_small",
-      //       effect: "multiply"
-      //     }
-      //   ]
-      // });
-      // images.push({ room: rooms[i], pattern: colors[z] });
+  for (var z = 0; z < colors.length; z++) {
+    let t = cloudinary.url(colors[z].replace(":", "/"));
+    images.push({
+      url: t,
+      color: colors[z]
+    });
+    for (var i = 0; i < rooms.length; i++) {
+      let temp = cloudinary.url(`test_rooms/wall_${rooms[i].name}_small`, {
+        width: "auto",
+        responsive: "true",
+        crop: "scale",
+        responsive_placeholder: "blank",
+        client_hints: "true",
+        sizes: "100vw",
+        transformation: [
+          {
+            overlay: colors[z],
+            flags: "tiled",
+            opacity: 85,
+            effect: "multiply",
+            width: rooms[i].patternSize
+          },
+          {
+            effect: "blur:10"
+          },
+          {
+            overlay: `test_rooms:furniture_${rooms[i].name}_small`
+          },
+          {
+            overlay: "test_rooms:noise_small",
+            effect: "multiply"
+          }
+        ]
+      });
+      images.push({ url: temp, color: colors[z] });
     }
   }
   commit("setRoomShotData", images);
-  dispatch("createRoomShots", images);
+  commit("setSelectedPdpImage", images[0]);
+};
+
+export const selectPdpImage = ({ commit }, image) => {
+  console.log("image being set as selected pdp image", image);
+  commit("setSelectedPdpImage", image);
 };
 
 export const createRoomShots = ({ commit }, images) => {
-  console.log("images", images);
   commit("setRoomShots", images);
 };
 
@@ -191,12 +223,23 @@ export const selectSize = ({ state }, size) => {
   router.replace({ params: { size: size } });
 };
 
-export const selectColor = ({ state }, color) => {
-  state.colorSelected = color;
-  router.replace({ params: { colorway: color } });
+export const selectColor = ({ state, commit }, color) => {
+  console.log("color", color);
+  state.colorSelected = color.name;
+  commit("setSelectedPdpImage", {
+    color: color.url,
+    url: cloudinary.url(color.url.replace(":", "/"))
+  });
+  router.replace({
+    params: {
+      colorway: color.name
+    }
+  });
 };
 
 export const findPdpProduct = ({ state, commit }) => {
+  console.log("state.colorSelected", state.colorSelected);
+
   for (var i = 0; i < state.patternInfo.Children.length; i++) {
     if (
       state.patternInfo.Children[i].Material == state.materialSelected &&
@@ -485,8 +528,10 @@ export const addQuantity = ({ state }, product) => {
 
 export const addToCart = ({ state }, pattern) => {
   //TODO : add options to function, ie. count size etc
+  console.log("product", pattern);
   var cartItem = pattern;
   cartItem.quantity = state.quantitySelected;
+  console.log("cartItem.quantity", cartItem.quantity);
   for (var i = 0; i < state.cart.length; i++) {
     if (state.cart[i].SkuNumber == pattern.SkuNumber) {
       state.cart[i].quantity += state.quantitySelected;
@@ -506,6 +551,7 @@ export const addToCart = ({ state }, pattern) => {
       state.cart = response.data;
     });
   });
+  console.log("cart", state.cart);
 };
 
 export const removeFromCart = ({ commit }, pattern) => {

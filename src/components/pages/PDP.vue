@@ -2,34 +2,17 @@
   <div class="content-wrap">
     <div id="pdp">
       <div class="pdp-top-content" id="pdp-image-container">
-        <pdp-image :product='patternInfo' :productSelected='selectedPdpImage'></pdp-image>
-        <!-- <div class="maintain-square-image-container" id="active-image">
-          <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamillePink24x24.jpg')">
-          </div>
-        </div> -->
 
-        <div id="pdp-image-selection">
-          <div class="maintain-square-image-container pdp-image-choice">
-            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamillePink24x24.jpg')">
+        <!-- TODO: Make a component -->
+        <!-- <div class="maintain-square-image-container pdp-image-choice">
+            <div class="maintain-square-image" :style="{ backgroundImage: 'url('+selectedImage+')'}" v-if="selectedProduct"></div>
+          </div> -->
+        <pdp-image></pdp-image>
 
-            </div>
-          </div>
-          <div class="maintain-square-image-container pdp-image-choice">
-            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleTeal24x24.jpg')">
-
-            </div>
-          </div>
-          <div class="maintain-square-image-container pdp-image-choice">
-            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleMidnightPink24x24.jpg')">
-
-            </div>
-          </div>
-          <div class="maintain-square-image-container pdp-image-choice">
-            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleMidnightTeal24x24.jpg')">
-
-            </div>
-          </div>
-        </div>
+        <!-- <div class="maintain-square-image-container pdp-image-choice" v-for="image in roomShotData" :key="image.src">
+            <div class="maintain-square-image" :style="{ backgroundImage: 'url('+image.url+')'}" v-if="image.color==selectedProduct.Images.CloudinaryPath"></div>
+          </div> -->
+        <room-shots :roomShotData="roomShotData" :selectedProduct="selectedProduct"></room-shots>
 
       </div>
 
@@ -42,34 +25,11 @@
           <a href="#">Ellen Chang</a>
         </p>
         <div id="color-ways-grid">
-
-          <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamillePink24x24.jpg')">
-
-            </div>
-          </div>
-
-          <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleTeal24x24.jpg')">
-
-            </div>
-          </div>
-          <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleMidnightPink24x24.jpg')">
-
-            </div>
-          </div>
-
-          <div class="maintain-square-image-container color-way-grid-item">
-            <div class="maintain-square-image" style="background: url('http://assets.fathead.com/swipe-patterns/HeatherDuttonCamilleMidnightTeal24x24.jpg')">
-
-            </div>
-          </div>
-
         </div>
         <div class="selectors">
-          <material-selector></material-selector>
-          <size-selector></size-selector>
+          <color-selector :colors="pdpColors"></color-selector>
+          <material-selector :materials="materials"></material-selector>
+          <size-selector :sizes="sizes"></size-selector>
           <quantity-selector></quantity-selector>
           <div class="calculator-wrap">
             <span>How much do I need?</span>
@@ -79,7 +39,7 @@
           <calculator-modal id="calculator-modal"></calculator-modal>
           <h1 id="pdp-price">$150</h1>
 
-          <div id="add-to-cart-btn" class="btn primary-btn">Add To Cart</div>
+          <add-to-cart :product="selectedProduct"></add-to-cart>
           <a href="#" id="order-sample">Order a sample swatch</a>
         </div>
       </div>
@@ -139,21 +99,28 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import ProductGridLineMock from "../ProductGridLineMock";
+import ColorSelector from "../pdp/ColorSelector";
 import MaterialSelector from "../pdp/MaterialSelector";
 import SizeSelector from "../pdp/SizeSelector";
 import QuantitySelector from "../pdp/QuantitySelector";
 import CalculatorModal from "../global/CalculatorModal";
 import PdpImage from "../pdp/PdpImage";
+import RoomShots from "../pdp/RoomShots";
+import AddToCart from "../pdp/AddToCart";
+import cloudinary from "cloudinary";
 
 export default {
   name: "PDP",
   components: {
     ProductGridLineMock,
+    ColorSelector,
     MaterialSelector,
     SizeSelector,
     QuantitySelector,
     CalculatorModal,
-    PdpImage
+    PdpImage,
+    AddToCart,
+    RoomShots
   },
   data() {
     return {
@@ -187,8 +154,13 @@ export default {
       materials: "getPdpMaterialsFromStore",
       sizes: "getPdpSizesFromStore",
       selectedPdpImage: "getSelectedPdpImageFromStore",
+      roomShotData: "getRoomShotDataFromStore",
       roomShots: "getRoomShotsFromStore"
-    })
+    }),
+    selectedImage() {
+      // let x = this.selectedProduct.Images.CloudinaryPath.replace(":", "/");
+      // return cloudinary.url(x);
+    }
   },
   created() {
     this.getPatternInfo(this.$route.params);

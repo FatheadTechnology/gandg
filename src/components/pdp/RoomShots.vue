@@ -1,9 +1,9 @@
 <template>
-
-  <div class="maintain-square-image-container pdp-image-choice" id="active-image">
-    <div class="maintain-square-image" :style="{ backgroundImage: 'url('+selectedPdpImage.url+')'}"></div>
+  <div id="pdp-image-selection">
+    <div class="maintain-square-image-container pdp-image-choice" v-for="image in roomShotData" :key="image.src" v-if="image.color==selectedProduct.Images.CloudinaryPath">
+      <div class="maintain-square-image" :style="{ backgroundImage: 'url('+image.url+')'}" @click="selectPdpImage(image)" :class="{selected: selectedPdpImage == image}"></div>
+    </div>
   </div>
-
   <!-- <span v-html='selectedImage'></span> -->
   <!-- <span id="cloud-layers" v-html='cloud'></span> -->
   <!-- <template v-for="combo in combinations">
@@ -18,9 +18,13 @@ import { mapGetters, mapActions } from "vuex";
 import cloudinary from "cloudinary";
 
 export default {
-  props: [],
+  props: ["roomShotData", "selectedProduct"],
   components: {},
-  methods: {},
+  methods: {
+    ...mapActions({
+      selectPdpImage: "selectPdpImage"
+    })
+  },
   computed: {
     ...mapGetters({
       selectedPdpImage: "getSelectedPdpImageFromStore"

@@ -1,4 +1,60 @@
 <template>
+  <div class="cart page" id="cart-page">
+    <div class="container" id="cart-container">
+      <div class="cart-flex">
+        <div class="content-block cart-list">
+          <div class="cart-list-inner">
+            <h1>cart</h1>
+            <cart-items :cart="cart" id="cart-items"></cart-items>
+            <!--TODO : cart stuff-->
+          </div>
+        </div>
+        <cart-total :cart="cart" id="cart-total"></cart-total>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<script>
+import { mapGetters, mapActions } from "vuex";
+import CartItems from "../global/CartItems";
+import CartTotal from "../global/CartTotal";
+
+export default {
+  components: {
+    CartItems,
+    CartTotal
+  },
+  name: "HelloWorld",
+  data() {
+    return {
+      msg: "Welcome to Your Vue.js App"
+    };
+  },
+  computed: {
+    ...mapGetters({
+      cart: "getCartFromStore"
+    })
+  },
+  methods: {
+    ...mapActions({
+      getCartHere: "getCart",
+      removeFromCart: "removeFromCart"
+    })
+  },
+  created() {
+    window.scrollTo(0, 0);
+    this.getCartHere();
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+<!--
+<template>
   <div id="cart">
     <div id="cart-header">
      <h1> Shopping Cart</h1>
@@ -72,9 +128,4 @@
       }
     }
   }
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
+</script>-->

@@ -73,30 +73,19 @@ export default {
 
   //start pdp
   patternInfo: {},
-  pdpMaterials: ["vinyl", "polywoven"],
-  pdpSizes: [
-    {
-      DisplayName: "16' x 3' Roll",
-      Value: "16x3"
-    },
-    {
-      DisplayName: "20' x 3' Roll",
-      Value: "20x3"
-    },
-    {
-      DisplayName: "1' x 1' Sample",
-      Value: "Sample"
-    }
-  ],
+  pdpMaterials: [],
+  pdpSizes: [],
   pdpColors: [],
   materialSelected: {},
   sizeSelected: {},
   colorSelected: {},
   selectedProduct: {},
+  selectedPdpImage: null,
   colorsAvailable: [],
   quantitySelected: 1,
   roomShots: null,
   roomShotData: null,
+  selectedRoomShots: null,
   //end pdp
 
   //start PDP room
