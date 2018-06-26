@@ -8,25 +8,22 @@
       <!-- END OPTION A -->
 
       <!-- OPTION B -->
-      <select name="material-select" class="material-select">
+      <!-- <select name="material-select" class="material-select">
         <option>Vinyl</option>
         <option>Textured</option>
-      </select>
-      <!-- <select name="material-select" class="material-select" v-model="selectedMaterial" @change="selectMaterial(materialSelected)">
-        <option v-for="material in materials" :value="`${material}`">{{material}}</option>
       </select> -->
+      <select name="material-select" class="material-select" v-model="selectedMaterial" @change="selectMaterial(selectedMaterial)">
+        <option v-for="material in materials" :value="`${material}`">{{material}}</option>
+      </select>
       <!-- END OPTION B -->
     </div>
   </div>
 </template>
 
 <script>
-// import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
-  /*    components : {
-      WallpaperPattern
-    },*/
   props: ["materials"],
   data: function() {
     return {
@@ -35,21 +32,21 @@ export default {
     };
   },
   computed: {
-    // ...mapGetters({
-    //   // materialSelected: "getMaterialSelectedFromStore"
-    // })
+    ...mapGetters({
+      materialSelected: "getMaterialSelectedFromStore"
+    })
   },
   methods: {
-    // ...mapActions({
-    //   // selectMaterial: "selectMaterial",
-    //   // findPdpProduct: "findPdpProduct"
-    // })
+    ...mapActions({
+      selectMaterial: "selectMaterial",
+      findPdpProduct: "findPdpProduct"
+    })
   },
   updated() {
-    // this.findPdpProduct();
+    this.findPdpProduct();
   },
   created() {
-    // this.selectMaterial('vinyl')
+    this.selectMaterial("vinyl");
   }
 };
 </script>

@@ -79,6 +79,13 @@
     }
   }
 }
+.maintain-square-image {
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.maintain-square-image.selected {
+  border: 2px solid black;
+}
 
 @include under-m {
   #pdp {
