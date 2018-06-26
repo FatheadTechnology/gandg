@@ -90,6 +90,10 @@ export const getPatternInfo = ({ commit, state, dispatch }, patternParams) => {
     let colorList = [];
     let sizeList = [];
     let materialList = [];
+    state.pdpSizes = [];
+    state.pdpMaterials = [];
+    state.pdpColors = [];
+
     for (var i = 0; i < products.length; i++) {
       //Loop through all the children products to find all unique colors, sizes, and materials available for the product
       if (
@@ -147,6 +151,8 @@ export const getPatternInfo = ({ commit, state, dispatch }, patternParams) => {
     });
 
     commit("setPatternInfo", response.data);
+    // TODO: Fix :(
+    // Calls the room shot creation action after this one is done
     setTimeout(() => {
       dispatch("createRoomShotData", state.patternInfo);
     }, 1);
@@ -156,18 +162,26 @@ export const getPatternInfo = ({ commit, state, dispatch }, patternParams) => {
 export const createRoomShotData = ({ commit, dispatch }, product) => {
   let rooms = product.RoomTypes;
   let colors = [];
+  let images = [];
+  // Getting exclusive Cloudinary IDs
   for (var i = 0; i < product.Children.length; i++) {
     let item = product.Children[i];
-    if (colors.indexOf(item.Images.CloudinaryPath) == -1) {
-      colors.push(item.Images.CloudinaryPath);
+    if (!colors.find(o => o.id == item.Images.CloudinaryPath)) {
+      colors.push({
+        id: item.Images.CloudinaryPath,
+        name: item.ColorWay.ColorWayName
+      });
     }
   }
-  let images = [];
+
   for (var z = 0; z < colors.length; z++) {
-    let t = cloudinary.url(colors[z].replace(":", "/"));
+    // Put the swatch into the list of images
+    let t = cloudinary.url(colors[z].id.replace(":", "/"));
     images.push({
       url: t,
-      color: colors[z]
+      color: colors[z].id,
+      name: colors[z].name,
+      room: "swatch"
     });
     for (var i = 0; i < rooms.length; i++) {
       let temp = cloudinary.url(`test_rooms/wall_${rooms[i].name}_small`, {
@@ -179,7 +193,7 @@ export const createRoomShotData = ({ commit, dispatch }, product) => {
         sizes: "100vw",
         transformation: [
           {
-            overlay: colors[z],
+            overlay: colors[z].id,
             flags: "tiled",
             opacity: 85,
             effect: "multiply",
@@ -197,15 +211,28 @@ export const createRoomShotData = ({ commit, dispatch }, product) => {
           }
         ]
       });
-      images.push({ url: temp, color: colors[z] });
+      images.push({
+        url: temp,
+        color: colors[z].id,
+        name: colors[z].name,
+        room: rooms[i].name
+      });
     }
   }
   commit("setRoomShotData", images);
-  commit("setSelectedPdpImage", images[0]);
+
+  // If a color is in the URL, use the first image with that same color (Should be swatch)
+  if (router.currentRoute.params.colorway) {
+    for (var i = 0; i < images.length; i++) {
+      if (images[i].name == router.currentRoute.params.colorway) {
+        commit("setSelectedPdpImage", images[i]);
+        return;
+      }
+    }
+  }
 };
 
 export const selectPdpImage = ({ commit }, image) => {
-  console.log("image being set as selected pdp image", image);
   commit("setSelectedPdpImage", image);
 };
 
@@ -224,12 +251,23 @@ export const selectSize = ({ state }, size) => {
 };
 
 export const selectColor = ({ state, commit }, color) => {
-  console.log("color", color);
   state.colorSelected = color.name;
-  commit("setSelectedPdpImage", {
-    color: color.url,
-    url: cloudinary.url(color.url.replace(":", "/"))
-  });
+
+  // Find the image that matches the currently selected room, with the newly selected color
+  for (var i = 0; i < state.roomShotData.length; i++) {
+    if (
+      state.roomShotData[i].color == color.url &&
+      state.roomShotData[i].room == state.selectedPdpImage.room
+    ) {
+      commit("setSelectedPdpImage", {
+        url: state.roomShotData[i].url,
+        color: color.url,
+        name: color.name,
+        room: state.roomShotData[i].room
+      });
+    }
+  }
+
   router.replace({
     params: {
       colorway: color.name
@@ -238,8 +276,6 @@ export const selectColor = ({ state, commit }, color) => {
 };
 
 export const findPdpProduct = ({ state, commit }) => {
-  console.log("state.colorSelected", state.colorSelected);
-
   for (var i = 0; i < state.patternInfo.Children.length; i++) {
     if (
       state.patternInfo.Children[i].Material == state.materialSelected &&
@@ -257,76 +293,6 @@ export const findPdpProduct = ({ state, commit }) => {
 };
 
 //END PDP CODE
-
-// START FILTERS CODE
-// TODO: remove this
-export const toggleColorFilter = ({ state, dispatch }, color) => {
-  if (color.active) {
-    color.active = false;
-    state.appliedColorFilters.pop(color);
-  } else {
-    color.active = true;
-    state.appliedColorFilters.push(color);
-  }
-
-  if (state.appliedColorFilters.length > 0) {
-    var colorParams = "(design.color:";
-    for (var filt in state.appliedColorFilters) {
-      if (filt != 0) {
-        colorParams += " OR design.color:";
-      }
-      colorParams += state.appliedColorFilters[filt].name;
-    }
-    colorParams += ")";
-  } else {
-    colorParams = "";
-  }
-
-  state.colorParameters = colorParams;
-
-  dispatch("combinedSearch");
-};
-// TODO: remove this
-export const togglePatternFilter = ({ state, dispatch }, patternType) => {
-  if (patternType.active) {
-    patternType.active = false;
-    state.appliedPatternFilters.pop(patternType);
-  } else {
-    patternType.active = true;
-    state.appliedPatternFilters.push(patternType);
-  }
-
-  if (state.appliedPatternFilters.length > 0) {
-    var patternParams = "(design.type:";
-    for (var filt in state.appliedPatternFilters) {
-      if (filt != 0) {
-        patternParams += " OR design.type:";
-      }
-      patternParams += state.appliedPatternFilters[filt].name;
-    }
-    patternParams += ")";
-  } else {
-    patternParams = "";
-  }
-
-  state.patternParameters = patternParams;
-  dispatch("combinedSearch");
-};
-// TODO: remove this
-export const combinedSearch = ({ state, dispatch }) => {
-  var and = "";
-  if (state.colorParameters && state.patternParameters) {
-    and = " AND ";
-  }
-
-  var params = {
-    searchTerm: state.appliedSearchTerm,
-    filters: state.colorParameters + and + state.patternParameters
-  };
-
-  dispatch("searchAlgolia", { ...params });
-};
-// END FILTERS CODE
 
 // START ARTISTS
 export const getArtists = ({ commit }) => {

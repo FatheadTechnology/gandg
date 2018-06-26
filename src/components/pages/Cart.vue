@@ -4,7 +4,7 @@
       <div class="cart-flex">
         <div class="content-block cart-list">
           <div class="cart-list-inner">
-            <h1>cart</h1>
+            <h1>Cart</h1>
             <cart-items :cart="cart" id="cart-items"></cart-items>
             <!--TODO : cart stuff-->
           </div>

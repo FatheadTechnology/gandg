@@ -1,7 +1,7 @@
 <template>
   <div id="pdp-image-selection">
     <div class="maintain-square-image-container pdp-image-choice" v-for="image in roomShotData" :key="image.src" v-if="image.color==selectedProduct.Images.CloudinaryPath">
-      <div class="maintain-square-image" :style="{ backgroundImage: 'url('+image.url+')'}" @click="selectPdpImage(image)" :class="{selected: selectedPdpImage == image}"></div>
+      <div class="maintain-square-image" :style="{ backgroundImage: 'url('+image.url+')'}" @click="selectPdpImage(image)" :class="{selected: selectedPdpImage.room == image.room}"></div>
     </div>
   </div>
   <!-- <span v-html='selectedImage'></span> -->

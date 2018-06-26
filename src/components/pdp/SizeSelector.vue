@@ -4,7 +4,7 @@
     <div class="button-wrap">
       <!-- TODO: Decide between these options -->
       <!-- OPTION A -->
-      <div class="size-option plain button" :id="size.Value" v-for="size in sizes" :class="{ selected : sizeSelected == size.Value }" @click="selectSize(size.Value)">{{size.DisplayName}}</div>
+      <!-- <div class="size-option plain button" :id="size.Value" v-for="size in sizes" :class="{ selected : sizeSelected == size.Value }" @click="selectSize(size.Value)">{{size.DisplayName}}</div> -->
       <!-- END OPTION A -->
 
       <!-- OPTION B -->
@@ -15,9 +15,9 @@
         <option>Sample - FREE*</option>
       </select>
       <span v-show="selectedSize == 'Sample - FREE*'">*not actually free lol</span> -->
-      <!-- <select name="size-select" class="size-select" v-model="selectedSize" @change="selectSize(selectedSize)">
+      <select name="size-select" class="size-select" v-model="selectedSize" @change="selectSize(selectedSize)">
         <option v-for="size in sizes" :value="`${size.Value}`">{{size.DisplayName}}</option>
-      </select> -->
+      </select>
       <!-- END OPTION B -->
     </div>
   </div>
@@ -30,9 +30,9 @@ export default {
   props: ["sizes"],
   data: function() {
     return {
-      selectedSize: "16x3"
+      selectedSize: "16x3",
       // TODO: Only needed for option B
-      // selectedSize: this.$route.params.size
+      selectedSize: this.$route.params.size
     };
   },
   computed: {

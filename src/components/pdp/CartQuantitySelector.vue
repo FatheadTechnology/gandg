@@ -1,8 +1,8 @@
 <template>
   <div class="quantity-selector">
-    <span class="minus-one button" @click="minusQuantity(product)">&minus;</span>
+    <span class="minus-one btn" @click="minusQuantity(product)">&minus;</span>
     <span class="quantity-selected">{{product.quantity}}</span>
-    <span class="plus-one button" @click="addQuantity(product)">&plus;</span>
+    <span class="plus-one btn" @click="addQuantity(product)">&plus;</span>
   </div>
 </template>
 

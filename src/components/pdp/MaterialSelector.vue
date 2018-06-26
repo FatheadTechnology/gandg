@@ -4,7 +4,7 @@
     <div class="button-wrap">
       <!-- TODO: Decide between these options -->
       <!-- OPTION A -->
-      <div class="material-option plain button" :id="material" v-for="material in materials" :class="{ selected : materialSelected == material }" @click="selectMaterial(material)">{{material}}</div>
+      <!-- <div class="material-option plain button" :id="material" v-for="material in materials" :class="{ selected : materialSelected == material }" @click="selectMaterial(material)">{{material}}</div> -->
       <!-- END OPTION A -->
 
       <!-- OPTION B -->
@@ -12,9 +12,9 @@
         <option>Vinyl</option>
         <option>Textured</option>
       </select> -->
-      <!-- <select name="material-select" class="material-select" v-model="selectedMaterial" @change="selectMaterial(materialSelected)">
+      <select name="material-select" class="material-select" v-model="selectedMaterial" @change="selectMaterial(selectedMaterial)">
         <option v-for="material in materials" :value="`${material}`">{{material}}</option>
-      </select> -->
+      </select>
       <!-- END OPTION B -->
     </div>
   </div>

@@ -220,6 +220,7 @@ export const setSelectedProduct = (state, product) => {
 };
 
 export const setSelectedPdpImage = (state, image) => {
+  console.log("image being set as selected pdp image", image);
   state.selectedPdpImage = image;
 };
 

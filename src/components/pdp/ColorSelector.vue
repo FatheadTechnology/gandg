@@ -25,8 +25,7 @@ export default {
   methods: {
     ...mapActions({
       selectColor: "selectColor",
-      findPdpProduct: "findPdpProduct",
-      colorExists: "colorExists"
+      findPdpProduct: "findPdpProduct"
     }),
     swatch(id) {
       let x = id.replace(":", "/");

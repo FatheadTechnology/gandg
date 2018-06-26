@@ -17,13 +17,13 @@
       </div>
 
       <div classs="pdp-top-content" id="pdp-purchase-container">
-        <h1>Majestic Teal</h1>
-        {{pattern}}
+        <pattern-info :info="patternInfo"></pattern-info>
+        <!-- <h1>Majestic Teal</h1>
 
-        <!--TODO : by artist component -->
+         TODO : by artist component
         <p> A removable wallpaper design by
           <a href="#">Ellen Chang</a>
-        </p>
+        </p> -->
         <div id="color-ways-grid">
         </div>
         <div class="selectors">
@@ -107,6 +107,7 @@ import CalculatorModal from "../global/CalculatorModal";
 import PdpImage from "../pdp/PdpImage";
 import RoomShots from "../pdp/RoomShots";
 import AddToCart from "../pdp/AddToCart";
+import PatternInfo from "../pdp/PatternInfo";
 import cloudinary from "cloudinary";
 
 export default {
@@ -120,6 +121,7 @@ export default {
     CalculatorModal,
     PdpImage,
     AddToCart,
+    PatternInfo,
     RoomShots
   },
   data() {

@@ -20,7 +20,9 @@
         <span>Total</span>
         <span id="final-total">${{calcFinalTotal()}}</span>
       </div>
-      <div class="big checkout button">CHECKOUT</div>
+      <div class="checkout-btn-wrap">
+        <div class="btn primary-btn">CHECKOUT</div>
+      </div>
     </div>
   </div>
 </template>

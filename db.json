@@ -74,8 +74,162 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 2,
+      "quantity": 5,
       "id": 1
+    },
+    {
+      "ProductId": 138,
+      "SkuNumber": "98-1251",
+      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
+      "DisplayName": "Rosa",
+      "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
+      "ColorWay": {
+        "ColorWayName": "oceanblue",
+        "ColorWayDisplayName": "Ocean Blue",
+        "ColorWayHex": "#0000cc"
+      },
+      "Material": "polywoven",
+      "MaterialDisplayName": "Polywoven",
+      "DimensionFormatMask": "{W}' x {H}'",
+      "Width": 3,
+      "Height": 20,
+      "SizeDisplayName": "20x3",
+      "Depth": 0,
+      "AllowReview": true,
+      "DecalCount": 3,
+      "PopularityRanking": 944,
+      "AmountSold": 944,
+      "QtyForSale": -144,
+      "Price": 99.99,
+      "ListPrice": 99.99,
+      "Images": {
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "CloudinaryPath": "test_patterns:rosa_oceanblue"
+      },
+      "Attributes": [
+        {
+          "Url": "blue",
+          "DisplayName": "Blue",
+          "SubDescription": null,
+          "VocabularyUrl": "primary-color",
+          "VocabularyDisplayName": "Primary Color"
+        },
+        {
+          "Url": "polywoven",
+          "DisplayName": "Polywoven",
+          "SubDescription": null,
+          "VocabularyUrl": "material",
+          "VocabularyDisplayName": "Material"
+        },
+        {
+          "Url": "16x3",
+          "DisplayName": "16Ft x 3Ft",
+          "SubDescription": null,
+          "VocabularyUrl": "size",
+          "VocabularyDisplayName": "Size"
+        },
+        {
+          "Url": "red",
+          "DisplayName": "Red",
+          "SubDescription": null,
+          "VocabularyUrl": "secondary-color",
+          "VocabularyDisplayName": "Secondary Color"
+        },
+        {
+          "Url": "white",
+          "DisplayName": "White",
+          "SubDescription": null,
+          "VocabularyUrl": "tertiary-color",
+          "VocabularyDisplayName": "Tertiary Color"
+        },
+        {
+          "Url": "no",
+          "DisplayName": "No Ancillaries",
+          "SubDescription": null,
+          "VocabularyUrl": "ancillaries",
+          "VocabularyDisplayName": "Ancillaries"
+        }
+      ],
+      "quantity": 1,
+      "id": 4
+    },
+    {
+      "ProductId": 138,
+      "SkuNumber": "98-1251",
+      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
+      "DisplayName": "Rosa",
+      "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
+      "ColorWay": {
+        "ColorWayName": "oceanblue",
+        "ColorWayDisplayName": "Ocean Blue",
+        "ColorWayHex": "#0000cc"
+      },
+      "Material": "polywoven",
+      "MaterialDisplayName": "Polywoven",
+      "DimensionFormatMask": "{W}' x {H}'",
+      "Width": 3,
+      "Height": 20,
+      "SizeDisplayName": "20x3",
+      "Depth": 0,
+      "AllowReview": true,
+      "DecalCount": 3,
+      "PopularityRanking": 944,
+      "AmountSold": 944,
+      "QtyForSale": -144,
+      "Price": 99.99,
+      "ListPrice": 99.99,
+      "Images": {
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "CloudinaryPath": "test_patterns:rosa_oceanblue"
+      },
+      "Attributes": [
+        {
+          "Url": "blue",
+          "DisplayName": "Blue",
+          "SubDescription": null,
+          "VocabularyUrl": "primary-color",
+          "VocabularyDisplayName": "Primary Color"
+        },
+        {
+          "Url": "polywoven",
+          "DisplayName": "Polywoven",
+          "SubDescription": null,
+          "VocabularyUrl": "material",
+          "VocabularyDisplayName": "Material"
+        },
+        {
+          "Url": "16x3",
+          "DisplayName": "16Ft x 3Ft",
+          "SubDescription": null,
+          "VocabularyUrl": "size",
+          "VocabularyDisplayName": "Size"
+        },
+        {
+          "Url": "red",
+          "DisplayName": "Red",
+          "SubDescription": null,
+          "VocabularyUrl": "secondary-color",
+          "VocabularyDisplayName": "Secondary Color"
+        },
+        {
+          "Url": "white",
+          "DisplayName": "White",
+          "SubDescription": null,
+          "VocabularyUrl": "tertiary-color",
+          "VocabularyDisplayName": "Tertiary Color"
+        },
+        {
+          "Url": "no",
+          "DisplayName": "No Ancillaries",
+          "SubDescription": null,
+          "VocabularyUrl": "ancillaries",
+          "VocabularyDisplayName": "Ancillaries"
+        }
+      ],
+      "quantity": 4,
+      "id": 5
     }
   ],
   "favorites": [],

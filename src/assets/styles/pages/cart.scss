@@ -39,6 +39,14 @@
   display: inline-block;
   display: flex;
   flex-direction: column;
+  .checkout-btn-wrap {
+    width: 100%;
+    text-align: center;
+    .btn {
+      display: inline-block;
+      width: 75%;
+    }
+  }
   @include m {
     width: 40%;
   }
@@ -48,7 +56,7 @@
   }
   .total-inner {
     padding: 20px;
-    background-color: $bg-color;
+    background-color: #fff;
     .button {
       display: block;
     }
