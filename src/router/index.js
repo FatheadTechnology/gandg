@@ -23,6 +23,7 @@ Vue.use(Router)
 
 //TODO : add in dynamic links
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/about-us',

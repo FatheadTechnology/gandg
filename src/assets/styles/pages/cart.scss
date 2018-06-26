@@ -2,7 +2,7 @@
 
 #cart {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(25, 1fr);
   //grid-gap: $cart-item-padding;
 
   .cart-label {
@@ -11,7 +11,7 @@
     text-align: left;
   }
   #cart-header {
-    grid-column: span 8 / auto;
+    grid-column: span 25 / auto;
     h1 {
       margin-bottom: 0;
       padding-bottom: .5em;
@@ -25,14 +25,14 @@
   }
 
   #label-bar {
-    grid-column: span 8 / auto;
+    grid-column: span 25 / auto;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(25, 1fr);
     grid-gap: $cart-item-padding;
     background-color: $footer-bg-color;
     color: $footer-color;
     .cart-item {
-      grid-column: span 3 / auto;
+      grid-column: span 5 / auto;
     }
     .quantity {
       grid-column: span 2 / auto;
