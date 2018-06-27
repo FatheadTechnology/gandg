@@ -28,6 +28,7 @@
   width: 100%;
   height: 100%;
 }
+
 .video-preview-container{
 
     display: grid;
@@ -35,6 +36,9 @@
     grid-gap: 10px;
     width: 100%;
 
+  .video-preview{
+    cursor: pointer;
+  }
     .maintain-square-video-preview {
       position: relative;
       &:before {
