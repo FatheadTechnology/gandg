@@ -191,7 +191,11 @@ export default {
   },
   created() {
       console.log(this.$route.params.landingId);
-      this.getLandingPageContent(this.$route.params.landingId);
+      if (this.$route.params.landingId){
+        this.getLandingPageContent(this.$route.params.landingId);
+      } else {
+        this.getLandingPageContent('standard');
+      }
 
   }
 };

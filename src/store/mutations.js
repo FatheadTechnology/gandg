@@ -24,6 +24,7 @@ export const setMaterials = (state, materials) => {
 export const setArtists = (state, artists) => {
   state.artists = artists;
 };
+
 export const setHomepageContent = (state, homepageJson) => {
   state.homepageContent = homepageJson;
   console.log("homepageJson", homepageJson);
