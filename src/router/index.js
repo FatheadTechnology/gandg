@@ -25,12 +25,7 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   routes: [
-    {
-      path: "/about-us",
-      name: "About Us",
-      component: AboutUs
-    },
-    {
+ /*   {
       path: "/blog",
       name: "Blog",
       component: BlogHome
@@ -39,7 +34,7 @@ export default new Router({
       path: "/blog-post",
       name: "Blog Post",
       component: BlogPost
-    },
+    },*/
     {
       path: "/about-us",
       name: "About Us",
@@ -92,7 +87,7 @@ export default new Router({
       component: PDP
     },
     {
-      path: "/product-list",
+      path: "/product-list/:landingId?",
       name: "product-list",
       component: ProductList
     },

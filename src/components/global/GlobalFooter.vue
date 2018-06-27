@@ -1,6 +1,10 @@
 <template>
   <div id="global-footer">
     <div class="small-nav-col" id="contact-us">
+      <!--
+TODO : MAKE THESE LINKS WORK WITH THE PRISMIC INTERPOLATOR : JACOB
+-->
+
       <h3>CONTACT</h3>
       <a href="tel:877-328-8877">877-328-8877</a>
       <a href="mailto:support@guildandgrace.com">E-mail Support</a>

@@ -1,11 +1,19 @@
 <template>
   <div id="product-list">
-    <div class="header" id="product-list-header">
-
+    <div class="header" id="product-list-header" :style="{ backgroundImage: 'url('+ landingPageContent['0'].data.landing_page_image.url +')' }">
     </div>
     <div class="header-bar">
-      <h2>CATEGORY NAME OR GENERAL TEXT (TODO : 6/18 PORT)</h2>
+      <h2>
+        {{landingPageContent["0"].data.landing_page_title["0"].text}}
+
+      </h2>
     </div>
+    <h3 class="btn-center-container">
+      <!--
+      TODO : Make unique class for these headers with better styling
+      -->
+    {{landingPageContent["0"].data.landing_page_subheader["0"].text}}
+    </h3>
     <div class="content-wrap">
       <!--
 TODO : ADD IN FILTERS
@@ -146,6 +154,7 @@ TODO : ADD IN FILTERS
 import ProductGridLineMock from "../ProductGridLineMock";
 import WallpaperPattern from "../global/WallpaperPattern";
 import ColorFilter from "../pdp/ColorFilter";
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: "HelloWorld",
@@ -164,13 +173,26 @@ export default {
       showSort: false
     };
   },
+  computed:{
+    ...mapGetters({
+      landingPageContent: 'getLandingPageContentFromStore'
+    })
+  },
   methods: {
+    ...mapActions({
+      getLandingPageContent: 'getLandingPageContent',
+    }),
     toggleFilters() {
       this.showFilters = !this.showFilters;
     },
     toggleSort() {
       this.showSort = !this.showSort;
     }
+  },
+  created() {
+      console.log(this.$route.params.landingId);
+      this.getLandingPageContent(this.$route.params.landingId);
+
   }
 };
 </script>
