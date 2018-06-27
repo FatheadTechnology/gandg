@@ -1,15 +1,92 @@
 {
   "cart": [
     {
-      "ProductId": 142,
-      "SkuNumber": "98-1255",
-      "ProductUrl": "rosa/tulip/polywoven/20x3",
+      "ProductId": 150,
+      "SkuNumber": "98-1262",
+      "ProductUrl": "rosa/sunset/polywoven/Sample",
+      "DisplayName": "Rosa",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Praesent libero. Sed cursus ante dapibus diam.",
+      "ColorWay": {
+        "ColorWayName": "sunset",
+        "ColorWayDisplayName": "Sunset",
+        "ColorWayHex": "#e89b58"
+      },
+      "Material": "polywoven",
+      "MaterialDisplayName": "Polywoven",
+      "DimensionFormatMask": "{W}' x {H}'",
+      "Width": 1,
+      "Height": 1,
+      "SizeDisplayName": "Sample",
+      "Depth": 0,
+      "AllowReview": true,
+      "DecalCount": 3,
+      "PopularityRanking": 944,
+      "AmountSold": 944,
+      "QtyForSale": -144,
+      "Price": 9.99,
+      "ListPrice": 9.99,
+      "Images": {
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Sunset.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Sunset.png",
+        "CloudinaryPath": "test_patterns:rosa_sunset"
+      },
+      "Attributes": [
+        {
+          "Url": "orange",
+          "DisplayName": "Orange",
+          "SubDescription": null,
+          "VocabularyUrl": "primary-color",
+          "VocabularyDisplayName": "Primary Color"
+        },
+        {
+          "Url": "polywoven",
+          "DisplayName": "Polywoven",
+          "SubDescription": null,
+          "VocabularyUrl": "material",
+          "VocabularyDisplayName": "Material"
+        },
+        {
+          "Url": "1x1",
+          "DisplayName": "1Ft x 1Ft",
+          "SubDescription": null,
+          "VocabularyUrl": "size",
+          "VocabularyDisplayName": "Size"
+        },
+        {
+          "Url": "red",
+          "DisplayName": "Red",
+          "SubDescription": null,
+          "VocabularyUrl": "secondary-color",
+          "VocabularyDisplayName": "Secondary Color"
+        },
+        {
+          "Url": "white",
+          "DisplayName": "White",
+          "SubDescription": null,
+          "VocabularyUrl": "tertiary-color",
+          "VocabularyDisplayName": "Tertiary Color"
+        },
+        {
+          "Url": "no",
+          "DisplayName": "No Ancillaries",
+          "SubDescription": null,
+          "VocabularyUrl": "ancillaries",
+          "VocabularyDisplayName": "Ancillaries"
+        }
+      ],
+      "quantity": 10,
+      "id": 14
+    },
+    {
+      "ProductId": 138,
+      "SkuNumber": "98-1251",
+      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
       "DisplayName": "Rosa",
       "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
       "ColorWay": {
-        "ColorWayName": "tulip",
-        "ColorWayDisplayName": "Tulip",
-        "ColorWayHex": "#cc33cc"
+        "ColorWayName": "oceanblue",
+        "ColorWayDisplayName": "Ocean Blue",
+        "ColorWayHex": "#0000cc"
       },
       "Material": "polywoven",
       "MaterialDisplayName": "Polywoven",
@@ -26,14 +103,14 @@
       "Price": 99.99,
       "ListPrice": 99.99,
       "Images": {
-        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Tulip.png",
-        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Tulip.png",
-        "CloudinaryPath": "test_patterns:rosa_tulip"
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "CloudinaryPath": "test_patterns:rosa_oceanblue"
       },
       "Attributes": [
         {
-          "Url": "purple",
-          "DisplayName": "Purple",
+          "Url": "blue",
+          "DisplayName": "Blue",
           "SubDescription": null,
           "VocabularyUrl": "primary-color",
           "VocabularyDisplayName": "Primary Color"
@@ -74,8 +151,8 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 5,
-      "id": 1
+      "quantity": 7,
+      "id": 15
     },
     {
       "ProductId": 138,
@@ -152,7 +229,7 @@
         }
       ],
       "quantity": 1,
-      "id": 4
+      "id": 16
     },
     {
       "ProductId": 138,
@@ -228,8 +305,239 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 4,
-      "id": 5
+      "quantity": 1,
+      "id": 17
+    },
+    {
+      "ProductId": 138,
+      "SkuNumber": "98-1251",
+      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
+      "DisplayName": "Rosa",
+      "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
+      "ColorWay": {
+        "ColorWayName": "oceanblue",
+        "ColorWayDisplayName": "Ocean Blue",
+        "ColorWayHex": "#0000cc"
+      },
+      "Material": "polywoven",
+      "MaterialDisplayName": "Polywoven",
+      "DimensionFormatMask": "{W}' x {H}'",
+      "Width": 3,
+      "Height": 20,
+      "SizeDisplayName": "20x3",
+      "Depth": 0,
+      "AllowReview": true,
+      "DecalCount": 3,
+      "PopularityRanking": 944,
+      "AmountSold": 944,
+      "QtyForSale": -144,
+      "Price": 99.99,
+      "ListPrice": 99.99,
+      "Images": {
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "CloudinaryPath": "test_patterns:rosa_oceanblue"
+      },
+      "Attributes": [
+        {
+          "Url": "blue",
+          "DisplayName": "Blue",
+          "SubDescription": null,
+          "VocabularyUrl": "primary-color",
+          "VocabularyDisplayName": "Primary Color"
+        },
+        {
+          "Url": "polywoven",
+          "DisplayName": "Polywoven",
+          "SubDescription": null,
+          "VocabularyUrl": "material",
+          "VocabularyDisplayName": "Material"
+        },
+        {
+          "Url": "16x3",
+          "DisplayName": "16Ft x 3Ft",
+          "SubDescription": null,
+          "VocabularyUrl": "size",
+          "VocabularyDisplayName": "Size"
+        },
+        {
+          "Url": "red",
+          "DisplayName": "Red",
+          "SubDescription": null,
+          "VocabularyUrl": "secondary-color",
+          "VocabularyDisplayName": "Secondary Color"
+        },
+        {
+          "Url": "white",
+          "DisplayName": "White",
+          "SubDescription": null,
+          "VocabularyUrl": "tertiary-color",
+          "VocabularyDisplayName": "Tertiary Color"
+        },
+        {
+          "Url": "no",
+          "DisplayName": "No Ancillaries",
+          "SubDescription": null,
+          "VocabularyUrl": "ancillaries",
+          "VocabularyDisplayName": "Ancillaries"
+        }
+      ],
+      "quantity": 1,
+      "id": 18
+    },
+    {
+      "ProductId": 138,
+      "SkuNumber": "98-1251",
+      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
+      "DisplayName": "Rosa",
+      "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
+      "ColorWay": {
+        "ColorWayName": "oceanblue",
+        "ColorWayDisplayName": "Ocean Blue",
+        "ColorWayHex": "#0000cc"
+      },
+      "Material": "polywoven",
+      "MaterialDisplayName": "Polywoven",
+      "DimensionFormatMask": "{W}' x {H}'",
+      "Width": 3,
+      "Height": 20,
+      "SizeDisplayName": "20x3",
+      "Depth": 0,
+      "AllowReview": true,
+      "DecalCount": 3,
+      "PopularityRanking": 944,
+      "AmountSold": 944,
+      "QtyForSale": -144,
+      "Price": 99.99,
+      "ListPrice": 99.99,
+      "Images": {
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "CloudinaryPath": "test_patterns:rosa_oceanblue"
+      },
+      "Attributes": [
+        {
+          "Url": "blue",
+          "DisplayName": "Blue",
+          "SubDescription": null,
+          "VocabularyUrl": "primary-color",
+          "VocabularyDisplayName": "Primary Color"
+        },
+        {
+          "Url": "polywoven",
+          "DisplayName": "Polywoven",
+          "SubDescription": null,
+          "VocabularyUrl": "material",
+          "VocabularyDisplayName": "Material"
+        },
+        {
+          "Url": "16x3",
+          "DisplayName": "16Ft x 3Ft",
+          "SubDescription": null,
+          "VocabularyUrl": "size",
+          "VocabularyDisplayName": "Size"
+        },
+        {
+          "Url": "red",
+          "DisplayName": "Red",
+          "SubDescription": null,
+          "VocabularyUrl": "secondary-color",
+          "VocabularyDisplayName": "Secondary Color"
+        },
+        {
+          "Url": "white",
+          "DisplayName": "White",
+          "SubDescription": null,
+          "VocabularyUrl": "tertiary-color",
+          "VocabularyDisplayName": "Tertiary Color"
+        },
+        {
+          "Url": "no",
+          "DisplayName": "No Ancillaries",
+          "SubDescription": null,
+          "VocabularyUrl": "ancillaries",
+          "VocabularyDisplayName": "Ancillaries"
+        }
+      ],
+      "quantity": 1,
+      "id": 19
+    },
+    {
+      "ProductId": 138,
+      "SkuNumber": "98-1251",
+      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
+      "DisplayName": "Rosa",
+      "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
+      "ColorWay": {
+        "ColorWayName": "oceanblue",
+        "ColorWayDisplayName": "Ocean Blue",
+        "ColorWayHex": "#0000cc"
+      },
+      "Material": "polywoven",
+      "MaterialDisplayName": "Polywoven",
+      "DimensionFormatMask": "{W}' x {H}'",
+      "Width": 3,
+      "Height": 20,
+      "SizeDisplayName": "20x3",
+      "Depth": 0,
+      "AllowReview": true,
+      "DecalCount": 3,
+      "PopularityRanking": 944,
+      "AmountSold": 944,
+      "QtyForSale": -144,
+      "Price": 99.99,
+      "ListPrice": 99.99,
+      "Images": {
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
+        "CloudinaryPath": "test_patterns:rosa_oceanblue"
+      },
+      "Attributes": [
+        {
+          "Url": "blue",
+          "DisplayName": "Blue",
+          "SubDescription": null,
+          "VocabularyUrl": "primary-color",
+          "VocabularyDisplayName": "Primary Color"
+        },
+        {
+          "Url": "polywoven",
+          "DisplayName": "Polywoven",
+          "SubDescription": null,
+          "VocabularyUrl": "material",
+          "VocabularyDisplayName": "Material"
+        },
+        {
+          "Url": "16x3",
+          "DisplayName": "16Ft x 3Ft",
+          "SubDescription": null,
+          "VocabularyUrl": "size",
+          "VocabularyDisplayName": "Size"
+        },
+        {
+          "Url": "red",
+          "DisplayName": "Red",
+          "SubDescription": null,
+          "VocabularyUrl": "secondary-color",
+          "VocabularyDisplayName": "Secondary Color"
+        },
+        {
+          "Url": "white",
+          "DisplayName": "White",
+          "SubDescription": null,
+          "VocabularyUrl": "tertiary-color",
+          "VocabularyDisplayName": "Tertiary Color"
+        },
+        {
+          "Url": "no",
+          "DisplayName": "No Ancillaries",
+          "SubDescription": null,
+          "VocabularyUrl": "ancillaries",
+          "VocabularyDisplayName": "Ancillaries"
+        }
+      ],
+      "quantity": 1,
+      "id": 20
     }
   ],
   "favorites": [],
@@ -642,7 +950,7 @@
         {
           "ProductId": 151,
           "SkuNumber": "98-1263",
-          "ProductUrl": "rosa/skyblue/vinyl/1x1",
+          "ProductUrl": "rosa/skyblue/vinyl/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -717,7 +1025,7 @@
         {
           "ProductId": 152,
           "SkuNumber": "98-1264",
-          "ProductUrl": "rosa/skyblue/polywoven/1x1",
+          "ProductUrl": "rosa/skyblue/polywoven/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Praesent libero. Sed cursus ante dapibus diam.",
           "ColorWay": {
@@ -1092,7 +1400,7 @@
         {
           "ProductId": 149,
           "SkuNumber": "98-1261",
-          "ProductUrl": "rosa/sunset/vinyl/1x1",
+          "ProductUrl": "rosa/sunset/vinyl/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -1167,7 +1475,7 @@
         {
           "ProductId": 150,
           "SkuNumber": "98-1262",
-          "ProductUrl": "rosa/sunset/polywoven/1x1",
+          "ProductUrl": "rosa/sunset/polywoven/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Praesent libero. Sed cursus ante dapibus diam.",
           "ColorWay": {
@@ -1542,7 +1850,7 @@
         {
           "ProductId": 147,
           "SkuNumber": "98-1259",
-          "ProductUrl": "rosa/grass/vinyl/1x1",
+          "ProductUrl": "rosa/grass/vinyl/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -1617,7 +1925,7 @@
         {
           "ProductId": 148,
           "SkuNumber": "98-1260",
-          "ProductUrl": "rosa/grass/polywoven/1x1",
+          "ProductUrl": "rosa/grass/polywoven/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Praesent libero. Sed cursus ante dapibus diam.",
           "ColorWay": {
@@ -1992,7 +2300,7 @@
         {
           "ProductId": 145,
           "SkuNumber": "98-1258",
-          "ProductUrl": "rosa/oceanblue/polywoven/1x1",
+          "ProductUrl": "rosa/oceanblue/polywoven/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
           "ColorWay": {
@@ -2067,7 +2375,7 @@
         {
           "ProductId": 146,
           "SkuNumber": "98-1258",
-          "ProductUrl": "rosa/oceanblue/vinyl/1x1",
+          "ProductUrl": "rosa/oceanblue/vinyl/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -2442,7 +2750,7 @@
         {
           "ProductId": 143,
           "SkuNumber": "98-1256",
-          "ProductUrl": "rosa/tulip/polywoven/1x1",
+          "ProductUrl": "rosa/tulip/polywoven/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
           "ColorWay": {
@@ -2517,7 +2825,7 @@
         {
           "ProductId": 144,
           "SkuNumber": "98-1257",
-          "ProductUrl": "rosa/tulip/vinyl/1x1",
+          "ProductUrl": "rosa/tulip/vinyl/Sample",
           "DisplayName": "Rosa",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -2921,7 +3229,7 @@
         {
           "ProductId": 205,
           "SkuNumber": "98-2005",
-          "ProductUrl": "baby_dinosaurs/sand/vinyl/1x1",
+          "ProductUrl": "baby_dinosaurs/sand/vinyl/Sample",
           "DisplayName": "Baby Dinosaurs",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -2981,7 +3289,7 @@
         {
           "ProductId": 205,
           "SkuNumber": "98-2005",
-          "ProductUrl": "baby_dinosaurs/sand/polywoven/1x1",
+          "ProductUrl": "baby_dinosaurs/sand/polywoven/Sample",
           "DisplayName": "Baby Dinosaurs",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -3281,7 +3589,7 @@
         {
           "ProductId": 210,
           "SkuNumber": "98-2010",
-          "ProductUrl": "baby_dinosaurs/lavender/vinyl/1x1",
+          "ProductUrl": "baby_dinosaurs/lavender/vinyl/Sample",
           "DisplayName": "Baby Dinosaurs",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -3341,7 +3649,7 @@
         {
           "ProductId": 211,
           "SkuNumber": "98-2011",
-          "ProductUrl": "baby_dinosaurs/lavender/polywoven/1x1",
+          "ProductUrl": "baby_dinosaurs/lavender/polywoven/Sample",
           "DisplayName": "Baby Dinosaurs",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -3641,7 +3949,7 @@
         {
           "ProductId": 210,
           "SkuNumber": "98-2010",
-          "ProductUrl": "baby_dinosaurs/oceanblue/vinyl/1x1",
+          "ProductUrl": "baby_dinosaurs/oceanblue/vinyl/Sample",
           "DisplayName": "Baby Dinosaurs",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -3701,7 +4009,7 @@
         {
           "ProductId": 211,
           "SkuNumber": "98-2011",
-          "ProductUrl": "baby_dinosaurs/oceanblue/polywoven/1x1",
+          "ProductUrl": "baby_dinosaurs/oceanblue/polywoven/Sample",
           "DisplayName": "Baby Dinosaurs",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -4001,7 +4309,7 @@
         {
           "ProductId": 210,
           "SkuNumber": "98-2010",
-          "ProductUrl": "baby_dinosaurs/turquoise/vinyl/1x1",
+          "ProductUrl": "baby_dinosaurs/turquoise/vinyl/Sample",
           "DisplayName": "Baby Dinosaurs",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {
@@ -4061,7 +4369,7 @@
         {
           "ProductId": 211,
           "SkuNumber": "98-2011",
-          "ProductUrl": "baby_dinosaurs/turquoise/polywoven/1x1",
+          "ProductUrl": "baby_dinosaurs/turquoise/polywoven/Sample",
           "DisplayName": "Baby Dinosaurs",
           "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
           "ColorWay": {

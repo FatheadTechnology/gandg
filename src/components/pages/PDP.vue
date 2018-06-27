@@ -136,7 +136,8 @@ export default {
   methods: {
     ...mapActions({
       getPatternInfo: "getPatternInfo",
-      findProduct: "findPdpProduct"
+      findProduct: "findPdpProduct",
+      createRoomShotData: "createRoomShotData"
     }),
     showModal() {
       this.$modal.show("calculator");
@@ -158,14 +159,13 @@ export default {
       selectedPdpImage: "getSelectedPdpImageFromStore",
       roomShotData: "getRoomShotDataFromStore",
       roomShots: "getRoomShotsFromStore"
-    }),
-    selectedImage() {
-      // let x = this.selectedProduct.Images.CloudinaryPath.replace(":", "/");
-      // return cloudinary.url(x);
-    }
+    })
   },
   created() {
-    this.getPatternInfo(this.$route.params);
+    // Get pattern info before creating room shots with it
+    this.getPatternInfo(this.$route.params).then(response => {
+      this.createRoomShotData(this.patternInfo);
+    });
     window.scrollTo(0, 0);
   }
 };

@@ -13,9 +13,6 @@ import { mapGetters, mapActions } from "vuex";
 import cloudinary from "cloudinary";
 
 export default {
-  /*    components : {
-      WallpaperPattern
-    },*/
   props: ["colors"],
   computed: {
     ...mapGetters({

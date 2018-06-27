@@ -10,22 +10,45 @@
   }
 }
 .add-to-cart.modal {
+  .image-bar {
+    height: 200px;
+    width: 100%;
+  }
   .modal-wrap {
     text-align: center;
+    flex-direction: column;
   }
   .modal-info-wrap {
+    padding: 30px 30px;
     max-width: 700px;
     text-align: left;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    .info-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+      img {
+        width: 20px;
+      }
+    }
   }
   img {
     max-width: 200px;
   }
   .modal-inner {
     width: 100%;
+    box-sizing: border-box;
   }
   .modal-inner.top-bar {
     width: auto;
+    #added-to-cart {
+      margin: 0;
+      margin-bottom: 20px;
+    }
   }
 }
 .v--modal {
@@ -35,12 +58,43 @@
   .v--modal {
     width: 100% !important;
     top: 0 !important;
+    left: 0 !important;
   }
   .modal-wrap {
     max-height: 20000000px;
   }
 }
-.calculator.modal {
+.add-to-cart.modal {
+  @include s {
+    .v--modal {
+      height: 100vh !important;
+    }
+    .modal-info-wrap {
+      width: 100%;
+      padding: 0;
+      .info-wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        text-align: center;
+        img {
+          margin-right: 0;
+        }
+      }
+    }
+    .button-wrap {
+      width: 100%;
+      .btn {
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+.calculator.modal,
+.add-to-cart.modal {
   @include s {
     z-index: 9999;
     width: 100%;

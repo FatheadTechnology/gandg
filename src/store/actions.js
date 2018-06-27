@@ -77,85 +77,83 @@ export const hideModal = ({ state }, modalName) => {
 //START PDP CODE
 
 export const getPatternInfo = ({ commit, state, dispatch }, patternParams) => {
-  state.pdpColors = [];
-  state.quantitySelected = 1;
-  console.log("patternParams", patternParams);
-  api.getPatternInfo(patternParams.pattern).then(response => {
-    //Get master product matching the product param in URL
-
-    console.log("response from product api = ", response);
-    let products = response.data[0].Children; //get list of child products under the master product
-
-    // state.pdpMaterials.active = 'vinyl'
-    let colorList = [];
-    let sizeList = [];
-    let materialList = [];
-    state.pdpSizes = [];
-    state.pdpMaterials = [];
+  return new Promise((resolve, reject) => {
     state.pdpColors = [];
+    state.quantitySelected = 1;
+    console.log("patternParams", patternParams);
+    api.getPatternInfo(patternParams.pattern).then(response => {
+      //Get master product matching the product param in URL
 
-    for (var i = 0; i < products.length; i++) {
-      //Loop through all the children products to find all unique colors, sizes, and materials available for the product
-      if (
-        !colorList.find(
-          o =>
-            o.url == products[i].Images.CloudinaryPath &&
-            o.name == products[i].ColorWay.ColorWayName
-        )
-      ) {
-        colorList.push({
-          url: products[i].Images.CloudinaryPath,
-          name: products[i].ColorWay.ColorWayName
-        });
-        state.pdpColors.push({
-          url: products[i].Images.CloudinaryPath,
-          name: products[i].ColorWay.ColorWayName
-        });
-      }
-      //TODO: Change this to use SizeValue?
-      if (!sizeList.includes(products[i].SizeDisplayName)) {
-        sizeList.push(products[i].SizeDisplayName);
-        state.pdpSizes.push({
-          Value: products[i].SizeDisplayName,
-          DisplayName: products[i].SizeDisplayName
-        });
-      }
-      if (!materialList.includes(products[i].Material)) {
-        materialList.push(products[i].Material);
-        state.pdpMaterials.push(products[i].Material);
-      }
-    }
-    //TODO: Make this customizable. Do we want the defaults to be the best seller?
+      console.log("response from product api = ", response);
+      let products = response.data[0].Children; //get list of child products under the master product
 
-    state.colorSelected = products[0].ColorWay.ColorWayName; //default color to first product's color
-    state.materialSelected = products[0].Material; //default material to first product's material
-    state.sizeSelected = products[0].SizeDisplayName; //default size to first product's size
+      // state.pdpMaterials.active = 'vinyl'
+      let colorList = [];
+      let sizeList = [];
+      let materialList = [];
+      state.pdpSizes = [];
+      state.pdpMaterials = [];
+      state.pdpColors = [];
 
-    // If color, material, or size is given in url, use it
-    if (patternParams.colorway) {
-      state.colorSelected = patternParams.colorway;
-    }
-    if (patternParams.material) {
-      state.materialSelected = patternParams.material;
-    }
-    if (patternParams.size) {
-      state.sizeSelected = patternParams.size;
-    }
-    router.replace({
-      name: "PDP",
-      params: {
-        colorway: state.colorSelected,
-        material: state.materialSelected,
-        size: state.sizeSelected
+      for (var i = 0; i < products.length; i++) {
+        //Loop through all the children products to find all unique colors, sizes, and materials available for the product
+        if (
+          !colorList.find(
+            o =>
+              o.url == products[i].Images.CloudinaryPath &&
+              o.name == products[i].ColorWay.ColorWayName
+          )
+        ) {
+          colorList.push({
+            url: products[i].Images.CloudinaryPath,
+            name: products[i].ColorWay.ColorWayName
+          });
+          state.pdpColors.push({
+            url: products[i].Images.CloudinaryPath,
+            name: products[i].ColorWay.ColorWayName
+          });
+        }
+        //TODO: Change this to use SizeValue?
+        if (!sizeList.includes(products[i].SizeDisplayName)) {
+          sizeList.push(products[i].SizeDisplayName);
+          state.pdpSizes.push({
+            Value: products[i].SizeDisplayName,
+            DisplayName: products[i].SizeDisplayName
+          });
+        }
+        if (!materialList.includes(products[i].Material)) {
+          materialList.push(products[i].Material);
+          state.pdpMaterials.push(products[i].Material);
+        }
       }
+      //TODO: Make this customizable. Do we want the defaults to be the best seller?
+
+      state.colorSelected = products[0].ColorWay.ColorWayName; //default color to first product's color
+      state.materialSelected = products[0].Material; //default material to first product's material
+      state.sizeSelected = products[0].SizeDisplayName; //default size to first product's size
+
+      // If color, material, or size is given in url, use it
+      if (patternParams.colorway) {
+        state.colorSelected = patternParams.colorway;
+      }
+      if (patternParams.material) {
+        state.materialSelected = patternParams.material;
+      }
+      if (patternParams.size) {
+        state.sizeSelected = patternParams.size;
+      }
+      router.replace({
+        name: "PDP",
+        params: {
+          colorway: state.colorSelected,
+          material: state.materialSelected,
+          size: state.sizeSelected
+        }
+      });
+
+      commit("setPatternInfo", response.data);
+      resolve();
     });
-
-    commit("setPatternInfo", response.data);
-    // TODO: Fix :(
-    // Calls the room shot creation action after this one is done
-    setTimeout(() => {
-      dispatch("createRoomShotData", state.patternInfo);
-    }, 1);
   });
 };
 
@@ -294,8 +292,6 @@ export const findPdpProduct = ({ state, commit }) => {
 
 //END PDP CODE
 
-
-
 // START Homepage Content
 export const getHomepageContent = ({ commit }) => {
   Prismic.getApi(prismicEndpoint)
@@ -314,15 +310,17 @@ export const getHomepageContent = ({ commit }) => {
 
 // START Homepage Content
 export const getLandingPageContent = ({ commit }, landingPageId) => {
-  console.log('landing page entry', landingPageId)
+  console.log("landing page entry", landingPageId);
   Prismic.getApi(prismicEndpoint)
     .then(function(api) {
-      console.log('in then', api)
-      return api.query(Prismic.Predicates.at('my.landing_page.uid', landingPageId));
+      console.log("in then", api);
+      return api.query(
+        Prismic.Predicates.at("my.landing_page.uid", landingPageId)
+      );
     })
     .then(
       function(response) {
-        console.log('response', response)
+        console.log("response", response);
         commit("setLandingPageContent", response.results);
       },
       function(err) {
@@ -330,7 +328,6 @@ export const getLandingPageContent = ({ commit }, landingPageId) => {
       }
     );
 };
-
 
 // START ARTISTS
 export const getArtists = ({ commit }) => {
