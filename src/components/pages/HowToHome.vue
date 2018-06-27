@@ -22,7 +22,7 @@
     -->
     <div class="video-preview-container">
 
-      <div @click="changeVideo('vE2tcalBh9w')">
+      <div @click="changeVideo('vE2tcalBh9w?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -30,7 +30,7 @@
         <span class="video-preview-title"> Only Happy When It Rains</span>
       </div>
 
-      <div @click="changeVideo('OKRJfIPiJGY')">
+      <div @click="changeVideo('OKRJfIPiJGY?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -38,7 +38,7 @@
         <span class="video-preview-title"> Bela Lugosis Dead</span>
       </div>
 
-      <div @click="changeVideo('5w2YLdjxS_M')">
+      <div @click="changeVideo('5w2YLdjxS_M?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -46,7 +46,7 @@
         <span class="video-preview-title"> Here & Now</span>
       </div>
 
-      <div @click="changeVideo('hAFuD-S-e_E')">
+      <div @click="changeVideo('hAFuD-S-e_E?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -54,7 +54,7 @@
         <span class="video-preview-title"> Popular</span>
       </div>
 
-      <div @click="changeVideo('E2Oe5YKhzCE')">
+      <div @click="changeVideo('E2Oe5YKhzCE?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -62,7 +62,7 @@
         <span class="video-preview-title"> Bound for the Floor</span>
       </div>
 
-      <div @click="changeVideo('EU1CDSP7FRk')">
+      <div @click="changeVideo('EU1CDSP7FRk?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -70,7 +70,7 @@
         <span class="video-preview-title"> Decepticon</span>
       </div>
 
-      <div @click="changeVideo('cMOAXm94VWo')">
+      <div @click="changeVideo('cMOAXm94VWo?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -78,7 +78,7 @@
         <span class="video-preview-title"> Waiting Room</span>
       </div>
 
-      <div @click="changeVideo('IlcMRq3gb1s')">
+      <div @click="changeVideo('IlcMRq3gb1s?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -86,7 +86,7 @@
         <span class="video-preview-title"> My Doorbell</span>
       </div>
 
-      <div @click="changeVideo('1GwdHe5nQSQ')">
+      <div @click="changeVideo('1GwdHe5nQSQ?autoplay=1')">
         <div class="maintain-square-video-preview">
           <div class="maintain-square-video-preview-image">
           </div>
@@ -123,7 +123,7 @@
     data() {
       return {
         msg: "Welcome to Your Vue.js App",
-        youtube: 'oIIxlgcuQRU'
+        youtube: 'iwVaTfXT1fo'
       };
     },
     methods: {
