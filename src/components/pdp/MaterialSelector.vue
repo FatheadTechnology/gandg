@@ -28,7 +28,7 @@ export default {
   data: function() {
     return {
       // TODO: Only needed for option B
-      selectedMaterial: this.$route.params.material
+      selectedMaterial: this.materialSelected
     };
   },
   computed: {
@@ -45,8 +45,8 @@ export default {
   updated() {
     this.findPdpProduct();
   },
-  created() {
-    this.selectMaterial("vinyl");
+  beforeUpdate() {
+    this.selectedMaterial = this.$route.params.material;
   }
 };
 </script>

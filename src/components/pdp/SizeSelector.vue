@@ -32,7 +32,7 @@ export default {
     return {
       selectedSize: "16x3",
       // TODO: Only needed for option B
-      selectedSize: this.$route.params.size
+      selectedSize: this.sizeSelected
     };
   },
   computed: {
@@ -45,6 +45,9 @@ export default {
       selectSize: "selectSize",
       findPdpProduct: "findPdpProduct"
     })
+  },
+  beforeUpdate() {
+    this.selectedSize = this.$route.params.size;
   },
   updated() {
     this.findPdpProduct();
