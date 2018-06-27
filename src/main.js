@@ -16,6 +16,10 @@ Vue.use(InstantSearch);
 Vue.config.productionTip = false;
 sync(store, router);
 
+cloudinary.config({
+  cloud_name: "rfathead"
+});
+
 router.beforeEach(function(to, from, next) {
   window.scrollTo(0, 0);
 

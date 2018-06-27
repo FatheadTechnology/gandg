@@ -6,7 +6,7 @@ export default {
   task: {
     body: null
   },
-  sampleMessage : 'Sample Message',
+  sampleMessage: "Sample Message",
   showMenu: false,
   // end starter code
 
@@ -16,8 +16,8 @@ export default {
   //end homepage code
   // start patterns
   patterns: null,
-  patternTypes : [],
-  fitleredPatterns : [],
+  patternTypes: [],
+  fitleredPatterns: [],
   // end patterns
 
   materials: [],
@@ -25,12 +25,12 @@ export default {
   // start filters
   appliedColorFilters: [],
   appliedPatternFilters: [],
-  appliedSearchTerm: '',
-  searchColorParams: '',
-  searchPatternParams: '',
+  appliedSearchTerm: "",
+  searchColorParams: "",
+  searchPatternParams: "",
   showMobileFilters: false,
-  colorParameters: '',
-  patternParameters: '',
+  colorParameters: "",
+  patternParameters: "",
   completeAlgoliaParams: null,
   //end filters
 
@@ -45,15 +45,15 @@ export default {
   //end artists
 
   // start favorites
-  favorites : [],
+  favorites: [],
   //end favorites
 
   // start cart
-  cart : [],
+  cart: [],
   cartTotal: 0,
   productAdded: null,
   salesTaxPercent: 6,
-  shippingCost: .08,
+  shippingCost: 0.08,
   //end cart
 
   //start blog
@@ -76,32 +76,24 @@ export default {
   //end search
 
   //start pdp
-  patternInfo : {},
-  pdpMaterials: ['vinyl','polywoven'],
-  pdpSizes: [
-    {
-      "DisplayName": "16' x 3' Roll",
-      "Value": "16x3"
-    },
-    {
-      "DisplayName": "20' x 3' Roll",
-      "Value": "20x3"
-    },
-    {
-      "DisplayName": "1' x 1' Sample",
-      "Value": "Sample"
-    }
-  ],
+
+  patternInfo: {},
+  pdpMaterials: [],
+  pdpSizes: [],
   pdpColors: [],
   materialSelected: {},
   sizeSelected: {},
   colorSelected: {},
   selectedProduct: {},
+  selectedPdpImage: null,
   colorsAvailable: [],
   quantitySelected: 1,
+  roomShots: null,
+  roomShotData: null,
+  selectedRoomShots: null,
   //end pdp
 
   //start PDP room
-  pdpRoom : 'livingRoom',
+  pdpRoom: "livingRoom"
   // end PDP room
-}
+};
