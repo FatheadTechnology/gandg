@@ -10,6 +10,10 @@ export default {
   showMenu: false,
   // end starter code
 
+  // start homepage code
+  homepageContent : [],
+  landingPageContent : [],
+  //end homepage code
   // start patterns
   patterns: null,
   patternTypes: [],
@@ -72,6 +76,7 @@ export default {
   //end search
 
   //start pdp
+
   patternInfo: {},
   pdpMaterials: [],
   pdpSizes: [],

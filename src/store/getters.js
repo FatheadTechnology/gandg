@@ -1,6 +1,10 @@
 export const getTask = state => state.task;
 
-export const getMessage = state => state.message;
+export const getHomepageContentFromStore = (state) => state.homepageContent
+export const getLandingPageContentFromStore = (state) => state.landingPageContent
+
+export const getMessage = (state) => state.message
+
 
 export const getSample = state => state.sampleMessage;
 

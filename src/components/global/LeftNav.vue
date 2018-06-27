@@ -40,6 +40,9 @@
       <div class="left-wallpaper-grid-inner-group">
         <div class="title">Colors</div>
         <div class="group">
+          <!--
+          TODO : make this grid have a column and row set so they dont have to be in groups
+          -->
           <div class="group-item">Pink</div>
           <div class="group-item">Red</div>
           <div class="group-item">Orange</div>
@@ -101,9 +104,13 @@
       FIND YOUR STYLE
     </router-link>
     <router-link tag="div" to="/how-to" class="left-menu-item" id="how-to-link"><span>How To</span></router-link>
+<!--
     <router-link tag="div" to="/blog" class="left-menu-item" id="blog-link"><span>Blog</span></router-link>
+-->
     <router-link tag="div" to="/about-us" class="left-menu-item" id="about-us-link"><span>About Us</span></router-link>
-
+<!--
+TODO : MAKE ROUTER LINKS WORK WITH PRISMIC
+-->
 
   </div>
 </template>

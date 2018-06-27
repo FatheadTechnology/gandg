@@ -22,7 +22,7 @@ const replica_index = client.initIndex("list-price_desc");
 //   ranking: ["desc(list-price)"]
 // });
 
-const apiEndpoint = "https://evolution.cdn.prismic.io/api/v2";
+const prismicEndpoint = "https://guildandgrace.cdn.prismic.io/api/v2";
 
 // START BOILER PLATE CODE
 
@@ -294,9 +294,47 @@ export const findPdpProduct = ({ state, commit }) => {
 
 //END PDP CODE
 
+
+
+// START Homepage Content
+export const getHomepageContent = ({ commit }) => {
+  Prismic.getApi(prismicEndpoint)
+    .then(function(api) {
+      return api.query(Prismic.Predicates.at("document.type", "homepage"));
+    })
+    .then(
+      function(response) {
+        commit("setHomepageContent", response.results);
+      },
+      function(err) {
+        console.log("Something went wrong: ", err);
+      }
+    );
+};
+
+// START Homepage Content
+export const getLandingPageContent = ({ commit }, landingPageId) => {
+  console.log('landing page entry', landingPageId)
+  Prismic.getApi(prismicEndpoint)
+    .then(function(api) {
+      console.log('in then', api)
+      return api.query(Prismic.Predicates.at('my.landing_page.uid', landingPageId));
+    })
+    .then(
+      function(response) {
+        console.log('response', response)
+        commit("setLandingPageContent", response.results);
+      },
+      function(err) {
+        console.log("Something went wrong: ", err);
+      }
+    );
+};
+
+
 // START ARTISTS
 export const getArtists = ({ commit }) => {
-  Prismic.getApi(apiEndpoint)
+  Prismic.getApi(prismicEndpoint)
     .then(function(api) {
       return api.query(Prismic.Predicates.at("document.type", "artist"));
     })
@@ -311,7 +349,7 @@ export const getArtists = ({ commit }) => {
 };
 
 export const getLandingContent = ({ commit }, uid) => {
-  Prismic.getApi(apiEndpoint)
+  Prismic.getApi(prismicEndpoint)
     .then(function(api) {
       return api.query([
         Prismic.Predicates.at("document.type", "landing-page"),
@@ -329,7 +367,7 @@ export const getLandingContent = ({ commit }, uid) => {
 };
 
 export const getPageArtist = ({ commit }, uid) => {
-  Prismic.getApi(apiEndpoint)
+  Prismic.getApi(prismicEndpoint)
     .then(function(api) {
       return api.query([
         Prismic.Predicates.at("document.type", "artist"),
@@ -352,7 +390,7 @@ export const getPageArtist = ({ commit }, uid) => {
 // START BLOGS
 
 export const getBlogs = ({ commit }) => {
-  Prismic.getApi(apiEndpoint)
+  Prismic.getApi(prismicEndpoint)
     .then(function(api) {
       return api.query(Prismic.Predicates.at("document.type", "blog"));
     })
@@ -368,7 +406,7 @@ export const getBlogs = ({ commit }) => {
 };
 
 export const getBlogPost = ({ commit }, uid) => {
-  Prismic.getApi(apiEndpoint)
+  Prismic.getApi(prismicEndpoint)
     .then(function(api) {
       return api.query([
         Prismic.Predicates.at("document.type", "blog"),
@@ -390,7 +428,7 @@ export const getBlogPost = ({ commit }, uid) => {
 
 // START EDUCATION
 export const getEducation = ({ commit }) => {
-  Prismic.getApi(apiEndpoint)
+  Prismic.getApi(prismicEndpoint)
     .then(function(api) {
       return api.query(Prismic.Predicates.at("document.type", "education"));
     })
@@ -581,7 +619,7 @@ export const hideMobileFilters = ({ state }) => {
 
 // START MARKETING
 export const getMarketingPanel = ({ commit }, page) => {
-  Prismic.getApi(apiEndpoint)
+  Prismic.getApi(prismicEndpoint)
     .then(function(api) {
       return api.query([
         Prismic.Predicates.at("document.type", "panel"),
