@@ -82,7 +82,8 @@ export default new Router({
     },
     {
       path: "/product/:pattern/:colorway?/:material?/:size?",
-      //https://github.com/vuejs/vue-router/blob/dev/examples/named-routes/app.js
+      //:licensed?
+      // https://github.com/vuejs/vue-router/blob/dev/examples/named-routes/app.js
       name: "PDP",
       component: PDP
     },
