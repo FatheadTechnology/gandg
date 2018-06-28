@@ -100,3 +100,9 @@
     }
   }
 }
+
+.add-to-cart-btn.btn {
+  @include m {
+    width: 220px;
+  }
+}

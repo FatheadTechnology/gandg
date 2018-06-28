@@ -1,11 +1,8 @@
 @import "./../variables/variables";
 
 .selectors {
-  width: 50%;
+  width: 100%;
   margin: 30px 0;
-  @include s {
-    width: 100%;
-  }
 }
 .material-picker {
   .button-wrap {
@@ -17,7 +14,6 @@
       max-width: 1000px;
     }
     .material-option {
-      width: 100px;
       padding: 10px 20px;
       text-align: center;
       cursor: pointer;
@@ -38,6 +34,12 @@
       margin: 20px 0;
       font-size: 1em;
       text-transform: capitalize;
+      @include xl {
+        width: 50%;
+      }
+      @include m {
+        width: 75%;
+      }
     }
   }
 }
@@ -74,6 +76,12 @@
       padding: 10px;
       margin: 20px 0;
       font-size: 1em;
+      @include xl {
+        width: 50%;
+      }
+      @include m {
+        width: 75%;
+      }
     }
   }
 }
@@ -83,9 +91,10 @@
   @include s {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 0;
   }
   .color-option {
+    box-sizing: border-box;
     display: inline-block;
     width: 55px;
     height: 55px;
@@ -100,36 +109,47 @@
     background-size: cover;
     margin-right: 10px;
     margin-bottom: 10px;
+    @include m {
+      width: 100px;
+      height: 100px;
+    }
     &:last-child {
       margin-right: 0;
     }
     &.selected {
       // TODO: Do we want this outline or the corner option?
-      // outline: 2px solid $selected-pdp-color;
-      &:before {
-        content: "";
-        display: inline-block;
-        color: #333;
-        text-align: center;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        position: relative;
-        padding: 7px 0;
-        top: -40px;
-        left: -40px;
-        width: 50px;
-        height: 50px;
-        background-color: $a-hover-color;
-      }
+      border: 4px solid #000;
+      // &:before {
+      //   content: "";
+      //   display: inline-block;
+      //   color: #333;
+      //   text-align: center;
+      //   -webkit-transform: rotate(-45deg);
+      //   -moz-transform: rotate(-45deg);
+      //   -ms-transform: rotate(-45deg);
+      //   -o-transform: rotate(-45deg);
+      //   position: relative;
+      //   padding: 7px 0;
+      //   top: -40px;
+      //   left: -40px;
+      //   width: 50px;
+      //   height: 50px;
+      //   background-color: $a-hover-color;
+      // }
     }
     @include s {
-      padding: 0 10px;
-      height: 50px;
-      width: 48%;
+      flex: 1 1 1;
+      margin: 5px;
       margin-top: 10px;
-      margin-right: 0;
+      width: 29%;
+      height: auto;
+      position: relative;
+
+      &:after {
+        padding-bottom: 100%;
+        display: block;
+        content: "";
+      }
     }
   }
 }

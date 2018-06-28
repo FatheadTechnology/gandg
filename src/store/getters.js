@@ -1,10 +1,9 @@
 export const getTask = state => state.task;
 
-export const getHomepageContentFromStore = (state) => state.homepageContent
-export const getLandingPageContentFromStore = (state) => state.landingPageContent
+export const getHomepageContentFromStore = state => state.homepageContent;
+export const getLandingPageContentFromStore = state => state.landingPageContent;
 
-export const getMessage = (state) => state.message
-
+export const getMessage = state => state.message;
 
 export const getSample = state => state.sampleMessage;
 
@@ -67,6 +66,12 @@ export const getMaterialsFromStore = state => state.materials;
 export const getShowMobileFilters = state => state.showMobileFilters;
 
 export const getArtistsFromStore = state => state.artists;
+
+export const getAboutUsFromStore = state => state.aboutUs;
+
+export const getHowToFromStore = state => state.howTo;
+
+export const getFaqFromStore = state => state.faq;
 
 export const getLandingContentFromStore = state => state.landingContent;
 

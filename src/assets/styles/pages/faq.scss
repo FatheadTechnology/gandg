@@ -1,1 +1,27 @@
 @import "../variables/variables";
+
+.faqs {
+  .faq {
+    .accordion-container {
+      margin: 2em 0;
+      .answer {
+        h2,
+        p {
+          display: inline-block;
+        }
+        p {
+          font-size: 1.2em;
+        }
+      }
+      .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $footer-bg-color;
+        cursor: pointer;
+        .open-accordion,
+        .close-accordion {
+        }
+      }
+    }
+  }
+}

@@ -25,6 +25,18 @@ export const setArtists = (state, artists) => {
   state.artists = artists;
 };
 
+export const setAboutUs = (state, aboutUs) => {
+  state.aboutUs = aboutUs;
+};
+
+export const setHowTo = (state, howTo) => {
+  state.howTo = howTo.data;
+};
+
+export const setFaq = (state, faq) => {
+  state.faq = faq.data;
+};
+
 export const setHomepageContent = (state, homepageJson) => {
   state.homepageContent = homepageJson;
   console.log("homepageJson", homepageJson);

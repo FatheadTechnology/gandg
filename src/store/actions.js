@@ -384,6 +384,63 @@ export const getPageArtist = ({ commit }, uid) => {
 
 // END ARTISTS
 
+// START ABOUT US
+export const getAboutUs = ({ commit }) => {
+  Prismic.getApi(prismicEndpoint)
+    .then(function(api) {
+      return api.query(Prismic.Predicates.at("document.type", "about_us"));
+    })
+    .then(
+      function(response) {
+        commit("setAboutUs", response.results[0]);
+      },
+      function(err) {
+        console.log("Something went wrong: ", err);
+      }
+    );
+};
+// END ABOUT US
+
+// START HOW TO
+export const getHowTo = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(Prismic.Predicates.at("document.type", "how_to"));
+      })
+      .then(
+        function(response) {
+          commit("setHowTo", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END HOW TO
+
+// START FAQ
+export const getFaq = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(Prismic.Predicates.at("document.type", "faq"));
+      })
+      .then(
+        function(response) {
+          commit("setFaq", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END FAQ
+
 // START BLOGS
 
 export const getBlogs = ({ commit }) => {

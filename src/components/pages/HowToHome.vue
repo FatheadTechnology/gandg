@@ -1,18 +1,16 @@
 <template>
   <div id="how-to-home" class="content-wrap">
-    <h1>How To</h1>
-    <p>Watch the video or follow our step-by-step instructions of how to apply and remove your removable wallpaper.</p>
+    <h1>{{howTo.page_header[0].text}}</h1>
+    <p>{{howTo.page_subheader[0].text}}</p>
     <div class="video-wrap-outer-container">
       <div class="video-wrap-container">
         <div class="video-wrap">
-          <iframe width="560" height="315" :src="'https://www.youtube.com/embed/'+youtube"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="315" :src="'https://www.youtube.com/embed/'+youtube" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <h1>How to Hang Removable Wallpaper, PORT2PRISMIC</h1>
-    <p>
-      Lorem ipsum dolor sit amet, eros mentitum duo ea. Labitur officiis et sed. Soluta maiorum an sea. Eum nuhil persius te. Impetus nesessitatibus id, cu inermis assueverit est.</p>
+    <h1>{{howTo.secondary_header[0].text}}</h1>
+    <p>{{howTo.secondary_subheader[0].text}}</p>
     <div class="btn-center-container">
       <div class="btn primary-btn">Step-by-Step Instructions</div>
     </div>
@@ -22,76 +20,12 @@
     -->
     <div class="video-preview-container">
 
-      <div class="video-preview" @click="changeVideo('vE2tcalBh9w?autoplay=1')">
+      <div class="video-preview" @click="changeVideo(video.video_url.embed_url)" v-for="video in howTo.body[0].items" :key="video.video_url.embed_url">
         <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
+          <div class="maintain-square-video-preview-image" :style="{ backgroundImage: 'url('+video.video_url.thumbnail_url+')' }">
           </div>
         </div>
-        <span class="video-preview-title"> Only Happy When It Rains</span>
-      </div>
-
-      <div class="video-preview" @click="changeVideo('OKRJfIPiJGY?autoplay=1')">
-        <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
-          </div>
-        </div>
-        <span class="video-preview-title"> Bela Lugosis Dead</span>
-      </div>
-
-      <div class="video-preview" @click="changeVideo('5w2YLdjxS_M?autoplay=1')">
-        <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
-          </div>
-        </div>
-        <span class="video-preview-title"> Here & Now</span>
-      </div>
-
-      <div class="video-preview" @click="changeVideo('hAFuD-S-e_E?autoplay=1')">
-        <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
-          </div>
-        </div>
-        <span class="video-preview-title"> Popular</span>
-      </div>
-
-      <div class="video-preview" @click="changeVideo('E2Oe5YKhzCE?autoplay=1')">
-        <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
-          </div>
-        </div>
-        <span class="video-preview-title"> Bound for the Floor</span>
-      </div>
-
-      <div class="video-preview" @click="changeVideo('EU1CDSP7FRk?autoplay=1')">
-        <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
-          </div>
-        </div>
-        <span class="video-preview-title"> Decepticon</span>
-      </div>
-
-      <div class="video-preview" @click="changeVideo('cMOAXm94VWo?autoplay=1')">
-        <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
-          </div>
-        </div>
-        <span class="video-preview-title"> Waiting Room</span>
-      </div>
-
-      <div class="video-preview" @click="changeVideo('IlcMRq3gb1s?autoplay=1')">
-        <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
-          </div>
-        </div>
-        <span class="video-preview-title"> My Doorbell</span>
-      </div>
-
-      <div class="video-preview" @click="changeVideo('1GwdHe5nQSQ?autoplay=1')">
-        <div class="maintain-square-video-preview">
-          <div class="maintain-square-video-preview-image">
-          </div>
-        </div>
-        <span class="video-preview-title"> No Tears</span>
+        <span class="video-preview-title"> {{video.video_title[0].text}}</span>
       </div>
 
     </div>
@@ -111,28 +45,45 @@
 </template>
 
 <script>
-  import ProductGridLineMock from "../ProductGridLineMock";
-  import VideoGrid from "../VideoGrid";
+import { mapGetters, mapActions } from "vuex";
+import ProductGridLineMock from "../ProductGridLineMock";
+import VideoGrid from "../VideoGrid";
 
-  export default {
-    name: "HelloWorld",
-    components: {
-      ProductGridLineMock,
-      VideoGrid
+export default {
+  name: "HelloWorld",
+  components: {
+    ProductGridLineMock,
+    VideoGrid
+  },
+  data() {
+    return {
+      msg: "Welcome to Your Vue.js App",
+      youtube: null
+    };
+  },
+  methods: {
+    ...mapActions({
+      getHowTo: "getHowTo"
+    }),
+    videoId(fullPath) {
+      return fullPath.split("?v=")[1];
     },
-    data() {
-      return {
-        msg: "Welcome to Your Vue.js App",
-        youtube: 'iwVaTfXT1fo'
-      };
-    },
-    methods: {
-      changeVideo(videoId) {
-        this.youtube = videoId;
-        window.scrollTo(0, 0);
-      }
+    changeVideo(videoId) {
+      this.youtube = this.videoId(videoId) + "?autoplay=1";
+      window.scrollTo(0, 0);
     }
-  };
+  },
+  computed: {
+    ...mapGetters({
+      howTo: "getHowToFromStore"
+    })
+  },
+  mounted() {
+    this.getHowTo().then(response => {
+      this.youtube = this.videoId(this.howTo.main_video.embed_url);
+    });
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
