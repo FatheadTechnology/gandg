@@ -2,7 +2,7 @@
   <div class="color-picker">
     <!-- TODO: Fix flickering when selecting a color for the first time -->
     <template v-for="color in colors">
-      <div class="color-option plain button" :class="{ selected : colorSelected == color.name }" @click="selectColor(color)" :style="{backgroundImage: 'url('+swatch(color.url)+')'}"></div>
+      <div class="color-option" :class="{ selected : colorSelected == color.name }" @click="selectColor(color)" :style="{backgroundImage: 'url('+swatch(color.url)+')'}"></div>
 
     </template>
   </div>
@@ -26,7 +26,7 @@ export default {
     }),
     swatch(id) {
       let x = id.replace(":", "/");
-      return cloudinary.url(x, { width: 200 });
+      return cloudinary.url(x, { width: 400 });
     }
   },
   updated() {

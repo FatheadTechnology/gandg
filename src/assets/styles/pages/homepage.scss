@@ -93,12 +93,16 @@
   background-color: $hero-cta-bg-color;
   color: $hero-cta-color;
   font-size: 1.25em;
-  padding: .5em;
+  padding: 0.5em;
   box-sizing: border-box;
   text-align: center;
   position: relative;
+  @include s {
+    padding-right: 40px;
+    text-align: left;
+  }
 
-  #close-hero{
+  #close-hero {
     cursor: pointer;
     font-weight: $header-font-weight;
     position: absolute;

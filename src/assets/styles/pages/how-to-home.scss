@@ -1,2 +1,33 @@
+$play-button: rgba(108, 79, 26, 0.75);
+$play-button-hover: rgba(155, 115, 40, 0.85);
+
 #how-to-home {
+  .video-preview-container {
+    .video-preview {
+      .maintain-square-video-preview {
+        .maintain-square-video-preview-image {
+          background-size: cover;
+          background-position: center center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 40px solid $play-button;
+          }
+          &:hover {
+            &:after {
+              border-left: 40px solid $play-button-hover;
+            }
+          }
+        }
+        .video-preview-title {
+        }
+      }
+    }
+  }
 }

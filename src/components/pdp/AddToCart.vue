@@ -1,6 +1,6 @@
 <template>
   <div class="add-to-cart" id="add-to-cart-btn">
-    <div v-on:click="addToCartHere(product).then(showModal())" class="btn primary-btn" :id="`add-to-cart-${product.SkuNumber}`">
+    <div v-on:click="addToCartHere(product).then(showModal())" class="btn primary-btn add-to-cart-btn" :id="`add-to-cart-${product.SkuNumber}`">
       ADD TO CART
     </div>
     <add-to-cart-modal :product="product" id="add-to-cart-modal"></add-to-cart-modal>

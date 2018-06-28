@@ -11,8 +11,8 @@ export default {
   // end starter code
 
   // start homepage code
-  homepageContent : [],
-  landingPageContent : [],
+  homepageContent: [],
+  landingPageContent: [],
   //end homepage code
   // start patterns
   patterns: null,
@@ -37,7 +37,9 @@ export default {
   //start marketing
   landingContent: null,
   //end marketing
-
+  aboutUs: null,
+  howTo: null,
+  faq: null,
   // start artists
   artists: null,
   selectedArtist: null,

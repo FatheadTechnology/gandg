@@ -4,7 +4,10 @@
     <left-nav></left-nav>
     <div class="space-fill"></div>
     <div id="page-content">
-    <router-view/>
+      <transition name="fade">
+
+        <router-view/>
+      </transition>
       <global-footer></global-footer>
     </div>
     <div class="space-fill"></div>
@@ -21,19 +24,22 @@
 </template>
 
 <script>
-  import LeftNav from './components/global/LeftNav'
-  import RightNav from './components/global/RightNav'
-  import MobileNav from './components/global/MobileNav'
-  import GlobalFooter from './components/global/GlobalFooter'
+import LeftNav from "./components/global/LeftNav";
+import RightNav from "./components/global/RightNav";
+import MobileNav from "./components/global/MobileNav";
+import GlobalFooter from "./components/global/GlobalFooter";
 
-  export default {
-    name: 'App',
-    components: {
-      LeftNav, RightNav, MobileNav, GlobalFooter
-    }
+export default {
+  name: "App",
+  components: {
+    LeftNav,
+    RightNav,
+    MobileNav,
+    GlobalFooter
   }
+};
 </script>
 
 <style lang="scss">
-  @import "./assets/styles/main.scss";
+@import "./assets/styles/main.scss";
 </style>
