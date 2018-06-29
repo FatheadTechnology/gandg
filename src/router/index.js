@@ -7,6 +7,7 @@ import BlogPost from "@/components/pages/BlogPost";
 import Cart from "@/components/pages/Cart";
 import Favorites from "@/components/pages/Favorites";
 import FAQ from "@/components/pages/FAQ";
+import Glossary from "@/components/pages/Glossary";
 import TermsAndConditions from "@/components/pages/TermsAndConditions";
 import PrivacyPolicy from "@/components/pages/PrivacyPolicy";
 import Careers from "@/components/pages/Careers";
@@ -59,6 +60,11 @@ export default new Router({
       component: FAQ
     },
     {
+      path: "/glossary",
+      name: "Glossary",
+      component: Glossary
+    },
+    {
       path: "/terms-and-conditions",
       name: "TermsAndConditions",
       component: TermsAndConditions
@@ -68,11 +74,11 @@ export default new Router({
       name: "PrivacyPolicy",
       component: PrivacyPolicy
     },
-    {
-      path: "/careers",
-      name: "Careers",
-      component: Careers
-    },
+    // {
+    //   path: "/careers",
+    //   name: "Careers",
+    //   component: Careers
+    // },
     {
       path: "/find-your-style",
       name: "Find Your Style",

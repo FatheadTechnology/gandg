@@ -33,6 +33,9 @@ export default {
     selectColor(color) {
       this.selectedColor = color;
     }
+  },
+  mounted() {
+    console.log("result", this.result);
   }
 };
 </script>

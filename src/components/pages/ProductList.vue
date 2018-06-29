@@ -67,7 +67,8 @@
             <div class="filter">
               <h3 slot="header">Color</h3>
               <div class="input-checkbox" v-for="facet in facetValues" :key="facet.name">
-                <input type="checkbox" v-model="facet.isRefined" @change="toggleRefinement(facet);toggleActive(facet)" :value="facet.name" />
+                <!-- TODO: Get the filtered color to show up instead of the default image -->
+                <input type="checkbox" v-model="facet.isRefined" @change="toggleRefinement(facet);toggleActive(facet);" :value="facet.name" />
                 <label for="checkbox">
                   <span>{{ facet.name }}</span>
                 </label>

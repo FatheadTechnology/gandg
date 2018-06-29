@@ -40,6 +40,7 @@ export default {
   aboutUs: null,
   howTo: null,
   faq: null,
+  glossary: null,
   termsAndConditions: null,
   privacyPolicy: null,
   careers: null,
