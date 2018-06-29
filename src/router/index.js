@@ -7,6 +7,9 @@ import BlogPost from "@/components/pages/BlogPost";
 import Cart from "@/components/pages/Cart";
 import Favorites from "@/components/pages/Favorites";
 import FAQ from "@/components/pages/FAQ";
+import TermsAndConditions from "@/components/pages/TermsAndConditions";
+import PrivacyPolicy from "@/components/pages/PrivacyPolicy";
+import Careers from "@/components/pages/Careers";
 import FindYourStyle from "@/components/pages/FindYourStyle";
 import Home from "@/components/pages/Home";
 import HowToHome from "@/components/pages/HowToHome";
@@ -25,7 +28,7 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   routes: [
- /*   {
+    /*   {
       path: "/blog",
       name: "Blog",
       component: BlogHome
@@ -54,6 +57,21 @@ export default new Router({
       path: "/faq",
       name: "FAQ",
       component: FAQ
+    },
+    {
+      path: "/terms-and-conditions",
+      name: "TermsAndConditions",
+      component: TermsAndConditions
+    },
+    {
+      path: "/privacy-policy",
+      name: "PrivacyPolicy",
+      component: PrivacyPolicy
+    },
+    {
+      path: "/careers",
+      name: "Careers",
+      component: Careers
     },
     {
       path: "/find-your-style",

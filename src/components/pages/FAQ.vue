@@ -39,12 +39,10 @@ import VideoGrid from "../VideoGrid";
 export default {
   name: "HelloWorld",
   components: {
-    ProductGridLineMock,
-    VideoGrid
+    ProductGridLineMock
   },
   data() {
     return {
-      msg: "Welcome to Your Vue.js App",
       shownAccordions: []
     };
   },
@@ -53,17 +51,11 @@ export default {
       getFaq: "getFaq"
     }),
     toggleAccordion(num) {
-      console.log("toggleAccordion");
       if (this.exists(num)) {
-        console.log("pop", num);
         this.shownAccordions.pop(num);
-        console.log("shownAccordions", this.shownAccordions);
       } else {
-        console.log("push", num);
         this.shownAccordions.push(num);
-        console.log("shownAccordions", this.shownAccordions);
       }
-      console.log("this.shownAccordions", this.shownAccordions);
     },
     exists(num) {
       return this.shownAccordions.indexOf(num) > -1;

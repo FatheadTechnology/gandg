@@ -9,7 +9,7 @@
         <div class="product-grid-item-image" :style="`background-image: url(${result.Images.DefaultThumbnail})`"></div>
       </div>
       <span class="product-grid-item-header">{{result.DisplayName}}</span>
-      <span class="product-grid-item-subheader">6 colors available</span>
+      <span class="product-grid-item-subheader">{{result.Colors.length}} colors available</span>
     </div>
   </router-link>
 </template>

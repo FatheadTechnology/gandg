@@ -75,7 +75,10 @@
 
       <div class="pdp-full-width-content">
         <h2>Related Patterns</h2>
-        <product-grid-line-mock></product-grid-line-mock>
+        <div class="product-grid">
+          <wallpaper-pattern :result="item" v-for="item in crossSells" :key="item.MasterSkuNumber"></wallpaper-pattern>
+        </div>
+        <!-- <product-grid-line-mock></product-grid-line-mock> -->
       </div>
 
       <div class="pdp-full-width-content">
@@ -108,6 +111,7 @@ import PdpImage from "../pdp/PdpImage";
 import RoomShots from "../pdp/RoomShots";
 import AddToCart from "../pdp/AddToCart";
 import PatternInfo from "../pdp/PatternInfo";
+import WallpaperPattern from "./../global/WallpaperPattern";
 import cloudinary from "cloudinary";
 
 export default {
@@ -122,7 +126,8 @@ export default {
     PdpImage,
     AddToCart,
     PatternInfo,
-    RoomShots
+    RoomShots,
+    WallpaperPattern
   },
   data() {
     return {
@@ -137,7 +142,8 @@ export default {
     ...mapActions({
       getPatternInfo: "getPatternInfo",
       findProduct: "findPdpProduct",
-      createRoomShotData: "createRoomShotData"
+      createRoomShotData: "createRoomShotData",
+      getCrossSells: "getCrossSells"
     }),
     showModal() {
       this.$modal.show("calculator");
@@ -158,13 +164,15 @@ export default {
       sizes: "getPdpSizesFromStore",
       selectedPdpImage: "getSelectedPdpImageFromStore",
       roomShotData: "getRoomShotDataFromStore",
-      roomShots: "getRoomShotsFromStore"
+      roomShots: "getRoomShotsFromStore",
+      crossSells: "getCrossSellsFromStore"
     })
   },
   created() {
     // Get pattern info before creating room shots with it
     this.getPatternInfo(this.$route.params).then(response => {
       this.createRoomShotData(this.patternInfo);
+      this.getCrossSells(this.patternInfo);
     });
     window.scrollTo(0, 0);
   }
