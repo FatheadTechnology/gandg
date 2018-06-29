@@ -368,8 +368,71 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 1,
+      "quantity": 3,
       "id": 7
+    },
+    {
+      "ProductId": 201,
+      "SkuNumber": "98-2001",
+      "ProductUrl": "baby_dinosaurs/sand/vinyl/16x3",
+      "DisplayName": "Baby Dinosaurs",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
+      "ColorWay": {
+        "ColorWayName": "sand",
+        "ColorWayDisplayName": "Sand",
+        "ColorWayHex": "#faf8c8"
+      },
+      "Material": "vinyl",
+      "MaterialDisplayName": "Vinyl",
+      "DimensionFormatMask": "{W}' x {H}'",
+      "Width": 3,
+      "Height": 16,
+      "SizeDisplayName": "16x3",
+      "Depth": 0,
+      "AllowReview": true,
+      "DecalCount": 3,
+      "PopularityRanking": 944,
+      "AmountSold": 944,
+      "QtyForSale": -144,
+      "Price": 59.99,
+      "ListPrice": 59.99,
+      "Images": {
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+        "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+        "CloudinaryPath": "test_patterns:baby_dinosaurs_sand"
+      },
+      "Attributes": [
+        {
+          "Url": "yellow",
+          "DisplayName": "Yellow",
+          "SubDescription": null,
+          "VocabularyUrl": "primary-color",
+          "VocabularyDisplayName": "Primary Color"
+        },
+        {
+          "Url": "vinyl",
+          "DisplayName": "Vinyl",
+          "SubDescription": null,
+          "VocabularyUrl": "material",
+          "VocabularyDisplayName": "Material"
+        },
+        {
+          "Url": "16x3",
+          "DisplayName": "16Ft x 3Ft",
+          "SubDescription": null,
+          "VocabularyUrl": "size",
+          "VocabularyDisplayName": "Size"
+        },
+        {
+          "Url": "no",
+          "DisplayName": "No Ancillaries",
+          "SubDescription": null,
+          "VocabularyUrl": "ancillaries",
+          "VocabularyDisplayName": "Ancillaries"
+        }
+      ],
+      "quantity": 2,
+      "id": 8
     }
   ],
   "favorites": [],
@@ -410,16 +473,8 @@
       "Description": "Lipsum porum descriptum whatesvum",
       "RoomTypes": [
         {
-          "name": "kids",
-          "patternSize": 148
-        },
-        {
-          "name": "nursery",
-          "patternSize": 168
-        },
-        {
-          "name": "industrial",
-          "patternSize": 214
+          "CloudinaryPath": "test_rooms/traditional_male_BR_PDP_z2_8x3",
+          "ZoneId": 2
         }
       ],
       "DimensionFormatMask": "{W}' x {H}'",
@@ -2748,16 +2803,8 @@
       "DisplayName": "Baby Dinosaurs",
       "RoomTypes": [
         {
-          "name": "kids",
-          "patternSize": 148
-        },
-        {
-          "name": "nursery",
-          "patternSize": 168
-        },
-        {
-          "name": "industrial",
-          "patternSize": 214
+          "CloudinaryPath": "test_rooms/traditional_male_BR_PDP_z2_8x3",
+          "ZoneId": 2
         }
       ],
       "Description": "Lipsum porum descriptum whatesvum Dinosaurs",
@@ -3944,7 +3991,7 @@
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
             "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "CloudinaryPath": "test_patterns:baby_dinosaurs_turqoise"
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4005,7 +4052,7 @@
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
             "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "CloudinaryPath": "test_patterns:baby_dinosaurs_turqoise"
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4066,7 +4113,7 @@
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
             "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "CloudinaryPath": "test_patterns:baby_dinosaurs_turqoise"
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4127,7 +4174,7 @@
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
             "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "CloudinaryPath": "test_patterns:baby_dinosaurs_turqoise"
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4188,7 +4235,7 @@
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
             "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "CloudinaryPath": "test_patterns:baby_dinosaurs_turqoise"
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4249,7 +4296,7 @@
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
             "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "CloudinaryPath": "test_patterns:baby_dinosaurs_turqoise"
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {

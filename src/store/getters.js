@@ -73,6 +73,8 @@ export const getHowToFromStore = state => state.howTo;
 
 export const getFaqFromStore = state => state.faq;
 
+export const getGlossaryFromStore = state => state.glossary;
+
 export const getTermsAndConditionsFromStore = state => state.termsAndConditions;
 
 export const getPrivacyPolicyFromStore = state => state.privacyPolicy;

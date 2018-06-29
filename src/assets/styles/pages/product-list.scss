@@ -8,6 +8,10 @@ $filter-border: 1px solid #ebebeb;
 
 .dropdown-wrap {
   display: flex;
+  width: 100%;
+  @include xs {
+    flex-direction: column;
+  }
   .dropdown {
     outline: $filter-border;
     width: 200px;
@@ -27,6 +31,13 @@ $filter-border: 1px solid #ebebeb;
     justify-content: space-between;
     align-items: center;
     -webkit-appearance: none;
+    @include s {
+      width: 50%;
+    }
+    @include xs {
+      width: 100%;
+      margin: 10px 0;
+    }
     &:-ms-expand {
       display: none;
     }
@@ -69,10 +80,18 @@ $filter-border: 1px solid #ebebeb;
 .filters-row {
   display: flex;
   flex-direction: row;
+  @include m {
+    width: 100%;
+  }
   .search-bar {
     margin-right: 20px;
     border: none;
-
+    @include m {
+      display: none;
+    }
+    @include s {
+      display: none;
+    }
     form {
       display: flex;
     }

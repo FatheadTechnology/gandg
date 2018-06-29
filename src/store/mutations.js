@@ -37,6 +37,10 @@ export const setFaq = (state, faq) => {
   state.faq = faq.data;
 };
 
+export const setGlossary = (state, glossary) => {
+  state.glossary = glossary.data;
+};
+
 export const setTermsAndConditions = (state, terms) => {
   state.termsAndConditions = terms.data;
 };

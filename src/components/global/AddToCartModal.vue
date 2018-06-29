@@ -5,7 +5,9 @@
       <div @click="hideModal" class="modal-close" id="add-to-cart-close">&times;</div>
     </div>
     <div class="modal-wrap">
-      <div :style="{backgroundImage: 'url('+addedImage+')'}" class="image-bar"></div>
+      <div class="image-bar">
+        <img :src="addedImage" class="image">
+      </div>
       <div class="modal-inner">
         <div class="modal-info-wrap">
           <!-- <img :src="`${selectedPdpImage.url}`" :alt="`${product.DisplayName}`"> -->
