@@ -1,16 +1,19 @@
 @import "../variables/variables";
 
-$filter-bg: $a-hover-color;
-$filter-hover: rgb(155, 122, 61);
-$filter-border: 1px solid $base-text-color;
+$filter-bg: #fff;
+$filter-hover: #ebebeb;
+$filter-transitions: 0.15s all ease-out;
+$filter-text: #000;
+$filter-border: 1px solid #ebebeb;
 
 .dropdown-wrap {
   display: flex;
   .dropdown {
+    outline: $filter-border;
     width: 200px;
     margin: 0 10px;
     background-color: $filter-bg;
-    color: #fff;
+    color: $filter-text;
     padding: 12px 20px;
     font-size: 1.25em;
     font-family: $base-font;
@@ -19,20 +22,40 @@ $filter-border: 1px solid $base-text-color;
     box-sizing: border-box;
     border: none;
     cursor: pointer;
+    transition: $filter-transitions;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-appearance: none;
+    &:-ms-expand {
+      display: none;
+    }
     &:hover {
       background-color: $filter-hover;
     }
     &:focus {
       background-color: $filter-hover;
     }
+    // TODO: Why isn't this working for the select dropdown??
     &:after {
-      content: "v";
-      float: right;
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid $filter-text;
     }
     &.open {
       background-color: $filter-hover;
+
       &:after {
-        content: "^";
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 0;
+        border-bottom: 5px solid $filter-text;
       }
     }
     &:last-child {
@@ -43,11 +66,56 @@ $filter-border: 1px solid $base-text-color;
     }
   }
 }
+.filters-row {
+  display: flex;
+  flex-direction: row;
+  .search-bar {
+    margin-right: 20px;
+    border: none;
+
+    form {
+      display: flex;
+    }
+    input {
+      outline: $filter-border;
+      &:focus {
+        outline-offset: 0;
+      }
+    }
+    button {
+      border: none;
+      outline: $filter-border;
+      cursor: pointer;
+      width: 40px;
+      background-color: $filter-bg;
+      color: $filter-text;
+      transition: $filter-transitions;
+      &:hover {
+        background-color: $filter-hover;
+      }
+    }
+    button.ais-search-box__submit {
+    }
+    button.ais-clear {
+      display: none;
+    }
+  }
+}
 .filters {
   background-color: $filter-hover;
+  outline: $filter-border;
   padding: 20px;
-  color: #fff;
+  color: $filter-text;
+  display: flex;
+  flex-direction: row;
   .filter {
+    margin: 0 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
     h3 {
       margin-top: 0;
     }
@@ -75,9 +143,9 @@ $filter-border: 1px solid $base-text-color;
     display: inline-block;
     .ais-pagination__item {
       margin: 0 5px;
-      background-color: #fff;
+      background-color: $filter-text;
       padding: 5px 10px;
-      border: 1px solid $footer-bg-color;
+      border: 1px solid $filter-border;
       .ais-pagination__link {
         text-decoration: none;
         color: $base-text-color;

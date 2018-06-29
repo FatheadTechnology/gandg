@@ -9,18 +9,7 @@ import cloudinary from "cloudinary";
 const client = algoliasearch("S7MN0CIBBE", "ecf8c6a506e3515c1400eb7086879aa2", {
   protocol: "https:"
 });
-const index = client.initIndex("dev_EvolutionProducts");
-const replicas = ["list-price_desc"];
-
-// index.setSettings({
-//   attributesForFaceting: ["design"],
-//   replicas: replicas
-// });
-
-const replica_index = client.initIndex("list-price_desc");
-// replica_index.setSettings({
-//   ranking: ["desc(list-price)"]
-// });
+const index = client.initIndex("dev_NewEvolutionProducts");
 
 const prismicEndpoint = "https://guildandgrace.cdn.prismic.io/api/v2";
 
@@ -155,6 +144,22 @@ export const getPatternInfo = ({ commit, state, dispatch }, patternParams) => {
       resolve();
     });
   });
+};
+
+export const getCrossSells = ({ commit }, productInfo) => {
+  console.log("productInfo", productInfo);
+
+  index.search(
+    {
+      query: productInfo.PrimaryCategory.DisplayName,
+      filters: `NOT MasterSkuNumber:${productInfo.SkuNumber}`
+    },
+    function searchDone(err, content) {
+      if (err) throw err;
+      console.log("crossSells", content);
+      commit("setCrossSells", content.hits);
+    }
+  );
 };
 
 export const createRoomShotData = ({ commit, dispatch }, product) => {
@@ -441,8 +446,73 @@ export const getFaq = ({ commit }) => {
 };
 // END FAQ
 
-// START BLOGS
+// START TERMS AND CONDITIONS
+export const getTermsAndConditions = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(
+          Prismic.Predicates.at("document.type", "terms_and_conditions")
+        );
+      })
+      .then(
+        function(response) {
+          commit("setTermsAndConditions", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END TERMS AND CONDITIONS
 
+// START PRIVACY POLICY
+export const getPrivacyPolicy = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(
+          Prismic.Predicates.at("document.type", "privacy_policy")
+        );
+      })
+      .then(
+        function(response) {
+          commit("setPrivacyPolicy", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END PRIVACY POLICY
+
+// START CAREERS
+export const getCareers = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(
+          Prismic.Predicates.at("document.type", "careers_page")
+        );
+      })
+      .then(
+        function(response) {
+          commit("setCareers", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END CAREERS
+
+// START BLOGS
 export const getBlogs = ({ commit }) => {
   Prismic.getApi(prismicEndpoint)
     .then(function(api) {
