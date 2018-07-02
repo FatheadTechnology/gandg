@@ -3,24 +3,15 @@ import * as api from "@/api";
 import Prismic from "prismic-javascript";
 import algoliasearch from "algoliasearch";
 import router from "./../router";
+import RoomZones from "./../../config/room_zones";
 
 import cloudinary from "cloudinary";
 
 const client = algoliasearch("S7MN0CIBBE", "ecf8c6a506e3515c1400eb7086879aa2", {
   protocol: "https:"
 });
-const index = client.initIndex("dev_EvolutionProducts");
-const replicas = ["list-price_desc"];
 
-// index.setSettings({
-//   attributesForFaceting: ["design"],
-//   replicas: replicas
-// });
-
-const replica_index = client.initIndex("list-price_desc");
-// replica_index.setSettings({
-//   ranking: ["desc(list-price)"]
-// });
+const index = client.initIndex("dev_NewEvolutionProducts");
 
 const prismicEndpoint = "https://guildandgrace.cdn.prismic.io/api/v2";
 
@@ -157,10 +148,44 @@ export const getPatternInfo = ({ commit, state, dispatch }, patternParams) => {
   });
 };
 
+export const getCrossSells = ({ commit }, productInfo) => {
+  console.log("productInfo", productInfo);
+
+  index.search(
+    {
+      query: productInfo.PrimaryCategory.DisplayName,
+      filters: `NOT MasterSkuNumber:${productInfo.SkuNumber}`
+    },
+    function searchDone(err, content) {
+      if (err) throw err;
+      console.log("crossSells", content);
+      commit("setCrossSells", content.hits);
+    }
+  );
+};
+
+// export const getCrossSells = ({ commit }, productInfo) => {
+//   console.log("productInfo", productInfo);
+
+//   index.search(
+//     {
+//       query: productInfo.PrimaryCategory.DisplayName,
+//       filters: `NOT MasterSkuNumber:${productInfo.SkuNumber}`
+//     },
+//     function searchDone(err, content) {
+//       if (err) throw err;
+//       console.log("crossSells", content);
+//       commit("setCrossSells", content.hits);
+//     }
+//   );
+// };
+
 export const createRoomShotData = ({ commit, dispatch }, product) => {
   let rooms = product.RoomTypes;
   let colors = [];
   let images = [];
+  console.log("roomwidths", RoomZones);
+
   // Getting exclusive Cloudinary IDs
   for (var i = 0; i < product.Children.length; i++) {
     let item = product.Children[i];
@@ -182,29 +207,37 @@ export const createRoomShotData = ({ commit, dispatch }, product) => {
       room: "swatch"
     });
     for (var i = 0; i < rooms.length; i++) {
-      let temp = cloudinary.url(`test_rooms/wall_${rooms[i].name}_small`, {
-        width: "auto",
-        responsive: "true",
-        crop: "scale",
-        responsive_placeholder: "blank",
-        client_hints: "true",
-        sizes: "100vw",
+      let temp = cloudinary.url(`${rooms[i].CloudinaryPath}_wall`, {
         transformation: [
           {
             overlay: colors[z].id,
             flags: "tiled",
             opacity: 85,
             effect: "multiply",
-            width: rooms[i].patternSize
+            width: RoomZones[rooms[i].ZoneId].PatternWidth
           },
           {
             effect: "blur:10"
           },
           {
-            overlay: `test_rooms:furniture_${rooms[i].name}_small`
+            overlay: `${rooms[i].CloudinaryPath.replace(
+              "/",
+              ":"
+            )}_wall_multiply`,
+            effect: "multiply"
           },
           {
-            overlay: "test_rooms:noise_small",
+            overlay: `${rooms[i].CloudinaryPath.replace(
+              "/",
+              ":"
+            )}_wall_lighten`,
+            effect: "multiply"
+          },
+          {
+            overlay: `${rooms[i].CloudinaryPath.replace("/", ":")}_furniture`
+          },
+          {
+            overlay: "test_rooms:noise",
             effect: "multiply"
           }
         ]
@@ -441,8 +474,93 @@ export const getFaq = ({ commit }) => {
 };
 // END FAQ
 
-// START BLOGS
+// START GLOSSARY
+export const getGlossary = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(Prismic.Predicates.at("document.type", "glossary"));
+      })
+      .then(
+        function(response) {
+          commit("setGlossary", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END GLOSSARY
 
+// START TERMS AND CONDITIONS
+export const getTermsAndConditions = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(
+          Prismic.Predicates.at("document.type", "terms_and_conditions")
+        );
+      })
+      .then(
+        function(response) {
+          commit("setTermsAndConditions", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END TERMS AND CONDITIONS
+
+// START PRIVACY POLICY
+export const getPrivacyPolicy = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(
+          Prismic.Predicates.at("document.type", "privacy_policy")
+        );
+      })
+      .then(
+        function(response) {
+          commit("setPrivacyPolicy", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END PRIVACY POLICY
+
+// START CAREERS
+export const getCareers = ({ commit }) => {
+  return new Promise((resolve, reject) => {
+    Prismic.getApi(prismicEndpoint)
+      .then(function(api) {
+        return api.query(
+          Prismic.Predicates.at("document.type", "careers_page")
+        );
+      })
+      .then(
+        function(response) {
+          commit("setCareers", response.results[0]);
+          resolve();
+        },
+        function(err) {
+          console.log("Something went wrong: ", err);
+        }
+      );
+  });
+};
+// END CAREERS
+
+// START BLOGS
 export const getBlogs = ({ commit }) => {
   Prismic.getApi(prismicEndpoint)
     .then(function(api) {

@@ -37,6 +37,26 @@ export const setFaq = (state, faq) => {
   state.faq = faq.data;
 };
 
+export const setGlossary = (state, glossary) => {
+  state.glossary = glossary.data;
+};
+
+export const setTermsAndConditions = (state, terms) => {
+  state.termsAndConditions = terms.data;
+};
+
+export const setPrivacyPolicy = (state, policy) => {
+  state.privacyPolicy = policy.data;
+};
+
+export const setCareers = (state, careers) => {
+  state.careers = careers.data;
+};
+
+export const setCrossSells = (state, crossSells) => {
+  state.crossSells = crossSells;
+};
+
 export const setHomepageContent = (state, homepageJson) => {
   state.homepageContent = homepageJson;
   console.log("homepageJson", homepageJson);

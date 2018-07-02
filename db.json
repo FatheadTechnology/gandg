@@ -1,92 +1,15 @@
 {
   "cart": [
     {
-      "ProductId": 150,
-      "SkuNumber": "98-1262",
-      "ProductUrl": "rosa/sunset/polywoven/Sample",
-      "DisplayName": "Rosa",
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Praesent libero. Sed cursus ante dapibus diam.",
-      "ColorWay": {
-        "ColorWayName": "sunset",
-        "ColorWayDisplayName": "Sunset",
-        "ColorWayHex": "#e89b58"
-      },
-      "Material": "polywoven",
-      "MaterialDisplayName": "Polywoven",
-      "DimensionFormatMask": "{W}' x {H}'",
-      "Width": 1,
-      "Height": 1,
-      "SizeDisplayName": "Sample",
-      "Depth": 0,
-      "AllowReview": true,
-      "DecalCount": 3,
-      "PopularityRanking": 944,
-      "AmountSold": 944,
-      "QtyForSale": -144,
-      "Price": 9.99,
-      "ListPrice": 9.99,
-      "Images": {
-        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Sunset.png",
-        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Sunset.png",
-        "CloudinaryPath": "test_patterns:rosa_sunset"
-      },
-      "Attributes": [
-        {
-          "Url": "orange",
-          "DisplayName": "Orange",
-          "SubDescription": null,
-          "VocabularyUrl": "primary-color",
-          "VocabularyDisplayName": "Primary Color"
-        },
-        {
-          "Url": "polywoven",
-          "DisplayName": "Polywoven",
-          "SubDescription": null,
-          "VocabularyUrl": "material",
-          "VocabularyDisplayName": "Material"
-        },
-        {
-          "Url": "1x1",
-          "DisplayName": "1Ft x 1Ft",
-          "SubDescription": null,
-          "VocabularyUrl": "size",
-          "VocabularyDisplayName": "Size"
-        },
-        {
-          "Url": "red",
-          "DisplayName": "Red",
-          "SubDescription": null,
-          "VocabularyUrl": "secondary-color",
-          "VocabularyDisplayName": "Secondary Color"
-        },
-        {
-          "Url": "white",
-          "DisplayName": "White",
-          "SubDescription": null,
-          "VocabularyUrl": "tertiary-color",
-          "VocabularyDisplayName": "Tertiary Color"
-        },
-        {
-          "Url": "no",
-          "DisplayName": "No Ancillaries",
-          "SubDescription": null,
-          "VocabularyUrl": "ancillaries",
-          "VocabularyDisplayName": "Ancillaries"
-        }
-      ],
-      "quantity": 10,
-      "id": 14
-    },
-    {
-      "ProductId": 138,
-      "SkuNumber": "98-1251",
-      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
+      "ProductId": 142,
+      "SkuNumber": "98-1255",
+      "ProductUrl": "rosa/tulip/polywoven/20x3",
       "DisplayName": "Rosa",
       "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
       "ColorWay": {
-        "ColorWayName": "oceanblue",
-        "ColorWayDisplayName": "Ocean Blue",
-        "ColorWayHex": "#0000cc"
+        "ColorWayName": "tulip",
+        "ColorWayDisplayName": "Tulip",
+        "ColorWayHex": "#cc33cc"
       },
       "Material": "polywoven",
       "MaterialDisplayName": "Polywoven",
@@ -103,14 +26,14 @@
       "Price": 99.99,
       "ListPrice": 99.99,
       "Images": {
-        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
-        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
-        "CloudinaryPath": "test_patterns:rosa_oceanblue"
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Tulip.png",
+        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_Tulip.png",
+        "CloudinaryPath": "test_patterns:rosa_tulip"
       },
       "Attributes": [
         {
-          "Url": "blue",
-          "DisplayName": "Blue",
+          "Url": "purple",
+          "DisplayName": "Purple",
           "SubDescription": null,
           "VocabularyUrl": "primary-color",
           "VocabularyDisplayName": "Primary Color"
@@ -151,8 +74,8 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 7,
-      "id": 15
+      "quantity": 5,
+      "id": 1
     },
     {
       "ProductId": 138,
@@ -229,7 +152,7 @@
         }
       ],
       "quantity": 1,
-      "id": 16
+      "id": 4
     },
     {
       "ProductId": 138,
@@ -305,22 +228,22 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 1,
-      "id": 17
+      "quantity": 4,
+      "id": 5
     },
     {
-      "ProductId": 138,
-      "SkuNumber": "98-1251",
-      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
+      "ProductId": 136,
+      "SkuNumber": "98-1249",
+      "ProductUrl": "rosa/oceanblue/vinyl/20x3",
       "DisplayName": "Rosa",
-      "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
       "ColorWay": {
         "ColorWayName": "oceanblue",
         "ColorWayDisplayName": "Ocean Blue",
         "ColorWayHex": "#0000cc"
       },
-      "Material": "polywoven",
-      "MaterialDisplayName": "Polywoven",
+      "Material": "vinyl",
+      "MaterialDisplayName": "Vinyl",
       "DimensionFormatMask": "{W}' x {H}'",
       "Width": 3,
       "Height": 20,
@@ -331,8 +254,8 @@
       "PopularityRanking": 944,
       "AmountSold": 944,
       "QtyForSale": -144,
-      "Price": 99.99,
-      "ListPrice": 99.99,
+      "Price": 89.99,
+      "ListPrice": 89.99,
       "Images": {
         "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
         "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
@@ -347,15 +270,15 @@
           "VocabularyDisplayName": "Primary Color"
         },
         {
-          "Url": "polywoven",
-          "DisplayName": "Polywoven",
+          "Url": "vinyl",
+          "DisplayName": "Vinyl",
           "SubDescription": null,
           "VocabularyUrl": "material",
           "VocabularyDisplayName": "Material"
         },
         {
-          "Url": "16x3",
-          "DisplayName": "16Ft x 3Ft",
+          "Url": "20x3",
+          "DisplayName": "20Ft x 3Ft",
           "SubDescription": null,
           "VocabularyUrl": "size",
           "VocabularyDisplayName": "Size"
@@ -383,37 +306,37 @@
         }
       ],
       "quantity": 1,
-      "id": 18
+      "id": 6
     },
     {
-      "ProductId": 138,
-      "SkuNumber": "98-1251",
-      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
-      "DisplayName": "Rosa",
-      "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
+      "ProductId": 206,
+      "SkuNumber": "98-2006",
+      "ProductUrl": "baby_dinosaurs/oceanblue/vinyl/16x3",
+      "DisplayName": "Baby Dinosaurs",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
       "ColorWay": {
         "ColorWayName": "oceanblue",
         "ColorWayDisplayName": "Ocean Blue",
-        "ColorWayHex": "#0000cc"
+        "ColorWayHex": "#679fd3"
       },
-      "Material": "polywoven",
-      "MaterialDisplayName": "Polywoven",
+      "Material": "vinyl",
+      "MaterialDisplayName": "Vinyl",
       "DimensionFormatMask": "{W}' x {H}'",
       "Width": 3,
-      "Height": 20,
-      "SizeDisplayName": "20x3",
+      "Height": 16,
+      "SizeDisplayName": "16x3",
       "Depth": 0,
       "AllowReview": true,
       "DecalCount": 3,
       "PopularityRanking": 944,
       "AmountSold": 944,
       "QtyForSale": -144,
-      "Price": 99.99,
-      "ListPrice": 99.99,
+      "Price": 59.99,
+      "ListPrice": 59.99,
       "Images": {
-        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
-        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
-        "CloudinaryPath": "test_patterns:rosa_oceanblue"
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
+        "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
+        "CloudinaryPath": "test_patterns:baby_dinosaurs_oceanblue"
       },
       "Attributes": [
         {
@@ -424,8 +347,8 @@
           "VocabularyDisplayName": "Primary Color"
         },
         {
-          "Url": "polywoven",
-          "DisplayName": "Polywoven",
+          "Url": "vinyl",
+          "DisplayName": "Vinyl",
           "SubDescription": null,
           "VocabularyUrl": "material",
           "VocabularyDisplayName": "Material"
@@ -438,20 +361,6 @@
           "VocabularyDisplayName": "Size"
         },
         {
-          "Url": "red",
-          "DisplayName": "Red",
-          "SubDescription": null,
-          "VocabularyUrl": "secondary-color",
-          "VocabularyDisplayName": "Secondary Color"
-        },
-        {
-          "Url": "white",
-          "DisplayName": "White",
-          "SubDescription": null,
-          "VocabularyUrl": "tertiary-color",
-          "VocabularyDisplayName": "Tertiary Color"
-        },
-        {
           "Url": "no",
           "DisplayName": "No Ancillaries",
           "SubDescription": null,
@@ -459,50 +368,50 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 1,
-      "id": 19
+      "quantity": 3,
+      "id": 7
     },
     {
-      "ProductId": 138,
-      "SkuNumber": "98-1251",
-      "ProductUrl": "rosa/oceanblue/polywoven/20x3",
-      "DisplayName": "Rosa",
-      "Description": "Lorem ipsum dolor sit amet. Praesent libero. Sed cursus ante dapibus diam, consectetur adipiscing elit. Sed nisi",
+      "ProductId": 201,
+      "SkuNumber": "98-2001",
+      "ProductUrl": "baby_dinosaurs/sand/vinyl/16x3",
+      "DisplayName": "Baby Dinosaurs",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
       "ColorWay": {
-        "ColorWayName": "oceanblue",
-        "ColorWayDisplayName": "Ocean Blue",
-        "ColorWayHex": "#0000cc"
+        "ColorWayName": "sand",
+        "ColorWayDisplayName": "Sand",
+        "ColorWayHex": "#faf8c8"
       },
-      "Material": "polywoven",
-      "MaterialDisplayName": "Polywoven",
+      "Material": "vinyl",
+      "MaterialDisplayName": "Vinyl",
       "DimensionFormatMask": "{W}' x {H}'",
       "Width": 3,
-      "Height": 20,
-      "SizeDisplayName": "20x3",
+      "Height": 16,
+      "SizeDisplayName": "16x3",
       "Depth": 0,
       "AllowReview": true,
       "DecalCount": 3,
       "PopularityRanking": 944,
       "AmountSold": 944,
       "QtyForSale": -144,
-      "Price": 99.99,
-      "ListPrice": 99.99,
+      "Price": 59.99,
+      "ListPrice": 59.99,
       "Images": {
-        "Thumbnail": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
-        "Full": "https://assets.fathead.com/new_patterns/Simple_Flower-01_OceanBlue.png",
-        "CloudinaryPath": "test_patterns:rosa_oceanblue"
+        "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+        "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+        "CloudinaryPath": "test_patterns:baby_dinosaurs_sand"
       },
       "Attributes": [
         {
-          "Url": "blue",
-          "DisplayName": "Blue",
+          "Url": "yellow",
+          "DisplayName": "Yellow",
           "SubDescription": null,
           "VocabularyUrl": "primary-color",
           "VocabularyDisplayName": "Primary Color"
         },
         {
-          "Url": "polywoven",
-          "DisplayName": "Polywoven",
+          "Url": "vinyl",
+          "DisplayName": "Vinyl",
           "SubDescription": null,
           "VocabularyUrl": "material",
           "VocabularyDisplayName": "Material"
@@ -515,20 +424,6 @@
           "VocabularyDisplayName": "Size"
         },
         {
-          "Url": "red",
-          "DisplayName": "Red",
-          "SubDescription": null,
-          "VocabularyUrl": "secondary-color",
-          "VocabularyDisplayName": "Secondary Color"
-        },
-        {
-          "Url": "white",
-          "DisplayName": "White",
-          "SubDescription": null,
-          "VocabularyUrl": "tertiary-color",
-          "VocabularyDisplayName": "Tertiary Color"
-        },
-        {
           "Url": "no",
           "DisplayName": "No Ancillaries",
           "SubDescription": null,
@@ -536,8 +431,8 @@
           "VocabularyDisplayName": "Ancillaries"
         }
       ],
-      "quantity": 1,
-      "id": 20
+      "quantity": 2,
+      "id": 8
     }
   ],
   "favorites": [],
@@ -578,16 +473,8 @@
       "Description": "Lipsum porum descriptum whatesvum",
       "RoomTypes": [
         {
-          "name": "kids",
-          "patternSize": 148
-        },
-        {
-          "name": "nursery",
-          "patternSize": 168
-        },
-        {
-          "name": "industrial",
-          "patternSize": 214
+          "CloudinaryPath": "test_rooms/traditional_male_BR_PDP_z2_8x3",
+          "ZoneId": 2
         }
       ],
       "DimensionFormatMask": "{W}' x {H}'",
@@ -993,7 +880,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -1068,7 +955,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -1443,7 +1330,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -1518,7 +1405,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -1893,7 +1780,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -1968,7 +1855,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -2343,7 +2230,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -2418,7 +2305,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -2793,7 +2680,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -2868,7 +2755,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -2916,16 +2803,8 @@
       "DisplayName": "Baby Dinosaurs",
       "RoomTypes": [
         {
-          "name": "kids",
-          "patternSize": 148
-        },
-        {
-          "name": "nursery",
-          "patternSize": 168
-        },
-        {
-          "name": "industrial",
-          "patternSize": 214
+          "CloudinaryPath": "test_rooms/traditional_male_BR_PDP_z2_8x3",
+          "ZoneId": 2
         }
       ],
       "Description": "Lipsum porum descriptum whatesvum Dinosaurs",
@@ -3013,7 +2892,8 @@
           "ListPrice": 59.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_sand"
           },
           "Attributes": [
             {
@@ -3073,7 +2953,8 @@
           "ListPrice": 79.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_sand"
           },
           "Attributes": [
             {
@@ -3133,7 +3014,8 @@
           "ListPrice": 89.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_sand"
           },
           "Attributes": [
             {
@@ -3193,7 +3075,8 @@
           "ListPrice": 89.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_sand"
           },
           "Attributes": [
             {
@@ -3242,7 +3125,7 @@
           "DimensionFormatMask": "{W}' x {H}'",
           "Width": 1,
           "Height": 1,
-          "SizeDisplayName": "1x1",
+          "SizeDisplayName": "Sample",
           "Depth": 0,
           "AllowReview": true,
           "DecalCount": 3,
@@ -3253,7 +3136,8 @@
           "ListPrice": 9.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_sand"
           },
           "Attributes": [
             {
@@ -3271,7 +3155,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -3302,7 +3186,7 @@
           "DimensionFormatMask": "{W}' x {H}'",
           "Width": 1,
           "Height": 1,
-          "SizeDisplayName": "1x1",
+          "SizeDisplayName": "Sample",
           "Depth": 0,
           "AllowReview": true,
           "DecalCount": 3,
@@ -3313,7 +3197,8 @@
           "ListPrice": 9.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_sand.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_sand"
           },
           "Attributes": [
             {
@@ -3331,7 +3216,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -3373,7 +3258,8 @@
           "ListPrice": 59.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_lavender"
           },
           "Attributes": [
             {
@@ -3433,7 +3319,8 @@
           "ListPrice": 79.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_lavender"
           },
           "Attributes": [
             {
@@ -3493,7 +3380,8 @@
           "ListPrice": 89.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_lavender"
           },
           "Attributes": [
             {
@@ -3553,7 +3441,8 @@
           "ListPrice": 89.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_lavender"
           },
           "Attributes": [
             {
@@ -3602,7 +3491,7 @@
           "DimensionFormatMask": "{W}' x {H}'",
           "Width": 1,
           "Height": 1,
-          "SizeDisplayName": "1x1",
+          "SizeDisplayName": "Sample",
           "Depth": 0,
           "AllowReview": true,
           "DecalCount": 3,
@@ -3613,7 +3502,8 @@
           "ListPrice": 9.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_lavender"
           },
           "Attributes": [
             {
@@ -3631,7 +3521,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -3662,7 +3552,7 @@
           "DimensionFormatMask": "{W}' x {H}'",
           "Width": 1,
           "Height": 1,
-          "SizeDisplayName": "1x1",
+          "SizeDisplayName": "Sample",
           "Depth": 0,
           "AllowReview": true,
           "DecalCount": 3,
@@ -3673,7 +3563,8 @@
           "ListPrice": 9.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_lavender.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_lavender"
           },
           "Attributes": [
             {
@@ -3691,7 +3582,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -3733,7 +3624,8 @@
           "ListPrice": 59.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_oceanblue"
           },
           "Attributes": [
             {
@@ -3793,7 +3685,8 @@
           "ListPrice": 79.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_oceanblue"
           },
           "Attributes": [
             {
@@ -3853,7 +3746,8 @@
           "ListPrice": 89.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_oceanblue"
           },
           "Attributes": [
             {
@@ -3913,7 +3807,8 @@
           "ListPrice": 89.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_oceanblue"
           },
           "Attributes": [
             {
@@ -3962,7 +3857,7 @@
           "DimensionFormatMask": "{W}' x {H}'",
           "Width": 1,
           "Height": 1,
-          "SizeDisplayName": "1x1",
+          "SizeDisplayName": "Sample",
           "Depth": 0,
           "AllowReview": true,
           "DecalCount": 3,
@@ -3973,7 +3868,8 @@
           "ListPrice": 9.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_oceanblue"
           },
           "Attributes": [
             {
@@ -3991,7 +3887,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -4022,7 +3918,7 @@
           "DimensionFormatMask": "{W}' x {H}'",
           "Width": 1,
           "Height": 1,
-          "SizeDisplayName": "1x1",
+          "SizeDisplayName": "Sample",
           "Depth": 0,
           "AllowReview": true,
           "DecalCount": 3,
@@ -4033,7 +3929,8 @@
           "ListPrice": 9.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_oceanblue.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_oceanblue"
           },
           "Attributes": [
             {
@@ -4051,7 +3948,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -4093,7 +3990,8 @@
           "ListPrice": 59.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4153,7 +4051,8 @@
           "ListPrice": 79.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4213,7 +4112,8 @@
           "ListPrice": 89.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4273,7 +4173,8 @@
           "ListPrice": 89.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4322,7 +4223,7 @@
           "DimensionFormatMask": "{W}' x {H}'",
           "Width": 1,
           "Height": 1,
-          "SizeDisplayName": "1x1",
+          "SizeDisplayName": "Sample",
           "Depth": 0,
           "AllowReview": true,
           "DecalCount": 3,
@@ -4333,7 +4234,8 @@
           "ListPrice": 9.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4351,7 +4253,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",
@@ -4382,7 +4284,7 @@
           "DimensionFormatMask": "{W}' x {H}'",
           "Width": 1,
           "Height": 1,
-          "SizeDisplayName": "1x1",
+          "SizeDisplayName": "Sample",
           "Depth": 0,
           "AllowReview": true,
           "DecalCount": 3,
@@ -4393,7 +4295,8 @@
           "ListPrice": 9.99,
           "Images": {
             "Thumbnail": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
-            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png"
+            "Full": "https://assets.fathead.com/new_patterns/Baby_Dinosaurs_turquoise.png",
+            "CloudinaryPath": "test_patterns:baby_dinosaurs_turquoise"
           },
           "Attributes": [
             {
@@ -4411,7 +4314,7 @@
               "VocabularyDisplayName": "Material"
             },
             {
-              "Url": "1x1",
+              "Url": "Sample",
               "DisplayName": "1Ft x 1Ft",
               "SubDescription": null,
               "VocabularyUrl": "size",

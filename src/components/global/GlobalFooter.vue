@@ -10,7 +10,7 @@ TODO : MAKE THESE LINKS WORK WITH THE PRISMIC INTERPOLATOR : JACOB
       <a href="mailto:support@guildandgrace.com">E-mail Support</a>
       <a href="#">Track Your Order</a>
       <a href="#">Help Center</a>
-      <a href="#">Careers</a>
+      <!-- <a href="#">Careers</a> -->
     </div>
 
     <div class="small-nav-col" id="support">
@@ -32,17 +32,16 @@ TODO : MAKE THESE LINKS WORK WITH THE PRISMIC INTERPOLATOR : JACOB
 </template>
 
 <script>
-  export default {
-    name: 'GFooter',
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
-    }
+export default {
+  name: "GFooter",
+  data() {
+    return {
+      msg: "Welcome to Your Vue.js App"
+    };
   }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

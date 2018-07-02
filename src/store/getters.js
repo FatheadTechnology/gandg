@@ -73,6 +73,16 @@ export const getHowToFromStore = state => state.howTo;
 
 export const getFaqFromStore = state => state.faq;
 
+export const getGlossaryFromStore = state => state.glossary;
+
+export const getTermsAndConditionsFromStore = state => state.termsAndConditions;
+
+export const getPrivacyPolicyFromStore = state => state.privacyPolicy;
+
+export const getCareersFromStore = state => state.careers;
+
+export const getCrossSellsFromStore = state => state.crossSells;
+
 export const getLandingContentFromStore = state => state.landingContent;
 
 export const getSelectedArtistFromStore = state => state.selectedArtist;

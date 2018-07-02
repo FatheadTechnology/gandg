@@ -40,6 +40,10 @@ export default {
   aboutUs: null,
   howTo: null,
   faq: null,
+  glossary: null,
+  termsAndConditions: null,
+  privacyPolicy: null,
+  careers: null,
   // start artists
   artists: null,
   selectedArtist: null,
@@ -93,6 +97,7 @@ export default {
   roomShots: null,
   roomShotData: null,
   selectedRoomShots: null,
+  crossSells: null,
   //end pdp
 
   //start PDP room
