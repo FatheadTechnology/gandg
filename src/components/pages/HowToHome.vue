@@ -10,9 +10,8 @@
       </div>
     </div>
     <h1>{{howTo.secondary_header[0].text}}</h1>
-    <p>{{howTo.secondary_subheader[0].text}}</p>
     <div class="btn-center-container">
-      <div class="btn primary-btn">Step-by-Step Instructions</div>
+      <div class="btn primary-btn" @click="openInfo">Step-by-Step Instructions</div>
     </div>
     <h1>More How-to Videos</h1>
     <!--
@@ -48,12 +47,14 @@
 import { mapGetters, mapActions } from "vuex";
 import ProductGridLineMock from "../ProductGridLineMock";
 import VideoGrid from "../VideoGrid";
+import Serializer from "./../global/Serializer";
 
 export default {
   name: "HelloWorld",
   components: {
     ProductGridLineMock,
-    VideoGrid
+    VideoGrid,
+    Serializer
   },
   data() {
     return {
@@ -71,6 +72,9 @@ export default {
     changeVideo(videoId) {
       this.youtube = this.videoId(videoId) + "?autoplay=1";
       window.scrollTo(0, 0);
+    },
+    openInfo() {
+      this.showInfo = true;
     }
   },
   computed: {
