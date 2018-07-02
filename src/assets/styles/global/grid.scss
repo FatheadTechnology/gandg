@@ -1,9 +1,10 @@
 @import "../variables/variables";
 
 #app {
+  margin-top: $top-nav-size;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: $left-nav-size 1fr $right-nav-size;
+  grid-template-columns: $right-nav-size 1fr $right-nav-size;
   grid-column-gap: $main-grid-gap;
 }
 
@@ -16,7 +17,7 @@
 
 @include m {
   #app {
-    grid-template-columns: $left-nav-size-small 1fr $right-nav-size-small;
+    grid-template-columns: $right-nav-size-small 1fr $right-nav-size-small;
     grid-column-gap: $main-grid-gap-m;
   }
 }
@@ -146,8 +147,9 @@
   .product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
+    grid-column-gap: 0.25em !important;
+    grid-row-gap: 0.25em !important;
+    margin: 1em;
 
     .product-grid-item {
       height: 150px;

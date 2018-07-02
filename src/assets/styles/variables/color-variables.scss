@@ -1,27 +1,31 @@
+$black : #212322;
 //BASE COLORS
 $bg-color: #fcfaf8;
 //$bg-color: #F4F2F0;
-$base-text-color: #121212;
-$link-color: #133952;
-$a-hover-color: #6c4f1a;
+$base-text-color: $black;
+$link-color: #244b5a;
+$a-hover-color: #9fcfca;
 
 //HERO COLORS
-$hero-content-color: #fff;
-$hero-cta-bg-color: #7f1216;
-$hero-cta-color: #fff;
+$hero-content-color: $black;
+$hero-cta-bg-color: #d5ba8c;
+$hero-cta-color: $black;
+
+$hero-bar-bg-color: #9fcfca ;
+$hero-bar-color: $black;
 
 //BUTTON COLORS
-$btn-primary-bg-color: $link-color;
+$btn-primary-bg-color: #244b5a;
 $btn-primary-color: #fff;
 
 //$btn-secondary-bg-color: #BC9B7D;
-$btn-secondary-bg-color: #6c4f1a;
-$btn-secondary-bg-color-rgba: rgba(108, 79, 26, 1);
-$btn-secondary-color: #fff;
+$btn-secondary-bg-color: #d5ba8c;
+$btn-secondary-bg-color-rgba: rgba(213, 186, 140, 1);
+$btn-secondary-color: $black;
 
 // FOOTER COLORS
-$footer-bg-color: #3c3a38;
-$footer-color: #e5e2df;
+$footer-bg-color: $black;
+$footer-color: #fff;
 
 //Cart Hover Menu
 $cart-hover-menu-header-footer-bg-color: #545454;
