@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import AboutUs from "@/components/pages/AboutUs";
+import Artists from "@/components/pages/Artists";
 import BlogHome from "@/components/pages/BlogHome";
 import BlogPost from "@/components/pages/BlogPost";
 import Cart from "@/components/pages/Cart";
@@ -35,6 +36,11 @@ export default new Router({
       name: "Blog Post",
       component: BlogPost
     },*/
+    {
+      path: "/artists",
+      name: "Artists",
+      component: Artists
+    },
     {
       path: "/about-us",
       name: "About Us",

@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
-@import url("https://use.typekit.net/nod1lcl.css");
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+@import url("https://use.typekit.net/nod1lcl.css");*/
 
-$base-font : 'futura-pt', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,700|Open+Sans:400,400i,700');
+
+$base-font : 'Open Sans', sans-serif;
 $base-font-weight: 400;
 
-$secondary-font:   'futura-pt', sans-serif;
+$secondary-font:   'Open Sans', sans-serif;
 $secondary-font-weight: 400;
 
-$header-font :  'futura-pt', sans-serif;
+$header-font :  'Assistant', sans-serif;
 $header-font-weight : 700;
 
-$base-font-size: 14px;
-$base-font-size-retina: 18px;
+$base-font-size: 16px;
+$base-font-size-retina: 16px;

@@ -19,7 +19,8 @@
   }
   svg {
     box-sizing: border-box;
-    padding: 2em;
+    height: $mobile-nav-bar-height - 10px;
+    margin-top: 5px;
   }
   .mobile-menu-bar {
     width: 100%;

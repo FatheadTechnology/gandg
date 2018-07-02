@@ -1,11 +1,11 @@
 <template>
   <div id="home">
-    <div id="cta-hero-bar" v-show="showCTA">
+<!--    <div id="cta-hero-bar" v-show="showCTA">
       {{homepageContent["0"].data.marketingcta["0"].text}}
       <div id="close-hero" v-on:click="showCTA = !showCTA">
         <span> &times;</span>
       </div>
-    </div>
+    </div>-->
     <div id="hero">
       <!--      <div id="hero-content">
         <h2>Transform Your Room</h2>

@@ -11,14 +11,14 @@ $base-top-margin: 2em;
 //GLOBAL BUTTONS
 $btn-padding : 1em;
 $btn-margin: 1.25em 0;
-$btn-width: 220px;
+$btn-width: 240px;
 $btn-width-retina: 250px;
 
 //MOBILE NAV
-$mobile-nav-bar-height: 3em;
+$mobile-nav-bar-height: 60px;
 
 //MOBILE SPACING
-$mobile-padding: 0 1.25em;
+$mobile-padding: 0 .5em;
 
 //BORDER RADIUS
 $base-border-radius: 1px;
@@ -26,6 +26,10 @@ $base-border-radius: 1px;
 //LEFT NAV
 $left-nav-size: 250px;
 $left-nav-size-small: 200px;
+
+//TOP NAV
+$top-nav-size: 165px;
+$left-nav-size-small: 165px;
 
 // RIGHT NAV
 $right-nav-size: 75px;

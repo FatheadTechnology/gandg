@@ -90,6 +90,7 @@
 //TODO: CTA HERO AT TOP
 #cta-hero-bar {
   width: 100%;
+  width: 100%;
   background-color: $hero-cta-bg-color;
   color: $hero-cta-color;
   font-size: 1.25em;
@@ -117,9 +118,8 @@
   }
 }
 #hero-bar {
-  width: 100%;
-  background-color: $btn-primary-bg-color;
-  color: $hero-cta-color;
+  background-color: $hero-bar-bg-color;
+  color: $hero-bar-color;
   padding: 1em;
   box-sizing: border-box;
   text-align: center;
@@ -176,6 +176,21 @@
     }
     .product-grid-item-subheader {
       letter-spacing: 0.15em;
+    }
+  }
+}
+
+@include under-m {
+  #subheader-grid-container {
+    .product-grid {
+      text-align: center;
+      text-transform: uppercase;
+      .product-grid-item-header {
+        letter-spacing: 0;
+      }
+      .product-grid-item-subheader {
+        letter-spacing: 0;
+      }
     }
   }
 }
