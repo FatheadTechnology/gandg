@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-<!--    <div id="cta-hero-bar" v-show="showCTA">
+    <!--    <div id="cta-hero-bar" v-show="showCTA">
       {{homepageContent["0"].data.marketingcta["0"].text}}
       <div id="close-hero" v-on:click="showCTA = !showCTA">
         <span> &times;</span>
@@ -15,16 +15,16 @@
       </div>-->
     </div>
     <div id="hero-bar">
-      <h2>  {{homepageContent["0"].data.header["0"].text}}</h2>
+      <h2> {{homepageContent["0"].data.header["0"].text}}</h2>
       <p>
-       {{homepageContent["0"].data.subheader["0"].text}} </p>
+        {{homepageContent["0"].data.subheader["0"].text}} </p>
     </div>
     <!--   <div class="btn-center-container">
       <div id="hero-subheader-btn" class="btn secondary-btn">CALL TO ACTION</div>
     </div>-->
     <div class="content-wrap">
 
-      <div id="subheader-grid-container">
+      <!-- <div id="subheader-grid-container">
         <div class="product-grid">
           <div class="product-grid-item-container" v-for="(patternType, index) in homepageContent['0'].data.featured_pattern_types" :key="index">
             <div class="product-grid-item-image-container">
@@ -40,24 +40,63 @@
         <router-link tag="div" to="/product-list" class="btn primary-btn" id="see-all-design-styles">
           See all design styles
         </router-link>
+      </div> -->
+
+      <div class="featured-section">
+        <h2 class="home-section-header">Featured Patterns</h2>
+        <product-grid-line-mock></product-grid-line-mock>
+        <div class="btn-center-container">
+          <router-link to="/product-list" tag="div" class="btn primary-btn">See All Patterns</router-link>
+        </div>
+      </div>
+      <div class="featured-section">
+        <h2 class="home-section-header">Featured Artists</h2>
+        <div class="product-grid">
+
+          <router-link tag="div" to="/pdp" class="product-grid-item-container">
+            <div class="product-grid-item-image-container">
+              <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/deco_diamond_blue-01.jpg');"></div>
+            </div>
+            <span class="product-grid-item-header"> Artist Name</span>
+          </router-link>
+
+          <router-link tag="div" to="/pdp" class="product-grid-item-container">
+            <div class="product-grid-item-image-container">
+              <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/resting_sparrows_white.jpg');"></div>
+            </div>
+            <span class="product-grid-item-header"> Artist Name</span>
+          </router-link>
+
+          <router-link tag="div" to="/pdp" class="product-grid-item-container">
+            <div class="product-grid-item-image-container">
+              <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonDunesGray24x24.jpg');"></div>
+            </div>
+            <span class="product-grid-item-header"> Artist Name</span>
+          </router-link>
+
+          <router-link tag="div" to="/pdp" class="product-grid-item-container">
+            <div class="product-grid-item-image-container">
+              <div class="product-grid-item-image" style="background-image: url('https://assets.fathead.com/swipe-patterns/HeatherDuttonLamaisondespapillonsNavy12x12.jpg');"></div>
+            </div>
+            <span class="product-grid-item-header"> Artist Name</span>
+          </router-link>
+
+        </div>
+        <div class="btn-center-container">
+          <router-link to="/product-list" tag="div" class="btn primary-btn">See All Artists</router-link>
+        </div>
       </div>
 
-      <h2>Featured Patterns, needs to call product api?</h2>
-      <product-grid-line-mock></product-grid-line-mock>
-      <div class="btn-center-container">
-        <div class="btn primary-btn">See all patterns</div>
-      </div>
-
-      <h2>Recently Viewed</h2>
+      <!-- <h2>Recently Viewed</h2>
       <product-grid-line-mock></product-grid-line-mock>
 
       <div class="btn-center-container">
         <div class="btn primary-btn">See all viewed patterns</div>
-      </div>
+      </div> -->
 
-      <div id="featured-artist-grid-container">
+      <!-- <div id="featured-artist-grid-container">
         <h1> {{homepageContent["0"].data.featured_artist["0"].text}}</h1>
-        <p>  {{homepageContent["0"].data.featured_artist_copy["0"].text}}</p>
+        <p> {{homepageContent["0"].data.featured_artist_copy["0"].text}}</p>
         <div class="product-grid">
 
           <div class="product-grid-item-container">
@@ -98,20 +137,22 @@
           <a href="#">See All Artists</a>
         </div>
 
-      </div>
+      </div> -->
     </div>
   </div>
 
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import ProductGridLineMock from "../ProductGridLineMock";
-import { mapGetters, mapActions } from 'vuex';
+import WallpaperPattern from "../global/WallpaperPattern";
 
 export default {
   name: "HelloWorld",
   components: {
-    ProductGridLineMock
+    ProductGridLineMock,
+    WallpaperPattern
   },
   data() {
     return {
@@ -119,22 +160,20 @@ export default {
       showCTA: true
     };
   },
-  computed:{
+  computed: {
     ...mapGetters({
-      homepageContent: 'getHomepageContentFromStore'
+      homepageContent: "getHomepageContentFromStore"
     })
   },
-  methods : {
+  methods: {
     ...mapActions({
-      getHomepageContent: 'getHomepageContent',
+      getHomepageContent: "getHomepageContent"
     })
   },
   created() {
     this.getHomepageContent();
-
   },
-  mounted(){
-  }
+  mounted() {}
 };
 </script>
 

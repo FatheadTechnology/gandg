@@ -81,11 +81,15 @@
 
     .product-grid-item-header {
       margin-top: 0.5em;
-      font-size: 1.25em;
+      font-size: 1em;
       font-weight: $header-font-weight;
     }
-    .product-grid-item-subheader {
+    .product-grid-item-artist {
       font-size: 1em;
+      margin-bottom: 0.2em;
+    }
+    .product-grid-item-subheader {
+      font-size: 0.8em;
       margin-bottom: 1em;
     }
     .product-grid-item-image-container {
