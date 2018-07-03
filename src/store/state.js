@@ -10,6 +10,11 @@ export default {
   showMenu: false,
   // end starter code
 
+  // start nav
+  showNavDrop: false,
+  hoverSection: null,
+  // end nav
+
   // start homepage code
   homepageContent: [],
   landingPageContent: [],

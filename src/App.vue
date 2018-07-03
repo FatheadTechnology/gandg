@@ -1,29 +1,34 @@
 <template>
   <div id="app">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <mobile-nav></mobile-nav>
-<!--
+    <div id="site-wrap">
+
+      <div id="global-grid">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+        <mobile-nav></mobile-nav>
+        <!--
     <left-nav></left-nav>
 -->
-    <top-nav></top-nav>
-    <div class="space-fill"></div>
-    <div id="page-content">
-      <transition name="fade">
+        <top-nav></top-nav>
+        <div class="space-fill"></div>
+        <div id="page-content">
+          <transition name="fade">
 
-        <router-view/>
-      </transition>
-      <global-footer></global-footer>
-    </div>
-    <div class="space-fill"></div>
-    <right-nav></right-nav>
-    <!--
+            <router-view/>
+          </transition>
+          <global-footer></global-footer>
+        </div>
+        <div class="space-fill"></div>
+        <right-nav></right-nav>
+        <!--
     TODO: absolute position the icon in the help btn?
     -->
-    <div id="help-btn">
-      <img src="./assets/icomoon_6_icons/SVG/bubbles2.svg" alt="Chat Bubble">
+        <div id="help-btn">
+          <img src="./assets/icomoon_6_icons/SVG/bubbles2.svg" alt="Chat Bubble">
 
+        </div>
+        <div id="breakpoint-teller"></div>
+      </div>
     </div>
-    <div id="breakpoint-teller"></div>
   </div>
 </template>
 

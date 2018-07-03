@@ -11,7 +11,10 @@
     </div>
     <h1>{{howTo.secondary_header[0].text}}</h1>
     <div class="btn-center-container">
-      <div class="btn primary-btn" @click="openInfo">Step-by-Step Instructions</div>
+      <div class="btn primary-btn" id="step-by-step-instructions-btn" @click="toggleInfo">Step-by-Step Instructions</div>
+    </div>
+    <div class="step-by-step" v-if="showInfo">
+      <serializer :content="howTo.step_by_step_instructions"></serializer>
     </div>
     <h1>More How-to Videos</h1>
     <!--
@@ -59,7 +62,8 @@ export default {
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
-      youtube: null
+      youtube: null,
+      showInfo: false
     };
   },
   methods: {
@@ -73,8 +77,8 @@ export default {
       this.youtube = this.videoId(videoId) + "?autoplay=1";
       window.scrollTo(0, 0);
     },
-    openInfo() {
-      this.showInfo = true;
+    toggleInfo() {
+      this.showInfo = !this.showInfo;
     }
   },
   computed: {

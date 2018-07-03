@@ -148,6 +148,9 @@
     border-bottom: 2px solid $base-text-color;
     text-align: center;
     padding: 0.5em 0;
+    @include s {
+      margin: 0;
+    }
   }
 }
 

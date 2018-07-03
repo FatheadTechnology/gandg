@@ -3,7 +3,16 @@
 #mobile-nav {
   display: none;
 }
-
+.close-nav {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  position: absolute;
+  background-color: transparent;
+}
 @include s {
   #mobile-nav {
     display: flex;
@@ -31,12 +40,19 @@
   margin-right: 5px;
   width: $right-nav-size;
   position: fixed;
-  right: 0;
   top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1001;
+  margin-left: calc(#{$xl} - #{$right-nav-size});
+  @media (max-width: $xl) {
+    margin-left: 0;
+    right: 0;
+  }
+  @include l {
+    margin-top: 200px;
+  }
   @include m {
     margin-top: 200px;
   }
@@ -45,9 +61,10 @@
 #top-nav-link-wrap {
   width: 100%;
   z-index: 5;
+  position: relative;
 }
 
-$top-nav-wallpaper-height: 350px;
+$top-nav-wallpaper-height: 200px;
 $top-nav-artists-height: 200px;
 $top-nav-howto-height: 200px;
 $top-nav-aboutus-height: 200px;
@@ -57,10 +74,9 @@ $top-nav-aboutus-height: 200px;
   z-index: 5;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
+  max-width: $xl;
   box-sizing: border-box;
-  padding: 0 125px;
   height: $top-nav-size;
   display: flex;
   justify-content: center;
@@ -73,44 +89,52 @@ $top-nav-aboutus-height: 200px;
     padding: 0;
   }
 
+  #nav-wrap {
+    width: 100%;
+    max-width: $main-grid-width;
+    position: relative;
+  }
+
   #top-nav-dropdown {
-    left: 0;
-    position: fixed;
-    top: $top-nav-size;
+    position: absolute;
     width: 100%;
     background-color: $bg-color;
-    padding-bottom: 10px;
-    &.Wallpaper {
-      height: $top-nav-wallpaper-height;
-    }
-    &.Artists {
-      height: $top-nav-artists-height;
-    }
-    &.HowTo {
-      height: $top-nav-howto-height;
-    }
+    // &.Wallpaper {
+    //   height: $top-nav-wallpaper-height;
+    // }
+    // &.Artists {
+    //   height: $top-nav-artists-height;
+    // }
+    // &.HowTo {
+    //   height: $top-nav-howto-height;
+    // }
     &.AboutUs {
-      height: $top-nav-aboutus-height;
+      .top-nav-wrapper {
+        grid-template-columns: 1fr;
+        padding: 0 400px;
+        .section-wrap {
+          .design-types {
+            text-align: center;
+          }
+          &:first-child {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
     }
-    .close-nav {
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 5;
-      position: absolute;
-      background-color: transparent;
-    }
+
     .top-nav-wrapper {
       box-sizing: border-box;
-      position: fixed;
-      padding: 0 125px;
+      position: relative;
+      padding: 0 200px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 50px;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
       z-index: 5;
       width: 100%;
+
       height: inherit;
       @include m {
         padding: 0 50px 0 0;
@@ -121,6 +145,7 @@ $top-nav-aboutus-height: 200px;
           text-align: left;
           width: 50%;
           display: inline-block;
+          cursor: pointer;
         }
         img {
           width: 100%;
@@ -131,26 +156,38 @@ $top-nav-aboutus-height: 200px;
         }
       }
       .section-wrap {
-        margin: 0 20px;
+        margin: 15px 20px;
         display: inline-block;
         height: inherit;
         margin-bottom: 20px;
+        position: relative;
+        &:first-child {
+          &:after {
+            content: "";
+            width: 2px;
+            background-color: black;
+            position: absolute;
+            right: -28px;
+            top: 0;
+            height: 100%;
+          }
+        }
       }
       .section-title {
-        margin: 10px 0 0;
         font-weight: bold;
         display: inline-block;
       }
       ul {
         display: grid;
-        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-row-gap: 5px;
         list-style-type: none;
         padding: 0;
         box-sizing: border-box;
         li {
           cursor: pointer;
-          margin: 10px 0;
           transition: 0.15s all ease-out;
+          font-size: 0.8em;
           &:hover {
             color: $a-hover-color;
           }
@@ -166,6 +203,7 @@ $top-nav-aboutus-height: 200px;
     box-sizing: border-box;
     border-bottom: 2px solid $btn-primary-bg-color;
     width: 100%;
+    max-width: inherit;
     box-sizing: border-box;
     z-index: 5;
     .top-nav-link {
@@ -244,6 +282,7 @@ $top-nav-aboutus-height: 200px;
 
 #home-link {
   cursor: pointer;
+  text-align: center;
 }
 
 $hover-menu-background-color: #fff;

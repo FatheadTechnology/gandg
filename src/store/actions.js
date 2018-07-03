@@ -53,6 +53,24 @@ export const saveTask = ({ commit, dispatch, state }) => {
 };
 // END BOILER PLATE CODE
 
+// START NAV
+export const showNavSection = ({ state }, section) => {
+  state.showNavDrop = true;
+  state.hoverSection = section;
+};
+
+export const hideNav = ({ state }) => {
+  setTimeout(() => {
+    state.showNavDrop = false;
+    state.hoverSection = null;
+  }, 100);
+};
+
+export const showNav = ({ state }) => {
+  state.showNavDrop = true;
+};
+// END NAV
+
 // START MODALS
 export const showModal = ({ state }, modalName) => {
   console.log("this", this);

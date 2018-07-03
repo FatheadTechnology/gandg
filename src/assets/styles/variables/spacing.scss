@@ -56,3 +56,7 @@ $grid-gap-pdp: 0.5em;
 
 //CART
 $cart-item-padding: 1em;
+
+$main-grid-width: calc(
+  #{$xl} - #{$right-nav-size} - #{$right-nav-size} - #{$main-grid-gap} - #{$main-grid-gap}
+);
