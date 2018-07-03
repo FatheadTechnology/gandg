@@ -1,22 +1,34 @@
 @import "../variables/variables";
 
 #app {
+  width: 100%;
+  text-align: center;
+}
+#global-grid {
   margin-top: $top-nav-size;
   min-height: 100vh;
   display: grid;
   grid-template-columns: $right-nav-size 1fr $right-nav-size;
   grid-column-gap: $main-grid-gap;
+  max-width: $xl;
+  text-align: left;
+}
+
+#site-wrap {
+  width: 100%;
+  max-width: $xl;
+  display: inline-block;
 }
 
 @include s {
-  #app {
+  #global-grid {
     margin-top: $mobile-nav-bar-height;
     grid-template-columns: 1fr;
   }
 }
 
 @include m {
-  #app {
+  #global-grid {
     grid-template-columns: $right-nav-size-small 1fr $right-nav-size-small;
     grid-column-gap: $main-grid-gap-m;
   }
@@ -81,11 +93,15 @@
 
     .product-grid-item-header {
       margin-top: 0.5em;
-      font-size: 1.25em;
+      font-size: 1em;
       font-weight: $header-font-weight;
     }
-    .product-grid-item-subheader {
+    .product-grid-item-artist {
       font-size: 1em;
+      margin-bottom: 0.2em;
+    }
+    .product-grid-item-subheader {
+      font-size: 0.8em;
       margin-bottom: 1em;
     }
     .product-grid-item-image-container {

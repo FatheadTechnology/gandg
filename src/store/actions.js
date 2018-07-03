@@ -53,6 +53,24 @@ export const saveTask = ({ commit, dispatch, state }) => {
 };
 // END BOILER PLATE CODE
 
+// START NAV
+export const showNavSection = ({ state }, section) => {
+  state.showNavDrop = true;
+  state.hoverSection = section;
+};
+
+export const hideNav = ({ state }) => {
+  setTimeout(() => {
+    state.showNavDrop = false;
+    state.hoverSection = null;
+  }, 100);
+};
+
+export const showNav = ({ state }) => {
+  state.showNavDrop = true;
+};
+// END NAV
+
 // START MODALS
 export const showModal = ({ state }, modalName) => {
   console.log("this", this);
@@ -210,11 +228,14 @@ export const createRoomShotData = ({ commit, dispatch }, product) => {
       let temp = cloudinary.url(`${rooms[i].CloudinaryPath}_wall`, {
         transformation: [
           {
-            overlay: colors[z].id,
+            overlay:
+              "guildgrace:web_licensed:pattern_swatch:NFL_Detroit_Lions_2018_Wallpaper_Lines_Blue_Smooth",
             flags: "tiled",
             opacity: 85,
             effect: "multiply",
-            width: RoomZones[rooms[i].ZoneId].PatternWidth
+            width: RoomZones[rooms[i].ZoneId].PatternWidth,
+            height: RoomZones[rooms[i].ZoneId].PatternWidth,
+            crop: "lfill"
           },
           {
             effect: "blur:10"

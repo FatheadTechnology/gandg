@@ -7,6 +7,10 @@ export const getMessage = state => state.message;
 
 export const getSample = state => state.sampleMessage;
 
+export const getHoverSectionFromStore = state => state.hoverSection;
+
+export const getShowNavDropFromStore = state => state.showNavDrop;
+
 export const getPatternsFromStore = state => state.patterns;
 
 export const getFavoritesFromStore = state => state.favorites;
