@@ -210,11 +210,14 @@ export const createRoomShotData = ({ commit, dispatch }, product) => {
       let temp = cloudinary.url(`${rooms[i].CloudinaryPath}_wall`, {
         transformation: [
           {
-            overlay: colors[z].id,
+            overlay:
+              "guildgrace:web_licensed:pattern_swatch:NFL_Detroit_Lions_2018_Wallpaper_Lines_Blue_Smooth",
             flags: "tiled",
             opacity: 85,
             effect: "multiply",
-            width: RoomZones[rooms[i].ZoneId].PatternWidth
+            width: RoomZones[rooms[i].ZoneId].PatternWidth,
+            height: RoomZones[rooms[i].ZoneId].PatternWidth,
+            crop: "lfill"
           },
           {
             effect: "blur:10"
