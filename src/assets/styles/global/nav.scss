@@ -72,7 +72,7 @@ $top-nav-aboutus-height: 200px;
 #top-nav {
   background-color: $bg-color;
   z-index: 5;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   max-width: $xl;
@@ -93,8 +93,21 @@ $top-nav-aboutus-height: 200px;
     width: 100%;
     max-width: $main-grid-width;
     position: relative;
+    &.altNav {
+      position: fixed;
+      top: 0;
+      background-color: $bg-color;
+      #nav-items {
+        padding: 10px 0;
+      }
+    }
   }
-
+  #alt-nav-logo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 75px;
+  }
   #top-nav-dropdown {
     position: absolute;
     width: 100%;
@@ -127,6 +140,9 @@ $top-nav-aboutus-height: 200px;
             height: 10px;
             margin-right: 5px;
             display: inline-block;
+            &.white {
+              border: 1px solid rgb(165, 165, 165);
+            }
           }
           &:hover {
             color: $a-hover-color;
@@ -194,19 +210,19 @@ $top-nav-aboutus-height: 200px;
         margin-bottom: 20px;
         position: relative;
         &:after {
-            content: "";
-            width: 2px;
-            background-color: black;
-            position: absolute;
-            right: -28px;
-            top: 0;
-            height: 100%;
-          }
+          content: "";
+          width: 2px;
+          background-color: black;
+          position: absolute;
+          right: -28px;
+          top: 0;
+          height: 100%;
+        }
         &:last-child {
           &:after {
             display: none;
           }
-        }        
+        }
       }
       .section-title {
         font-weight: bold;
@@ -241,7 +257,6 @@ $top-nav-aboutus-height: 200px;
         grid-template-columns: repeat(4, minmax(100px, 1fr));
         grid-template-rows: repeat(9, 1fr);
         @include l {
-
         }
       }
       ul.colors {
@@ -249,8 +264,8 @@ $top-nav-aboutus-height: 200px;
         grid-template-rows: repeat(6, 1fr);
       }
       ul.design-types {
-          grid-template-columns: repeat(2, minmax(100px, 1fr));
-          grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-template-rows: repeat(8, 1fr);
       }
     }
   }
@@ -277,7 +292,7 @@ $top-nav-aboutus-height: 200px;
       }
     }
   }
-  svg {
+  #desktop-logo {
     height: 100px;
     margin: 10px 0 0;
   }

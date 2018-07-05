@@ -9,7 +9,7 @@
     <left-nav></left-nav>
 -->
         <top-nav></top-nav>
-        <div class="space-fill left"></div>
+        <div class="space-fill"></div>
         <div id="page-content">
           <transition name="fade">
 
@@ -17,7 +17,7 @@
           </transition>
           <global-footer></global-footer>
         </div>
-        <div class="space-fill right"></div>
+        <div class="space-fill"></div>
         <right-nav></right-nav>
         <!--
     TODO: absolute position the icon in the help btn?

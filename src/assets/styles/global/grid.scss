@@ -5,13 +5,13 @@
   text-align: center;
 }
 #global-grid {
-  margin-top: $top-nav-size;
   min-height: 100vh;
   display: grid;
   grid-template-columns: $right-nav-size 1fr $right-nav-size;
   grid-column-gap: $main-grid-gap;
   max-width: $xl;
   text-align: left;
+  position: relative;
   .space-fill.left {
     grid-column-start: 1;
     grid-column-end: 2;
