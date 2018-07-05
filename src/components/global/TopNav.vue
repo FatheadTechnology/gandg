@@ -1,7 +1,6 @@
 <template>
   <div id="top-nav">
     <div id="nav-wrap">
-
       <div class="close-nav" @mouseover="hideNav" v-show="showNavDrop"></div>
       <router-link tag="div" to="/" id="home-link">
         <svg id="desktop-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1683.6 585.7" enable-background="new 0 0 1683.6 585.7" xml:space="preserve">
@@ -107,6 +106,45 @@
                 <h4>Product Name</h4>
               </router-link>
             </div> -->
+                          <div class="section-wrap">
+                <div class="section-title">Pattern Types</div>
+                <ul class="pattern-types">
+                  <router-link to="#" tag="li">Abstract</router-link>
+                  <router-link to="#" tag="li">Animal</router-link>
+                  <router-link to="#" tag="li">Beach</router-link>
+                  <router-link to="#" tag="li">Botanical</router-link>
+                  <router-link to="#" tag="li">Brick</router-link>
+                  <router-link to="#" tag="li">Burlap</router-link>
+                  <router-link to="#" tag="li">Chevron</router-link>
+                  <router-link to="#" tag="li">Coastal</router-link>
+                  <router-link to="#" tag="li">Cultural</router-link>
+                  <router-link to="#" tag="li">Damask</router-link>
+                  <router-link to="#" tag="li">Fine Arts</router-link>
+                  <router-link to="#" tag="li">Floral</router-link>
+                  <router-link to="#" tag="li">Folk</router-link>
+                  <router-link to="#" tag="li">Food</router-link>
+                  <router-link to="#" tag="li">Geometric</router-link>
+                  <router-link to="#" tag="li">Illustration</router-link>
+                  <router-link to="#" tag="li">Industrial</router-link>
+                  <router-link to="#" tag="li">Leather</router-link>
+                  <router-link to="#" tag="li">Linen</router-link>
+                  <router-link to="#" tag="li">Marble</router-link>
+                  <router-link to="#" tag="li">Nature</router-link>
+                  <router-link to="#" tag="li">Novelty</router-link>
+                  <router-link to="#" tag="li">Paisley</router-link>
+                  <router-link to="#" tag="li">Plaid</router-link>
+                  <router-link to="#" tag="li">Stone</router-link>
+                  <router-link to="#" tag="li">Stripes</router-link>
+                  <router-link to="#" tag="li">Texture</router-link>
+                  <router-link to="#" tag="li">Tile</router-link>
+                  <router-link to="#" tag="li">Tropical</router-link>
+                  <router-link to="#" tag="li">Tufted</router-link>
+                  <router-link to="#" tag="li">Vintage</router-link>
+                  <router-link to="#" tag="li">Watercolor</router-link>
+                  <router-link to="#" tag="li">Wood</router-link>
+                  <router-link to="#" tag="li">Woven</router-link>
+                </ul>
+              </div>
               <div class="section-wrap">
                 <div class="section-title">Design Types</div>
                 <ul class="design-types">
@@ -123,30 +161,32 @@
                   <router-link to="#" tag="li">Industrial</router-link>
                   <router-link to="#" tag="li">Victorian</router-link>
                   <router-link to="#" tag="li">Kids</router-link>
+                  <router-link to="#" tag="li">Nursery</router-link>
                   <router-link to="#" tag="li">Vintage</router-link>
                 </ul>
               </div>
               <div class="section-wrap">
                 <div class="section-title">Colors</div>
                 <ul class="colors">
-                  <router-link to="#" tag="li">Pink</router-link>
-                  <router-link to="#" tag="li">Red</router-link>
-                  <router-link to="#" tag="li">Orange</router-link>
-                  <router-link to="#" tag="li">Green</router-link>
-                  <router-link to="#" tag="li">Blue</router-link>
-                  <router-link to="#" tag="li">Purple</router-link>
-                  <router-link to="#" tag="li">Brown</router-link>
-                  <router-link to="#" tag="li">Black</router-link>
-                  <router-link to="#" tag="li">Gray</router-link>
-                  <router-link to="#" tag="li">White</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: pink"></div>Pink</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: red"></div>Red</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: orange"></div>Orange</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: yellow"></div>Yellow</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: green"></div>Green</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: blue"></div>Blue</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: purple"></div>Purple</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: brown"></div>Brown</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: black"></div>Black</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: gray"></div>Gray</router-link>
+                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: white"></div>White</router-link>
                 </ul>
-              </div>
+              </div>              
             </div>
             <div class="top-nav-wrapper" v-if="hoverSection == 'HowTo'">
               <div class="section-wrap">
 
                 <div class="section-title">Tutorial Videos</div>
-                <ul class="design-types">
+                <ul class="tutorial-videos">
                   <router-link to="#" tag="li">How to Apply</router-link>
                   <router-link to="#" tag="li">Disaster Control</router-link>
                   <router-link to="#" tag="li">Wall Types</router-link>
@@ -156,7 +196,7 @@
               </div>
               <div class="section-wrap">
                 <div class="section-title">Support</div>
-                <ul class="colors">
+                <ul class="support">
                   <router-link to="#" tag="li">Return Policy</router-link>
                   <router-link to="#" tag="li">Help</router-link>
                   <router-link to="#" tag="li">Privacy Policy</router-link>
@@ -167,7 +207,7 @@
             <div class="top-nav-wrapper" v-if="hoverSection == 'AboutUs'">
               <div class="section-wrap">
 
-                <ul class="design-types">
+                <ul class="about-us">
                   <router-link to="#" tag="li">Our Artists</router-link>
                   <router-link to="#" tag="li">Mission</router-link>
                   <router-link to="#" tag="li">Our Material</router-link>

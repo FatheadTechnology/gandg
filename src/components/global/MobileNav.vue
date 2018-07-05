@@ -34,6 +34,18 @@
             <div class="left-menu-item" id="wallpaper">
               <span>Wallpaper</span>
             </div>
+                        <ul style="list-style-type: none">
+              <li>Lorem.</li>
+              <li>Aspernatur.</li>
+              <li>Corporis.</li>
+              <li>Rem?</li>
+              <li>Minima.</li>
+              <li>At?</li>
+              <li>Assumenda!</li>
+              <li>Alias?</li>
+              <li>Dolorum?</li>
+              <li>Odit.</li>
+            </ul>
             <div class="left-menu-item" id="collections">
               <span>Collections</span>
             </div>

@@ -228,8 +228,7 @@ export const createRoomShotData = ({ commit, dispatch }, product) => {
       let temp = cloudinary.url(`${rooms[i].CloudinaryPath}_wall`, {
         transformation: [
           {
-            overlay:
-              "guildgrace:web_licensed:pattern_swatch:NFL_Detroit_Lions_2018_Wallpaper_Lines_Blue_Smooth",
+            overlay: colors[z].id,
             flags: "tiled",
             opacity: 85,
             effect: "multiply",

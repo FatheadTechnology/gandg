@@ -10,7 +10,7 @@
   left: 0;
   right: 0;
   z-index: 5;
-  position: absolute;
+  position: fixed;
   background-color: transparent;
 }
 @include s {
@@ -99,9 +99,41 @@ $top-nav-aboutus-height: 200px;
     position: absolute;
     width: 100%;
     background-color: $bg-color;
-    // &.Wallpaper {
-    //   height: $top-nav-wallpaper-height;
-    // }
+    &.Wallpaper {
+      .top-nav-wrapper {
+        grid-template-columns: 5fr 3fr 3fr;
+        padding: 0;
+        text-align: left;
+        @include l {
+          grid-template-columns: 4fr 3fr 3fr;
+        }
+      }
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-template-rows: repeat(8, 1fr);
+        grid-auto-flow: column;
+        grid-row-gap: 5px;
+        list-style-type: none;
+        padding: 0;
+        box-sizing: border-box;
+        li {
+          cursor: pointer;
+          transition: 0.15s all ease-out;
+          font-size: 0.8em;
+          .color-dot {
+            border-radius: 100%;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            display: inline-block;
+          }
+          &:hover {
+            color: $a-hover-color;
+          }
+        }
+      }
+    }
     // &.Artists {
     //   height: $top-nav-artists-height;
     // }
@@ -128,14 +160,14 @@ $top-nav-aboutus-height: 200px;
     .top-nav-wrapper {
       box-sizing: border-box;
       position: relative;
-      padding: 0 200px;
+      padding: 0px 300px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 20px;
       z-index: 5;
       width: 100%;
-
       height: inherit;
+      text-align: center;
       @include m {
         padding: 0 50px 0 0;
       }
@@ -161,8 +193,7 @@ $top-nav-aboutus-height: 200px;
         height: inherit;
         margin-bottom: 20px;
         position: relative;
-        &:first-child {
-          &:after {
+        &:after {
             content: "";
             width: 2px;
             background-color: black;
@@ -171,7 +202,11 @@ $top-nav-aboutus-height: 200px;
             top: 0;
             height: 100%;
           }
-        }
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }        
       }
       .section-title {
         font-weight: bold;
@@ -179,7 +214,9 @@ $top-nav-aboutus-height: 200px;
       }
       ul {
         display: grid;
-        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-auto-flow: column;
         grid-row-gap: 5px;
         list-style-type: none;
         padding: 0;
@@ -188,10 +225,32 @@ $top-nav-aboutus-height: 200px;
           cursor: pointer;
           transition: 0.15s all ease-out;
           font-size: 0.8em;
+          .color-dot {
+            border-radius: 100%;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            display: inline-block;
+          }
           &:hover {
             color: $a-hover-color;
           }
         }
+      }
+      ul.pattern-types {
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        grid-template-rows: repeat(9, 1fr);
+        @include l {
+
+        }
+      }
+      ul.colors {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-template-rows: repeat(6, 1fr);
+      }
+      ul.design-types {
+          grid-template-columns: repeat(2, minmax(100px, 1fr));
+          grid-template-rows: repeat(8, 1fr);
       }
     }
   }
