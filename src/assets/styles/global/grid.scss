@@ -12,6 +12,18 @@
   grid-column-gap: $main-grid-gap;
   max-width: $xl;
   text-align: left;
+  .space-fill.left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  #page-content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .space-fill.right {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
 }
 
 #site-wrap {
@@ -37,6 +49,7 @@
 .main-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 1.5em;
   margin: 1.5em 0;
 }
