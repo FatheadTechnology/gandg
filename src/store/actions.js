@@ -701,6 +701,10 @@ export const changeQuantity = ({ commit }, quantity) => {
   commit("setQuantitySelected", quantity);
 };
 
+export const changeQuantityToInt = ({ commit }, quantity) => {
+  commit("setQuantitySelectedToInt", quantity);
+};
+
 export const minusQuantity = ({ commit }, product) => {
   if (product.quantity - 1 > 0) {
     product.quantity -= 1;

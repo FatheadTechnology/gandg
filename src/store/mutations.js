@@ -274,3 +274,7 @@ export const setQuantitySelected = (state, amount) => {
     state.quantitySelected += amount;
   }
 };
+
+export const setQuantitySelectedToInt = (state, amount) => {
+    state.quantitySelected = amount;
+};
