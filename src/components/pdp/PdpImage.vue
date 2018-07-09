@@ -29,5 +29,6 @@ export default {
   mounted() {}
 };
 </script>
-<style <style lang="scss" scoped>
+
+<style lang="scss" scoped>
 </style>

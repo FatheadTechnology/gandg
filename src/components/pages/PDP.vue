@@ -12,6 +12,7 @@
         <!-- <div class="maintain-square-image-container pdp-image-choice" v-for="image in roomShotData" :key="image.src">
             <div class="maintain-square-image" :style="{ backgroundImage: 'url('+image.url+')'}" v-if="image.color==selectedProduct.Images.CloudinaryPath"></div>
           </div> -->
+
         <room-shots :roomShotData="roomShotData" :selectedProduct="selectedProduct"></room-shots>
 
       </div>
@@ -35,6 +36,9 @@
             <span>How much do I need?</span>
             <!-- TODO: Remove fontawesome icon -->
             <img class="show-calculator" @click="showModal" id="calculator-btn" src="./../../assets/icomoon_6_icons/SVG/calculator.svg">
+          </div>
+          <div @click="addToFavorites()">
+            <h2>placeholder for <3 component</h2>
           </div>
           <calculator-modal id="calculator-modal"></calculator-modal>
           <h1 id="pdp-price">$150</h1>
@@ -113,6 +117,8 @@ import AddToCart from "../pdp/AddToCart";
 import PatternInfo from "../pdp/PatternInfo";
 import WallpaperPattern from "./../global/WallpaperPattern";
 import cloudinary from "cloudinary";
+import firebase from 'firebase';
+import {xor} from 'lodash'
 
 export default {
   name: "PDP",
@@ -135,7 +141,8 @@ export default {
       showAccordion1: false,
       showAccordion2: false,
       showAccordion3: false,
-      pattern: null
+      pattern: null,
+      favorites : []
     };
   },
   methods: {
@@ -150,6 +157,27 @@ export default {
     },
     hideModal() {
       this.$modal.hide("calculator");
+    },
+    addToFavorites(){
+   /*   let userId = firebase.auth().currentUser.uid;
+      let routeParam = this.$route.params;
+
+      firebase.database().ref('users/' + userId +'/favorites').push({
+        routeParam
+      });
+*/
+      let routeParam = this.$route.params;
+
+      if (this.favorites !== []){
+          console.log('before',this.favorites);
+        this.favorites = xor(this.favorites, [routeParam])
+        console.log('after',this.favorites);
+
+      }
+      let userId = firebase.auth().currentUser.uid;
+      firebase.database().ref('users/' + userId).update({
+        favorites : this.favorites
+      });
     }
   },
   computed: {
@@ -170,11 +198,26 @@ export default {
   },
   created() {
     // Get pattern info before creating room shots with it
-    this.getPatternInfo(this.$route.params).then(response => {
+    let routeParam = this.$route.params;
+
+    this.getPatternInfo(routeParam).then(response => {
       this.createRoomShotData(this.patternInfo);
       this.getCrossSells(this.patternInfo);
     });
     window.scrollTo(0, 0);
+
+    let userId = firebase.auth().currentUser.uid;
+    firebase.database().ref('users/' + userId +'/recentlyViewed').push({
+      routeParam
+    });
+
+       firebase.database().ref('/users/' + userId).once('value').then(snapshot => {
+        this.favorites = (snapshot.val() && snapshot.val().favorites) || 'Anonymous';
+        //TODO : move to favorites component? or where? ask jacob
+       });
+
+    // TODO : iterate over this data in Firebase for recently viwewed
+
   }
 };
 </script>
