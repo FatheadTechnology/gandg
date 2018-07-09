@@ -8,8 +8,6 @@ import router from "./router";
 import { sync } from "vuex-router-sync";
 import VModal from "vue-js-modal";
 import InstantSearch from "vue-instantsearch";
-import PrismicDOM from "prismic-dom";
-import Prismic from "prismic-javascript";
 import cloudinary from "cloudinary";
 import firebase from 'firebase';
 

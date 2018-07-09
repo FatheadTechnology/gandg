@@ -138,7 +138,8 @@ let router = new Router({
       component: PDP
     },
     {
-      path: "/product-list/:landingId?",
+      //TODO: Add search= before searchTerm
+      path: "/product-list/:landingId?/:searchTerm?",
       name: "product-list",
       component: ProductList
     },
