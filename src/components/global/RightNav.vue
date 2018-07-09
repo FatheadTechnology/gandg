@@ -1,7 +1,8 @@
 <template>
   <div id="right-nav">
     <router-link tag="div" to="/cart" id="cart-link">
-      <img @mouseover="showCartMenu = !showCartMenu" class="social-btn" src="../../assets/icomoon_6_icons/SVG/cart.svg" alt="Cart">
+      <img @mouseover="showCartMenu = !showCartMenu" class="social-btn" src="../../assets/icomoon_6_icons/SVG/cart.svg"
+           alt="Cart">
     </router-link>
     <!--v-if="showCartMenu"-->
     <div id="cart-hover-menu" v-if="showCartMenu">
@@ -51,7 +52,7 @@
     <div @click="profileOrLogin()" id="profile-link">
       <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/user2.svg" alt="Profile">
     </div>
-{{userEmail}}
+    {{userEmail}}
     <div>
     </div>
 
@@ -64,55 +65,64 @@
 <script>
   import firebase from 'firebase';
 
-export default {
-  name: "HelloWorld",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App",
-      showCartMenu: false,
-      userEmail : null
-    };
-  },
-  methods: {
-    profileOrLogin : function(){
-      let user = firebase.auth().currentUser;
+  export default {
+    name: "HelloWorld",
+    data() {
+      return {
+        msg: "Welcome to Your Vue.js App",
+        showCartMenu: false,
+        userEmail: null
+      };
+    },
+    methods: {
+      profileOrLogin: function () {
+        let user = firebase.auth().currentUser;
 
-      if (user) {
-        console.log('user',user)
-        this.userEmail = user.email;
-        this.$router.replace('profile2')
-        console.log('logged in')
-      } else {
-        console.log(this)
-        this.userEmail = null;
-        this.$router.replace('login')
-        console.log('not logged in')      }
-
-/*      firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            console.log(this)
+          console.log('user', user)
+          this.userEmail = user.email;
           this.$router.replace('profile2')
           console.log('logged in')
         } else {
           console.log(this)
-
+          this.userEmail = null;
           this.$router.replace('login')
           console.log('not logged in')
         }
-      });*/
-    }
-  },
-  watch:{
-    $route (to, from){
+
+        /*      firebase.auth().onAuthStateChanged(function(user) {
+         if (user) {
+         console.log(this)
+         this.$router.replace('profile2')
+         console.log('logged in')
+         } else {
+         console.log(this)
+
+         this.$router.replace('login')
+         console.log('not logged in')
+         }
+         });*/
+      }
+    },
+    mounted () {
       let user = firebase.auth().currentUser;
       if (user) {
         this.userEmail = user.email;
       } else {
         this.userEmail = null;
       }
+    },
+    watch: {
+      $route (to, from){
+        let user = firebase.auth().currentUser;
+        if (user) {
+          this.userEmail = user.email;
+        } else {
+          this.userEmail = null;
+        }
+      }
     }
-  }
-};
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
