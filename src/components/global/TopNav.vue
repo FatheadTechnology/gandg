@@ -106,7 +106,7 @@
                 <h4>Product Name</h4>
               </router-link>
             </div> -->
-                          <div class="section-wrap">
+              <div class="section-wrap">
                 <div class="section-title">Pattern Types</div>
                 <ul class="pattern-types">
                   <router-link to="#" tag="li">Abstract</router-link>
@@ -168,19 +168,30 @@
               <div class="section-wrap">
                 <div class="section-title">Colors</div>
                 <ul class="colors">
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: pink"></div>Pink</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: red"></div>Red</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: orange"></div>Orange</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: yellow"></div>Yellow</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: green"></div>Green</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: blue"></div>Blue</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: purple"></div>Purple</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: brown"></div>Brown</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: black"></div>Black</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: gray"></div>Gray</router-link>
-                  <router-link to="#" tag="li"><div class="color-dot" style="background-color: white"></div>White</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: pink"></div>Pink</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: red"></div>Red</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: orange"></div>Orange</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: yellow"></div>Yellow</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: green"></div>Green</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: blue"></div>Blue</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: purple"></div>Purple</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: brown"></div>Brown</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: black"></div>Black</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot" style="background-color: gray"></div>Gray</router-link>
+                  <router-link to="#" tag="li">
+                    <div class="color-dot white" style="background-color: white"></div>White</router-link>
                 </ul>
-              </div>              
+              </div>
             </div>
             <div class="top-nav-wrapper" v-if="hoverSection == 'HowTo'">
               <div class="section-wrap">

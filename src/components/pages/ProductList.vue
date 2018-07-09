@@ -16,7 +16,7 @@
     </h3>
     <div class="content-wrap">
 
-      <ais-index appId="S7MN0CIBBE" apiKey="ecf8c6a506e3515c1400eb7086879aa2">
+      <ais-index appId="S7MN0CIBBE" apiKey="ecf8c6a506e3515c1400eb7086879aa2" :query="query">
         <!-- <ais-search-box>
             <div class="input-group">
               <ais-input placeholder="Search" class="search-input text-input" id="freaking-search" />
@@ -52,7 +52,7 @@
 
           </div>
           <div class="search-bar">
-            <ais-search-box></ais-search-box>
+            <ais-search-box placeholder="Search"></ais-search-box>
           </div>
           <div class="dropdown-wrap">
 
@@ -164,10 +164,10 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import ProductGridLineMock from "../ProductGridLineMock";
 import WallpaperPattern from "../global/WallpaperPattern";
 import ColorFilter from "../pdp/ColorFilter";
-import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "HelloWorld",
@@ -190,12 +190,22 @@ export default {
   },
   computed: {
     ...mapGetters({
-      landingPageContent: "getLandingPageContentFromStore"
-    })
+      landingPageContent: "getLandingPageContentFromStore",
+      results: "getAlgoliaResultsFromStore"
+    }),
+    query() {
+      if (this.$route.params.searchTerm) {
+        console.log("searchterm exists");
+        return this.$route.params.searchTerm;
+      }
+      console.log("searchterm doesn't exist");
+      return "";
+    }
   },
   methods: {
     ...mapActions({
-      getLandingPageContent: "getLandingPageContent"
+      getLandingPageContent: "getLandingPageContent",
+      searchAlgolia: "searchAlgolia"
     }),
     toggleFilters() {
       this.showFilters = !this.showFilters;
@@ -214,7 +224,9 @@ export default {
     } else {
       this.getLandingPageContent("standard");
     }
-  }
+  },
+  beforeMount() {},
+  mounted() {}
 };
 </script>
 

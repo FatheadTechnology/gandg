@@ -1,5 +1,6 @@
 <template>
   <div id="home">
+    <search></search>
     <!--    <div id="cta-hero-bar" v-show="showCTA">
       {{homepageContent["0"].data.marketingcta["0"].text}}
       <div id="close-hero" v-on:click="showCTA = !showCTA">
@@ -147,12 +148,14 @@
 import { mapGetters, mapActions } from "vuex";
 import ProductGridLineMock from "../ProductGridLineMock";
 import WallpaperPattern from "../global/WallpaperPattern";
+import Search from "../global/Search";
 
 export default {
   name: "HelloWorld",
   components: {
     ProductGridLineMock,
-    WallpaperPattern
+    WallpaperPattern,
+    Search
   },
   data() {
     return {

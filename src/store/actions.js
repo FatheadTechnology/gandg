@@ -3,6 +3,7 @@ import * as api from "@/api";
 import Prismic from "prismic-javascript";
 import algoliasearch from "algoliasearch";
 import router from "./../router";
+import { createFromAlgoliaCredentials } from "vue-instantsearch";
 import RoomZones from "./../../config/room_zones";
 
 import cloudinary from "cloudinary";
@@ -836,32 +837,30 @@ export const getMarketingPanel = ({ commit }, page) => {
 
 // START SEARCH
 export const searchAlgolia = ({ state, commit }, query) => {
-  index.search(
-    {
-      query: query.searchTerm,
-      filters: query.filters,
-      facets: ["*"]
-    },
-    function searchDone(err, content) {
-      if (err) {
-        console.error(err);
-        return;
-      } else {
-        commit("setAlgoliaResults", content.hits);
-        //Only want to pull the colors once, otherwise the active states get overwritten
-        if (!state.algoliaColors) {
-          commit("setAlgoliaColors", content.facets["design.color"]);
-        }
-        if (!state.algoliaPatterns) {
-          commit("setAlgoliaPatterns", content.facets["design.type"]);
-        }
-      }
-    }
-  );
-  var results = "";
-  replica_index.search("", (err, content) => {
-    results = content;
-    console.log("replica index results", results);
-  });
+  // index.search(
+  //   {
+  //     query: query
+  //   },
+  //   function searchDone(err, content) {
+  //     if (err) {
+  //       console.error(err);
+  //       return;
+  //     } else {
+  //       commit("setAlgoliaResults", content.hits);
+  //       Only want to pull the colors once, otherwise the active states get overwritten
+  //       if (!state.algoliaColors) {
+  //         commit("setAlgoliaColors", content.facets["design.color"]);
+  //       }
+  //       if (!state.algoliaPatterns) {
+  //         commit("setAlgoliaPatterns", content.facets["design.type"]);
+  //       }
+  //     }
+  //   }
+  // );
+  // var results = "";
+  // replica_index.search("", (err, content) => {
+  //   results = content;
+  //   console.log("replica index results", results);
+  // });
 };
 // END SEARCH
