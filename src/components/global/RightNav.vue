@@ -48,9 +48,12 @@
       <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/heart3.svg" alt="Favorites">
     </router-link>
 
-    <router-link tag="div" to="/profile" id="profile-link">
+    <div @click="profileOrLogin()" id="profile-link">
       <img class="social-btn" src="../../assets/icomoon_6_icons/SVG/user2.svg" alt="Profile">
-    </router-link>
+    </div>
+{{userEmail}}
+    <div>
+    </div>
 
     <!--
           TODO : custom btns from design
@@ -59,17 +62,60 @@
 </template>
 
 <script>
+  import firebase from 'firebase';
+
 export default {
   name: "HelloWorld",
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
-      showCartMenu: false
+      showCartMenu: false,
+      userEmail : null
     };
+  },
+  methods: {
+    profileOrLogin : function(){
+      let user = firebase.auth().currentUser;
+
+      if (user) {
+        console.log('user',user)
+        this.userEmail = user.email;
+        this.$router.replace('profile2')
+        console.log('logged in')
+      } else {
+        console.log(this)
+        this.userEmail = null;
+        this.$router.replace('login')
+        console.log('not logged in')      }
+
+/*      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            console.log(this)
+          this.$router.replace('profile2')
+          console.log('logged in')
+        } else {
+          console.log(this)
+
+          this.$router.replace('login')
+          console.log('not logged in')
+        }
+      });*/
+    }
+  },
+  watch:{
+    $route (to, from){
+      let user = firebase.auth().currentUser;
+      if (user) {
+        this.userEmail = user.email;
+      } else {
+        this.userEmail = null;
+      }
+    }
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 </style>

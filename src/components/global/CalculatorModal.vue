@@ -112,8 +112,16 @@
         if (this.heightFt) {
           if (this.heightIn) {
             // Get total height of wall in Inches
-            let verticalPadding = 0;
-            this.totalHeight = parseInt(this.heightFt * 12) + parseInt(this.heightIn + verticalPadding);
+            let verticalPadding;
+            console.log('heightFt',this.heightFt);
+            console.log('heightIn',this.heightIn);
+            let parsedHeightFt  = parseInt(this.heightFt) * 12;
+            console.log('parsed ft', parsedHeightFt)
+            let parsedHeightIn = parseInt(this.heightIn + verticalPadding);
+            console.log('parsed in', parsedHeightIn)
+
+            this.totalHeight = parsedHeightFt + parsedHeightIn ;
+            console.log('totalHeight', this.totalHeight)
             // if we want to pad the height input by half in inch do it above here at the end of the line
           } else {
             this.totalHeight = this.heightFt * 12;

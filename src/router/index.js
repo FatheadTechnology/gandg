@@ -17,6 +17,10 @@ import Home from "@/components/pages/Home";
 import HowToHome from "@/components/pages/HowToHome";
 import HowToVideo from "@/components/pages/HowToVideo";
 import OrderHistory from "@/components/pages/OrderHistory";
+import Login from "@/components/firebase/Login";
+import ProfileFirebase from "@/components/firebase/Profile";
+import SignUp from "@/components/firebase/SignUp";
+
 //TODO : do we need this just for anon orders?
 import PDP from "@/components/pages/PDP";
 import ProductList from "@/components/pages/ProductList";
@@ -24,11 +28,12 @@ import Profile from "@/components/pages/Profile";
 import SearchResults from "@/components/pages/SearchResults";
 //TODO : this is just the product list with variables?
 
+import firebase from 'firebase';
+
 Vue.use(Router);
 
-//TODO : add in dynamic links
-export default new Router({
-  mode: "history",
+let router = new Router({
+  mode: 'history',
   routes: [
     /*   {
       path: "/blog",
@@ -40,6 +45,21 @@ export default new Router({
       name: "Blog Post",
       component: BlogPost
     },*/
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/profile2',
+      name: 'Profile',
+      component: ProfileFirebase
+    },
+    {
+      path: '/sign-up',
+      name: 'SignUp',
+      component: SignUp
+    },
     {
       path: "/artists",
       name: "Artists",
@@ -135,3 +155,23 @@ export default new Router({
     }
   ]
 });
+
+
+router.beforeEach((to, from, next) => {
+  let currentUser = firebase.auth().currentUser;
+  let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+  if (requiresAuth && !currentUser) {
+    /*  next('login')*/
+    next();
+  } else if (!requiresAuth && currentUser) {
+    /* next('hello')*/
+    next();
+  } else {
+    next();
+  }
+});
+
+export default router;
+
+

@@ -9,6 +9,7 @@ import { sync } from "vuex-router-sync";
 import VModal from "vue-js-modal";
 import InstantSearch from "vue-instantsearch";
 import cloudinary from "cloudinary";
+import firebase from 'firebase';
 
 Vue.use(VModal);
 Vue.use(InstantSearch);
@@ -19,17 +20,26 @@ cloudinary.config({
   cloud_name: "rfathead"
 });
 
-router.beforeEach(function(to, from, next) {
-  window.scrollTo(0, 0);
+let app;
+let config = {
+  apiKey: 'AIzaSyC18-Jisbl4qldOnksO7xTsWCCC8bUjevo',
+  authDomain: 'evolution-883a5.firebaseapp.com',
+  databaseURL: 'https://evolution-883a5.firebaseio.com',
+  projectId: 'evolution-883a5',
+  storageBucket: 'evolution-883a5.appspot.com',
+  messagingSenderId: '742293904721'
+};
 
-  next();
-});
-
-/* eslint-disable no-new */
-new Vue({
-  el: "#app",
-  store,
-  router,
-  components: { App },
-  template: "<App/>"
+firebase.initializeApp(config);
+firebase.auth().onAuthStateChanged(function(user) {
+  if (!app) {
+    /* eslint-disable no-new */
+    app = new Vue({
+      el: '#app',
+      store,
+      router,
+      template: '<App/>',
+      components: { App }
+    });
+  }
 });
